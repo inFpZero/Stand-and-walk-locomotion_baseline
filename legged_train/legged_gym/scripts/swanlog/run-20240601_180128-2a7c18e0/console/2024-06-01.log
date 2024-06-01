@@ -1,24 +1,0 @@
-swanlab: \ Creating experiment...                                                                                                    swanlab:Tracking run with swanlab version 0.3.0
-swanlab:Run data will be saved locally in /home/aaron/Aaron/projects/Locomotion_Baseline/legged_train/legged_gym/scripts/swanlog/run-20240601_180128-2a7c18e0
-swanlab:👋 Hi Aaron, welcome to swanlab!
-swanlab:Syncing run wow_test_Jun01_18-01-28 to the cloud
-swanlab:🌟 Run `swanlab watch -l /home/aaron/Aaron/projects/Locomotion_Baseline/legged_train/legged_gym/scripts/swanlog` to view SwanLab Experiment Dashboard locally
-swanlab:🏠 View project at https://dev101.swanlab.cn/@Aaron/QRC
-swanlab:🚀 View run at https://dev101.swanlab.cn/@Aaron/QRC/runs/g1tr3fyfra40vkscch97a
-Setting seed: 1
-********************************************************************************
-Start creating ground...
-Converting heightmap to trimesh...
-Created 5913600 vertices
-Created 11816962 triangles
-Adding trimesh to simulation...
-Trimesh added
-Finished creating ground. Time taken 19.49 s
-********************************************************************************
-force sensors set at: ['base', 'FL_hip', 'FL_thigh', 'FL_calf', 'FL_foot', 'FR_hip', 'FR_thigh', 'FR_calf', 'FR_foot', 'RL_hip', 'RL_thigh', 'RL_calf', 'RL_foot', 'RR_hip', 'RR_thigh', 'RR_calf', 'RR_foot']
-Creating env...
-go2
-Using MLP and Priviliged Env encoder ActorCritic structure
-ActorCritic.__init__ got unexpected arguments, which will be ignored: ['adapt_hidden_dims', 'estimate_hidden_dims']
-swanlab:Error happened while training
-swanlab: \ Waiting for uploading completeswanlab: | Waiting for uploading completeswanlab: / Waiting for uploading completeswanlab: - Waiting for uploading completeswanlab: \ Waiting for uploading completeswanlab: | Waiting for uploading complete                                                                                                    swanlab: \ Updating experiment status...                                                                                                    

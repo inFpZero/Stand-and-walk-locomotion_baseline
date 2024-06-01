@@ -59,7 +59,7 @@ def train(args):
         mode = "disabled"
     print(args.proj_name)
     # swanlab.init(project=args.proj_name, experiment_name=args.exptid, group=args.exptid[:3], mode=mode, logdir="../../logs")
-    swanlab.init(project=args.proj_name, experiment_name=args.exptid, mode=mode)
+    swanlab.init(project=args.proj_name, experiment_name=args.exptid, mode=mode, logdir="../../logs")
 
    
     # swanlab.save(LEGGED_GYM_ENVS_DIR + "/base/legged_robot_config.py", policy="now")
