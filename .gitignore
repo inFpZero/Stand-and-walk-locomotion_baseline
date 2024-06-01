@@ -12,6 +12,6 @@ __pycache__
 .vscode
 
 # model
-legged_gym/logs/
+legged_train/logs/
 
 #
