@@ -1,0 +1,23 @@
+swanlab: \ Creating experiment...                                                                                                    swanlab:Tracking run with swanlab version 0.3.0
+swanlab:Run data will be saved locally in /home/aaron/Aaron/projects/QRC/legged_gym/legged_gym/scripts/swanlog/run-20240501_214508-1b8538c1
+swanlab:👋 Hi Aaron, welcome to swanlab!
+swanlab:Syncing run exp_May01_21-45-08 to the cloud
+swanlab:🌟 Run `swanlab watch -l /home/aaron/Aaron/projects/QRC/legged_gym/legged_gym/scripts/swanlog` to view SwanLab Experiment Dashboard locally
+swanlab:🏠 View project at https://dev101.swanlab.cn/@Aaron/parkour_new
+swanlab:🚀 View run at https://dev101.swanlab.cn/@Aaron/parkour_new/runs/eg90dluxk92kl62yk6h3w
+Setting seed: 1
+********************************************************************************
+Start creating ground...
+Converting heightmap to trimesh...
+Created 1140800 vertices
+Created 2277282 triangles
+Adding trimesh to simulation...
+Trimesh added
+Finished creating ground. Time taken 3.29 s
+********************************************************************************
+force sensors set at: ['base', 'FL_hip', 'FL_thigh', 'FL_calf', 'FL_foot', 'FR_hip', 'FR_thigh', 'FR_calf', 'FR_foot', 'Head_upper', 'RL_hip', 'RL_thigh', 'RL_calf', 'RL_foot', 'RR_hip', 'RR_thigh', 'RR_calf', 'RR_foot']
+Creating env...
+Using MLP and Priviliged Env encoder ActorCritic structure
+ActorCritic.__init__ got unexpected arguments, which will be ignored: ['continue_from_last_std', 'priv_encoder_dims', 'rnn_hidden_size', 'rnn_num_layers', 'rnn_type', 'sigmoid_output']
+swanlab:Error happened while training
+swanlab: \ Waiting for uploading completeswanlab: | Waiting for uploading completeswanlab: / Waiting for uploading completeswanlab: - Waiting for uploading completeswanlab: \ Waiting for uploading completeswanlab: | Waiting for uploading complete                                                                                                    swanlab: \ Updating experiment status...                                                                                                    

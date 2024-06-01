@@ -1,0 +1,10 @@
+2024-05-01 21:39:37.206635
+<class 'AttributeError'>
+AttributeError("module 'swanlab' has no attribute 'save'")
+  File "train.py", line 72, in <module>
+    train(args)
+
+  File "train.py", line 62, in train
+    swanlab.save(LEGGED_GYM_ENVS_DIR + "/base/legged_robot_config.py", policy="now")
+
+

@@ -1,0 +1,61 @@
+swanlab: \ Creating experiment...                                                                                                    swanlab:Tracking run with swanlab version 0.3.6
+swanlab:Run data will be saved locally in /home/aaron/Downloads/Locomotion_Baseline-main/legged_gym/legged_gym/scripts/swanlog/run-20240531_174504-a062f2ab
+swanlab:👋 Hi Aaron, welcome to swanlab!
+swanlab:Syncing run test_May31_17-45-04 to the cloud
+swanlab:🌟 Run `swanlab watch -l /home/aaron/Downloads/Locomotion_Baseline-main/legged_gym/legged_gym/scripts/swanlog` to view SwanLab Experiment Dashboard locally
+swanlab:🏠 View project at https://swanlab.cn/@Aaron/wow
+swanlab:🚀 View run at https://swanlab.cn/@Aaron/wow/runs/8jhvrpbiltr5y5e7kvwxi
+Setting seed: 1
+********************************************************************************
+Start creating ground...
+Converting heightmap to trimesh...
+Created 5913600 vertices
+Created 11816962 triangles
+Adding trimesh to simulation...
+Trimesh added
+Finished creating ground. Time taken 17.78 s
+********************************************************************************
+force sensors set at: ['body', 'left_roll_Link', 'left_yaw_Link', 'left_pitch_Link', 'left_knee_Link', 'left_foot_Link', 'right_roll_Link', 'right_yaw_Link', 'right_pitch_Link', 'right_knee_Link', 'right_foot_Link']
+Creating env...
+wow
+Estimator Module: Estimator(
+  (adaptor): Sequential(
+    (0): Linear(in_features=410, out_features=128, bias=True)
+    (1): ELU(alpha=1.0)
+    (2): Linear(in_features=128, out_features=64, bias=True)
+    (3): ELU(alpha=1.0)
+    (4): Linear(in_features=64, out_features=19, bias=True)
+  )
+  (fc1): Linear(in_features=19, out_features=128, bias=True)
+  (fc21): Linear(in_features=128, out_features=64, bias=True)
+  (fc22): Linear(in_features=128, out_features=64, bias=True)
+  (fc3): Linear(in_features=64, out_features=64, bias=True)
+  (fc4): Linear(in_features=64, out_features=41, bias=True)
+)
+Actor MLP: Sequential(
+  (0): Linear(in_features=60, out_features=1024, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=1024, out_features=512, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=512, out_features=256, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=256, out_features=128, bias=True)
+  (7): ELU(alpha=1.0)
+  (8): Linear(in_features=128, out_features=10, bias=True)
+)
+Critic MLP: Sequential(
+  (0): Linear(in_features=165, out_features=1024, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=1024, out_features=512, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=512, out_features=256, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=256, out_features=128, bias=True)
+  (7): ELU(alpha=1.0)
+  (8): Linear(in_features=128, out_features=1, bias=True)
+)
+swanlab:KeyboardInterrupt by user
+swanlab:🌟 Run `swanlab watch -l /home/aaron/Downloads/Locomotion_Baseline-main/legged_gym/legged_gym/scripts/swanlog` to view SwanLab Experiment Dashboard locally
+swanlab:🏠 View project at https://swanlab.cn/@Aaron/wow
+swanlab:🚀 View run at https://swanlab.cn/@Aaron/wow/runs/8jhvrpbiltr5y5e7kvwxi
+swanlab: \ Waiting for uploading completeswanlab: | Waiting for uploading completeswanlab: / Waiting for uploading completeswanlab: - Waiting for uploading completeswanlab: \ Waiting for uploading completeswanlab: | Waiting for uploading complete                                                                                                    swanlab: \ Updating experiment status...                                                                                                    

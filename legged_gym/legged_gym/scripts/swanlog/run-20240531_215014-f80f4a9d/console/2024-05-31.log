@@ -1,0 +1,24 @@
+swanlab: \ Creating experiment...                                                                                                    swanlab:Tracking run with swanlab version 0.3.6
+swanlab:Run data will be saved locally in /home/aaron/Downloads/Locomotion_Baseline-main/legged_gym/legged_gym/scripts/swanlog/run-20240531_215014-f80f4a9d
+swanlab:👋 Hi Aaron, welcome to swanlab!
+swanlab:Syncing run yu_gym_May31_21-50-15 to the cloud
+swanlab:🌟 Run `swanlab watch -l /home/aaron/Downloads/Locomotion_Baseline-main/legged_gym/legged_gym/scripts/swanlog` to view SwanLab Experiment Dashboard locally
+swanlab:🏠 View project at https://swanlab.cn/@Aaron/wow
+swanlab:🚀 View run at https://swanlab.cn/@Aaron/wow/runs/ic8h4mxnep6sbytm1378v
+Setting seed: 1
+********************************************************************************
+Start creating ground...
+Converting heightmap to trimesh...
+Created 5913600 vertices
+Created 11816962 triangles
+Adding trimesh to simulation...
+Trimesh added
+Finished creating ground. Time taken 19.38 s
+********************************************************************************
+force sensors set at: ['body', 'left_roll_Link', 'left_yaw_Link', 'left_pitch_Link', 'left_knee_Link', 'left_foot_Link', 'right_roll_Link', 'right_yaw_Link', 'right_pitch_Link', 'right_knee_Link', 'right_foot_Link']
+Creating env...
+swanlab:Error happened while training
+swanlab:🌟 Run `swanlab watch -l /home/aaron/Downloads/Locomotion_Baseline-main/legged_gym/legged_gym/scripts/swanlog` to view SwanLab Experiment Dashboard locally
+swanlab:🏠 View project at https://swanlab.cn/@Aaron/wow
+swanlab:🚀 View run at https://swanlab.cn/@Aaron/wow/runs/ic8h4mxnep6sbytm1378v
+swanlab: \ Waiting for uploading completeswanlab: | Waiting for uploading completeswanlab: / Waiting for uploading completeswanlab: - Waiting for uploading completeswanlab: \ Waiting for uploading completeswanlab: | Waiting for uploading complete                                                                                                    swanlab: \ Updating experiment status...                                                                                                    
