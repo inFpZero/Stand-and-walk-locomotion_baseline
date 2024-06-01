@@ -12,6 +12,6 @@ __pycache__
 .vscode
 
 # model
-legged_train/logs
+legged_train/logs/
 
 #
