@@ -1,0 +1,126 @@
+2024-06-02 16:11:52,161 INFO    StreamThr :43062 [internal.py:wandb_internal():86] W&B internal server running at pid: 43062, started at: 2024-06-02 16:11:52.160078
+2024-06-02 16:11:52,163 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: status
+2024-06-02 16:11:52,166 INFO    WriterThread:43062 [datastore.py:open_for_write():87] open: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240602_161152-ijvi2f0o/run-ijvi2f0o.wandb
+2024-06-02 16:11:52,171 DEBUG   SenderThread:43062 [sender.py:send():379] send: header
+2024-06-02 16:11:52,194 DEBUG   SenderThread:43062 [sender.py:send():379] send: run
+2024-06-02 16:11:52,198 INFO    SenderThread:43062 [sender.py:_setup_resume():749] checking resume status for None/Stand and Walk for wow/ijvi2f0o
+2024-06-02 16:11:53,779 INFO    SenderThread:43062 [dir_watcher.py:__init__():211] watching files in: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240602_161152-ijvi2f0o/files
+2024-06-02 16:11:53,780 INFO    SenderThread:43062 [sender.py:_start_run_threads():1124] run started: ijvi2f0o with start time 1717315912.159441
+2024-06-02 16:11:53,790 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: check_version
+2024-06-02 16:11:53,791 DEBUG   SenderThread:43062 [sender.py:send_request():406] send_request: check_version
+2024-06-02 16:11:55,682 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: run_start
+2024-06-02 16:11:55,697 DEBUG   HandlerThread:43062 [system_info.py:__init__():26] System info init
+2024-06-02 16:11:55,697 DEBUG   HandlerThread:43062 [system_info.py:__init__():41] System info init done
+2024-06-02 16:11:55,698 INFO    HandlerThread:43062 [system_monitor.py:start():194] Starting system monitor
+2024-06-02 16:11:55,698 INFO    SystemMonitor:43062 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-06-02 16:11:55,699 INFO    HandlerThread:43062 [system_monitor.py:probe():214] Collecting system info
+2024-06-02 16:11:55,700 INFO    SystemMonitor:43062 [interfaces.py:start():190] Started cpu monitoring
+2024-06-02 16:11:55,701 INFO    SystemMonitor:43062 [interfaces.py:start():190] Started disk monitoring
+2024-06-02 16:11:55,702 INFO    SystemMonitor:43062 [interfaces.py:start():190] Started gpu monitoring
+2024-06-02 16:11:55,706 INFO    SystemMonitor:43062 [interfaces.py:start():190] Started memory monitoring
+2024-06-02 16:11:55,707 INFO    SystemMonitor:43062 [interfaces.py:start():190] Started network monitoring
+2024-06-02 16:11:55,770 DEBUG   HandlerThread:43062 [system_info.py:probe():150] Probing system
+2024-06-02 16:11:55,777 DEBUG   HandlerThread:43062 [system_info.py:_probe_git():135] Probing git
+2024-06-02 16:11:55,792 DEBUG   HandlerThread:43062 [system_info.py:_probe_git():143] Probing git done
+2024-06-02 16:11:55,792 DEBUG   HandlerThread:43062 [system_info.py:probe():198] Probing system done
+2024-06-02 16:11:55,792 DEBUG   HandlerThread:43062 [system_monitor.py:probe():223] {'os': 'Linux-5.4.0-152-generic-x86_64-with-glibc2.17', 'python': '3.8.19', 'heartbeatAt': '2024-06-02T08:11:55.771057', 'startedAt': '2024-06-02T08:11:52.148822', 'docker': None, 'cuda': None, 'args': ('--exptid', 'loc-h1-wow', '--task=wow', '--device', 'cuda:0'), 'state': 'running', 'program': 'train.py', 'codePathLocal': 'train.py', 'codePath': 'legged_train/legged_gym/scripts/train.py', 'git': {'remote': 'git@github.com:inFpZero/Locomotion_Baseline.git', 'commit': '7fd383b226bab78e070f861bf92115771c9e3afc'}, 'email': 'ibean625@gmail.com', 'root': '/home/lenovo/chenxi/baseline_2/Locomotion_Baseline', 'host': 'lenovo', 'username': 'lenovo', 'executable': '/home/lenovo/chenxi/anaconda3/envs/legged_base/bin/python', 'cpu_count': 32, 'cpu_count_logical': 64, 'cpu_freq': {'current': 1080.5741406250004, 'min': 1000.0, 'max': 3900.0}, 'cpu_freq_per_core': [{'current': 1000.054, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.068, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.108, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.096, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.886, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.91, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.002, 'min': 1000.0, 'max': 3900.0}, {'current': 1001.044, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.32, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.511, 'min': 1000.0, 'max': 3900.0}, {'current': 1001.037, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.344, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.143, 'min': 1000.0, 'max': 3900.0}, {'current': 3547.57, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.122, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.198, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.942, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.163, 'min': 1000.0, 'max': 3900.0}, {'current': 1274.493, 'min': 1000.0, 'max': 3900.0}, {'current': 1001.549, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.142, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.693, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.014, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.739, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.618, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.304, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.147, 'min': 1000.0, 'max': 3900.0}, {'current': 1001.502, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.072, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.254, 'min': 1000.0, 'max': 3900.0}, {'current': 1001.055, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.652, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.214, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.944, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.458, 'min': 1000.0, 'max': 3900.0}, {'current': 999.969, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.108, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.753, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.579, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.27, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.283, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.346, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.103, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.826, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.971, 'min': 1000.0, 'max': 3900.0}, {'current': 3131.96, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.13, 'min': 1000.0, 'max': 3900.0}, {'current': 1001.356, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.77, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.142, 'min': 1000.0, 'max': 3900.0}, {'current': 1858.313, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.08, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.611, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.732, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.859, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.239, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.19, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.402, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.231, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.759, 'min': 1000.0, 'max': 3900.0}, {'current': 1002.044, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.409, 'min': 1000.0, 'max': 3900.0}, {'current': 1001.306, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.149, 'min': 1000.0, 'max': 3900.0}], 'disk': {'/': {'total': 3753.978012084961, 'used': 110.4874153137207}}, 'gpu': 'NVIDIA GeForce RTX 4080', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 4080', 'memory_total': 17171480576}], 'memory': {'total': 125.48954391479492}}
+2024-06-02 16:11:55,792 INFO    HandlerThread:43062 [system_monitor.py:probe():224] Finished collecting system info
+2024-06-02 16:11:55,792 INFO    HandlerThread:43062 [system_monitor.py:probe():227] Publishing system info
+2024-06-02 16:11:55,792 DEBUG   HandlerThread:43062 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-06-02 16:11:56,786 INFO    Thread-12 :43062 [dir_watcher.py:_on_file_created():271] file/dir created: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240602_161152-ijvi2f0o/files/conda-environment.yaml
+2024-06-02 16:11:57,114 DEBUG   HandlerThread:43062 [system_info.py:_save_conda():222] Saving conda packages done
+2024-06-02 16:11:57,117 INFO    HandlerThread:43062 [system_monitor.py:probe():229] Finished publishing system info
+2024-06-02 16:11:57,129 DEBUG   SenderThread:43062 [sender.py:send():379] send: files
+2024-06-02 16:11:57,130 INFO    SenderThread:43062 [sender.py:_save_file():1390] saving file wandb-metadata.json with policy now
+2024-06-02 16:11:57,208 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: python_packages
+2024-06-02 16:11:57,209 DEBUG   SenderThread:43062 [sender.py:send_request():406] send_request: python_packages
+2024-06-02 16:11:57,211 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: status_report
+2024-06-02 16:11:57,211 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-02 16:11:57,212 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-02 16:11:57,213 DEBUG   SenderThread:43062 [sender.py:send_request():406] send_request: stop_status
+2024-06-02 16:11:57,782 INFO    Thread-12 :43062 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240602_161152-ijvi2f0o/files/conda-environment.yaml
+2024-06-02 16:11:57,783 INFO    Thread-12 :43062 [dir_watcher.py:_on_file_created():271] file/dir created: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240602_161152-ijvi2f0o/files/base/legged_robot.py
+2024-06-02 16:11:57,783 INFO    Thread-12 :43062 [dir_watcher.py:_on_file_created():271] file/dir created: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240602_161152-ijvi2f0o/files/base/legged_robot_config.py
+2024-06-02 16:11:57,784 INFO    Thread-12 :43062 [dir_watcher.py:_on_file_created():271] file/dir created: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240602_161152-ijvi2f0o/files/wandb-metadata.json
+2024-06-02 16:11:57,784 INFO    Thread-12 :43062 [dir_watcher.py:_on_file_created():271] file/dir created: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240602_161152-ijvi2f0o/files/requirements.txt
+2024-06-02 16:11:57,784 INFO    Thread-12 :43062 [dir_watcher.py:_on_file_created():271] file/dir created: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240602_161152-ijvi2f0o/files/base
+2024-06-02 16:11:57,920 DEBUG   SenderThread:43062 [sender.py:send():379] send: telemetry
+2024-06-02 16:11:57,921 DEBUG   SenderThread:43062 [sender.py:send():379] send: telemetry
+2024-06-02 16:11:57,921 DEBUG   SenderThread:43062 [sender.py:send():379] send: files
+2024-06-02 16:11:57,922 INFO    SenderThread:43062 [sender.py:_save_file():1390] saving file base/legged_robot_config.py with policy now
+2024-06-02 16:11:57,922 DEBUG   SenderThread:43062 [sender.py:send():379] send: files
+2024-06-02 16:11:57,922 INFO    SenderThread:43062 [sender.py:_save_file():1390] saving file base/legged_robot.py with policy now
+2024-06-02 16:11:58,677 INFO    wandb-upload_0:43062 [upload_job.py:push():131] Uploaded file /tmp/tmp_y6wssxvwandb/mluib4vd-wandb-metadata.json
+2024-06-02 16:11:58,783 INFO    Thread-12 :43062 [dir_watcher.py:_on_file_created():271] file/dir created: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240602_161152-ijvi2f0o/files/output.log
+2024-06-02 16:11:59,015 INFO    wandb-upload_1:43062 [upload_job.py:push():131] Uploaded file /tmp/tmp_y6wssxvwandb/wbd545dm-base/legged_robot_config.py
+2024-06-02 16:11:59,614 INFO    wandb-upload_2:43062 [upload_job.py:push():131] Uploaded file /tmp/tmp_y6wssxvwandb/2g3z29ht-base/legged_robot.py
+2024-06-02 16:12:00,784 INFO    Thread-12 :43062 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240602_161152-ijvi2f0o/files/output.log
+2024-06-02 16:12:02,629 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: status_report
+2024-06-02 16:12:02,785 INFO    Thread-12 :43062 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240602_161152-ijvi2f0o/files/output.log
+2024-06-02 16:12:07,630 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: status_report
+2024-06-02 16:12:12,631 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: status_report
+2024-06-02 16:12:17,632 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: status_report
+2024-06-02 16:12:22,638 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: status_report
+2024-06-02 16:12:23,796 INFO    Thread-12 :43062 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240602_161152-ijvi2f0o/files/config.yaml
+2024-06-02 16:12:28,143 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: status_report
+2024-06-02 16:12:33,144 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: status_report
+2024-06-02 16:12:38,145 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: status_report
+2024-06-02 16:12:43,146 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: status_report
+2024-06-02 16:12:46,725 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-02 16:12:46,726 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-02 16:12:46,726 DEBUG   SenderThread:43062 [sender.py:send_request():406] send_request: stop_status
+2024-06-02 16:12:48,293 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: status_report
+2024-06-02 16:12:48,809 INFO    Thread-12 :43062 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240602_161152-ijvi2f0o/files/output.log
+2024-06-02 16:12:53,294 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: status_report
+2024-06-02 16:12:54,195 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: keepalive
+2024-06-02 16:12:55,708 DEBUG   SystemMonitor:43062 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-06-02 16:12:55,712 DEBUG   SenderThread:43062 [sender.py:send():379] send: stats
+2024-06-02 16:12:56,813 INFO    Thread-12 :43062 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240602_161152-ijvi2f0o/files/output.log
+2024-06-02 16:12:58,465 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: status_report
+2024-06-02 16:12:58,814 INFO    Thread-12 :43062 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240602_161152-ijvi2f0o/files/output.log
+2024-06-02 16:13:00,815 INFO    Thread-12 :43062 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240602_161152-ijvi2f0o/files/output.log
+2024-06-02 16:13:01,795 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-02 16:13:01,796 DEBUG   SenderThread:43062 [sender.py:send_request():406] send_request: stop_status
+2024-06-02 16:13:01,796 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-02 16:13:04,268 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: status_report
+2024-06-02 16:13:04,571 DEBUG   SenderThread:43062 [sender.py:send():379] send: telemetry
+2024-06-02 16:13:04,571 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: partial_history
+2024-06-02 16:13:06,493 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: partial_history
+2024-06-02 16:13:06,500 DEBUG   SenderThread:43062 [sender.py:send():379] send: history
+2024-06-02 16:13:06,501 DEBUG   SenderThread:43062 [sender.py:send_request():406] send_request: summary_record
+2024-06-02 16:13:06,502 INFO    SenderThread:43062 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-06-02 16:13:06,818 INFO    Thread-12 :43062 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240602_161152-ijvi2f0o/files/output.log
+2024-06-02 16:13:06,819 INFO    Thread-12 :43062 [dir_watcher.py:_on_file_created():271] file/dir created: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240602_161152-ijvi2f0o/files/wandb-summary.json
+2024-06-02 16:13:08,653 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: partial_history
+2024-06-02 16:13:08,656 DEBUG   SenderThread:43062 [sender.py:send():379] send: history
+2024-06-02 16:13:08,657 DEBUG   SenderThread:43062 [sender.py:send_request():406] send_request: summary_record
+2024-06-02 16:13:08,658 INFO    SenderThread:43062 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-06-02 16:13:08,819 INFO    Thread-12 :43062 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240602_161152-ijvi2f0o/files/wandb-summary.json
+2024-06-02 16:13:08,820 INFO    Thread-12 :43062 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240602_161152-ijvi2f0o/files/output.log
+2024-06-02 16:13:09,659 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: status_report
+2024-06-02 16:13:10,820 INFO    Thread-12 :43062 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240602_161152-ijvi2f0o/files/output.log
+2024-06-02 16:13:10,905 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: partial_history
+2024-06-02 16:13:10,909 DEBUG   SenderThread:43062 [sender.py:send():379] send: history
+2024-06-02 16:13:10,910 DEBUG   SenderThread:43062 [sender.py:send_request():406] send_request: summary_record
+2024-06-02 16:13:10,911 INFO    SenderThread:43062 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-06-02 16:13:11,823 INFO    Thread-12 :43062 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240602_161152-ijvi2f0o/files/wandb-summary.json
+2024-06-02 16:13:12,824 INFO    Thread-12 :43062 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240602_161152-ijvi2f0o/files/output.log
+2024-06-02 16:13:13,201 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: partial_history
+2024-06-02 16:13:13,204 DEBUG   SenderThread:43062 [sender.py:send():379] send: history
+2024-06-02 16:13:13,205 DEBUG   SenderThread:43062 [sender.py:send_request():406] send_request: summary_record
+2024-06-02 16:13:13,206 INFO    SenderThread:43062 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-06-02 16:13:13,826 INFO    Thread-12 :43062 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240602_161152-ijvi2f0o/files/wandb-summary.json
+2024-06-02 16:13:14,827 INFO    Thread-12 :43062 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240602_161152-ijvi2f0o/files/output.log
+2024-06-02 16:13:15,207 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: status_report
+2024-06-02 16:13:15,612 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: partial_history
+2024-06-02 16:13:15,615 DEBUG   SenderThread:43062 [sender.py:send():379] send: history
+2024-06-02 16:13:15,616 DEBUG   SenderThread:43062 [sender.py:send_request():406] send_request: summary_record
+2024-06-02 16:13:15,617 INFO    SenderThread:43062 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-06-02 16:13:15,829 INFO    Thread-12 :43062 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240602_161152-ijvi2f0o/files/wandb-summary.json
+2024-06-02 16:13:16,794 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-02 16:13:16,795 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-02 16:13:16,796 DEBUG   SenderThread:43062 [sender.py:send_request():406] send_request: stop_status
+2024-06-02 16:13:18,081 DEBUG   HandlerThread:43062 [handler.py:handle_request():146] handle_request: partial_history
+2024-06-02 16:13:18,084 DEBUG   SenderThread:43062 [sender.py:send():379] send: history
+2024-06-02 16:13:18,085 DEBUG   SenderThread:43062 [sender.py:send_request():406] send_request: summary_record
+2024-06-02 16:13:18,086 INFO    SenderThread:43062 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end

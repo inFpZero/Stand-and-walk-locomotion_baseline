@@ -102,7 +102,7 @@ class TaskRegistry():
                             headless=args.headless)
         return env, env_cfg
 
-    def make_alg_runner(self, env, name=None, args=None, train_cfg=None, init_swanlab=True, log_root="default", **kwargs) -> Tuple[OnPolicyRunner, LeggedRobotCfgPPO]:
+    def make_alg_runner(self, env, name=None, args=None, train_cfg=None, init_wandb=True, log_root="default", **kwargs) -> Tuple[OnPolicyRunner, LeggedRobotCfgPPO]:
         """ Creates the training algorithm  either from a registered namme or from the provided config file.
 
         Args:

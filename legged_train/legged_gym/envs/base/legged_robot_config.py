@@ -324,7 +324,7 @@ class LeggedRobotCfg(BaseConfig):
         Kd_factor_range = [0.8, 1.2]
         
         randomize_force_inject = True
-        RFI_range = [-0.1, 0.1]
+        RFI_range = [-0.05, 0.05]
 
         randomize_actuate_offset = False # don't be ture
         RAO_range = [-0.1, 0.1]
