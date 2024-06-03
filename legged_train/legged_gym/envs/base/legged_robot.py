@@ -583,39 +583,32 @@ class LeggedRobot(BaseTask):
             if self.cfg.commands.heading_command:
                 self.commands[env_ids, 3] = torch_rand_float(self.command_ranges["heading"][0], self.command_ranges["heading"][1], (len(env_ids), 1), device=self.device).squeeze(1)
                 
-                #将一些环境用于单独训练，前进后退、横向移动、旋转
-                num_of_single_command_env= math.ceil(len(env_ids) / 4)  
-                single_command_indices = torch.randperm(len(env_ids))[:num_of_single_command_env]  
+                # #将一些环境用于单独训练，前进后退、横向移动、旋转
+                # num_of_single_command_env= math.ceil(len(env_ids) / 4)  
+                # single_command_indices = torch.randperm(len(env_ids))[:num_of_single_command_env]  
 
-                #单独旋转训练
-                env_ids_to_ang = env_ids[single_command_indices]  
-                self.commands[env_ids_to_ang, 0] = torch.zeros_like(self.commands[env_ids_to_ang, 0])
-                self.commands[env_ids_to_ang, 1] = torch.zeros_like(self.commands[env_ids_to_ang, 1])
+                # #单独旋转训练
+                # env_ids_to_ang = env_ids[single_command_indices]  
+                # self.commands[env_ids_to_ang, 0] = torch.zeros_like(self.commands[env_ids_to_ang, 0])
+                # self.commands[env_ids_to_ang, 1] = torch.zeros_like(self.commands[env_ids_to_ang, 1])
 
-                #从旋转数个体中选取一部分，单独前后移动训练
-                num_of_single_command_env= math.ceil(len(env_ids_to_ang) / 2)  
-                single_command_indices = torch.randperm(len(env_ids_to_ang))[:num_of_single_command_env]   
+                # #从旋转数个体中选取一部分，单独前后移动训练
+                # num_of_single_command_env= math.ceil(len(env_ids_to_ang) / 2)  
+                # single_command_indices = torch.randperm(len(env_ids_to_ang))[:num_of_single_command_env]   
 
-                env_ids_to_back_and_forward=env_ids[single_command_indices]  
-                self.commands[env_ids_to_back_and_forward, 0] = torch_rand_float(self.command_ranges["lin_vel_x"][0], self.command_ranges["lin_vel_x"][1], (len(env_ids_to_back_and_forward), 1), device=self.device).squeeze(1)
-                self.commands[env_ids_to_back_and_forward, 1] = torch.zeros_like(self.commands[env_ids_to_back_and_forward, 1])
-                self.commands[env_ids_to_back_and_forward, 3] = torch.zeros_like(self.commands[env_ids_to_back_and_forward, 3])  
+                # env_ids_to_back_and_forward=env_ids[single_command_indices]  
+                # self.commands[env_ids_to_back_and_forward, 0] = torch_rand_float(self.command_ranges["lin_vel_x"][0], self.command_ranges["lin_vel_x"][1], (len(env_ids_to_back_and_forward), 1), device=self.device).squeeze(1)
+                # self.commands[env_ids_to_back_and_forward, 1] = torch.zeros_like(self.commands[env_ids_to_back_and_forward, 1])
+                # self.commands[env_ids_to_back_and_forward, 3] = torch.zeros_like(self.commands[env_ids_to_back_and_forward, 3])  
 
-                #从前后移动个体中，单独横向移动训练
-                num_of_single_command_env= math.ceil(len(env_ids_to_back_and_forward) / 3)  
-                single_command_indices = torch.randperm(len(env_ids_to_back_and_forward))[:num_of_single_command_env]  
+                # #从前后移动个体中，单独横向移动训练
+                # num_of_single_command_env= math.ceil(len(env_ids_to_back_and_forward) / 3)  
+                # single_command_indices = torch.randperm(len(env_ids_to_back_and_forward))[:num_of_single_command_env]  
 
-                env_ids_to_sldle=env_ids[single_command_indices]  
-                self.commands[env_ids_to_sldle, 0] = torch.zeros_like(self.commands[env_ids_to_sldle, 0])
-                self.commands[env_ids_to_sldle, 1] = torch_rand_float(self.command_ranges["lin_vel_y"][0], self.command_ranges["lin_vel_y"][1], (len(env_ids_to_sldle), 1), device=self.device).squeeze(1)
-                self.commands[env_ids_to_sldle, 3] = torch.zeros_like(self.commands[env_ids_to_sldle, 3])  
-   
-
-            
-            
-            
-            
-            
+                # env_ids_to_sldle=env_ids[single_command_indices]  
+                # self.commands[env_ids_to_sldle, 0] = torch.zeros_like(self.commands[env_ids_to_sldle, 0])
+                # self.commands[env_ids_to_sldle, 1] = torch_rand_float(self.command_ranges["lin_vel_y"][0], self.command_ranges["lin_vel_y"][1], (len(env_ids_to_sldle), 1), device=self.device).squeeze(1)
+                # self.commands[env_ids_to_sldle, 3] = torch.zeros_like(self.commands[env_ids_to_sldle, 3]
             
             else:
                 self.commands[env_ids, 2] = torch_rand_float(self.command_ranges["ang_vel_yaw"][0], self.command_ranges["ang_vel_yaw"][1], (len(env_ids), 1), device=self.device).squeeze(1)

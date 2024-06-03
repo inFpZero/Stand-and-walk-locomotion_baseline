@@ -27,3 +27,4 @@ config: {'action_difference': 0.02, 'ang_vel_xy': -0.1, 'base_acc': 0.02, 'base_
 2024-06-03 14:15:04,036 INFO    MainThread:23994 [wandb_run.py:_redirect():2280] Redirects installed.
 2024-06-03 14:15:04,036 INFO    MainThread:23994 [wandb_init.py:init():842] run started, returning control to user process
 2024-06-03 14:15:04,037 INFO    MainThread:23994 [wandb_run.py:_config_callback():1347] config_cb None None {'action_difference': 0.02, 'ang_vel_xy': -0.1, 'base_acc': 0.02, 'base_height': 0.003, 'dof_acc': -8e-07, 'dof_pos_limits': -1.5, 'dof_vel': -8e-05, 'feet_air_time': 0.5, 'foot_height': -0.12, 'foot_position_stand': 0.03, 'lin_vel_z': -0.8, 'orientation': -0.5, 'torques': 0.02, 'tracking_ang_vel': 1.0, 'tracking_lin_vel': 1.0, 'tracking_x_vel': 2, 'tracking_y_vel': 2}
+2024-06-03 14:59:43,076 WARNING MsgRouterThr:23994 [router.py:message_loop():77] message_loop has been closed
