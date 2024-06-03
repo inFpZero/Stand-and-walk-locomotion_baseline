@@ -14,5 +14,5 @@ __pycache__
 # model
 legged_train/logs/
 
-legged_train/scripts/wandb/
+legged_train/legged_gym/scripts/wandb/
 #
