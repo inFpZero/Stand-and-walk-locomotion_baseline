@@ -278,7 +278,7 @@ class LeggedRobotCfg(BaseConfig):
         foot_name = "None" # name of the feet bodies, used to index body state and contact force tensors
         penalize_contacts_on = []
         terminate_after_contacts_on = []
-        disable_gravity = False
+        disable_gravity = True
         collapse_fixed_joints = True # merge bodies connected by fixed joints. Specific fixed joints can be kept by adding " <... dont_collapse="true">
         fix_base_link = False # fixe the base of the robot
         default_dof_drive_mode = 3 # see GymDofDriveModeFlags (0 is none, 1 is pos tgt, 2 is vel tgt, 3 effort)
@@ -307,7 +307,7 @@ class LeggedRobotCfg(BaseConfig):
         added_mass_range = [-0.3, 0.3]
 
         randomize_base_com = True
-        added_com_range = [-0.2, 0.2]
+        added_com_range = [-0.05, 0.05]
 
         randomize_link_mass = True
         link_mass_range = [0.8, 1.2]
@@ -336,7 +336,7 @@ class LeggedRobotCfg(BaseConfig):
         max_push_vel_xy = 0.7
 
         disturbance = True
-        disturbance_range = [-30.0, 30.0]
+        disturbance_range = [-10.0, 10.0]
         disturbance_interval = 8
 
         ##--------------------------

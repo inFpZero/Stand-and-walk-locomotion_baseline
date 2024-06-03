@@ -101,9 +101,9 @@ def play(args):
     env_cfg.depth.angle = [0, 1]
     env_cfg.noise.add_noise = True
     env_cfg.domain_rand.randomize_friction = True
-    env_cfg.domain_rand.push_robots = False
-    env_cfg.domain_rand.push_interval_s = 6
-    env_cfg.domain_rand.randomize_base_mass = False
+    env_cfg.domain_rand.push_robots = True
+    env_cfg.domain_rand.push_interval_s = 10
+    env_cfg.domain_rand.randomize_base_mass = True
     env_cfg.domain_rand.randomize_base_com = False
     env_cfg.commands.heading_command = False
 
@@ -111,7 +111,6 @@ def play(args):
     # prepare environment
     env, _ = task_registry.make_env(name=args.task, args=args, env_cfg=env_cfg)
     obs = env.get_observations()
-    obs_history = env.get_history_observations()
 
     if args.web:
         web_viewer.setup(env)
@@ -130,17 +129,18 @@ def play(args):
         policy = ppo_runner.get_inference_policy(device=env.device)
 
         
-    actions = torch.zeros(env.num_envs, 12, device=env.device, requires_grad=False)
+    actions = torch.zeros(env.num_envs, env.num_actions, device=env.device, requires_grad=False)
     infos = {}
-    labol = torch.tensor([3], device=env.device)
     count = 0
-    latent_buffer = []
 
     for i in range(10*int(env.max_episode_length)):
 
-        actions = policy(obs.detach(), obs_history.detach())
+        actions = policy(obs.detach())
+
+        actions[:,0:9]=0
+        actions[1,0]=1
         
-        obs, _,obs_history, rews, dones, infos = env.step(actions.detach())
+        obs, _, rews, dones, infos = env.step(actions.detach())
         
         if args.web:
             web_viewer.render(fetch_results=True,

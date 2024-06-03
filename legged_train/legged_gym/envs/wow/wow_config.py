@@ -20,7 +20,7 @@ class wowRoughCfg( LeggedRobotCfg ):
         measured_points_y = [-0.75, -0.6, -0.45, -0.3, -0.15, 0.,  0.15, 0.3, 0.45, 0.6, 0.75]
 
     class init_state( LeggedRobotCfg.init_state ):
-        pos = [0.0, 0.0, 0.9] # x,y,z [m]
+        pos = [0.0, 0.0, 5.9] # x,y,z [m]
         default_joint_angles = { # = target angles [rad] when action = 0.0
             'left_roll_joint': 0,   # [rad]
             'left_yaw_joint': 0,   # [rad]
@@ -57,7 +57,7 @@ class wowRoughCfg( LeggedRobotCfg ):
   
     class rewards( LeggedRobotCfg.rewards ):
         soft_dof_pos_limit = 0.9
-        base_height_target = 0.85
+        base_height_target = 0.9
         only_positive_rewards = False # if true negative total rewards are clipped at zero (avoids early termination problems)
         class scales( LeggedRobotCfg.rewards.scales ):
             # # termination = -200.
@@ -176,20 +176,14 @@ class wowRoughCfg( LeggedRobotCfg ):
             tracking_x_vel = 5
             tracking_y_vel = 3
             tracking_ang_vel = 1.
-
             dof_vel=-6e-5
             dof_acc=-6e-7
-
             lin_vel_z = -0.3
             ang_vel_xy = -0.05
-
             dof_pos_limits = -0.3
             foot_height=-0.3
-            
-
             orientation = -8
-
-            feet_air_time=1.
+            feet_air_time=2.
 
 
 
