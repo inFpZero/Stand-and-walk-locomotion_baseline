@@ -57,7 +57,7 @@ class wowRoughCfg( LeggedRobotCfg ):
   
     class rewards( LeggedRobotCfg.rewards ):
         soft_dof_pos_limit = 0.9
-        base_height_target = 0.9
+        base_height_target = 0.85
         only_positive_rewards = False # if true negative total rewards are clipped at zero (avoids early termination problems)
         class scales( LeggedRobotCfg.rewards.scales ):
             # # termination = -200.
@@ -166,29 +166,30 @@ class wowRoughCfg( LeggedRobotCfg ):
 
 
             #walk and stand on falt
-            base_height=0.01
-            foot_position_stand=0.09
+            base_height=0.005
+            # foot_position_stand=0.008
             # arm_position=0.08
             # arm_position_stand=0.16
             base_acc=0.02
             action_difference=0.02
             torques=0.02
-            tracking_x_vel = 2
-            tracking_y_vel = 2
+            tracking_x_vel = 5
+            tracking_y_vel = 3
             tracking_ang_vel = 1.
 
-            dof_vel=-4e-4
-            dof_acc=-4e-6
+            dof_vel=-6e-5
+            dof_acc=-6e-7
 
-            lin_vel_z = -0.8
-            ang_vel_xy = -0.1
+            lin_vel_z = -0.3
+            ang_vel_xy = -0.05
 
-            dof_pos_limits = -2
-            foot_height=-0.12
+            dof_pos_limits = -0.3
+            foot_height=-0.3
+            
 
-            orientation = -1
+            orientation = -8
 
-            feet_air_time=0.5
+            feet_air_time=1.
 
 
 
