@@ -142,7 +142,7 @@ class LeggedRobotCfg(BaseConfig):
         stepping_stone_distance = [0.02, 0.08]
         downsampled_scale = 0.075
         max_stair_height = 0.23
-        curriculum = True
+        curriculum = False
 
         all_vertical = False
         no_flat = True
@@ -165,15 +165,15 @@ class LeggedRobotCfg(BaseConfig):
         num_cols = 20 # number of terrain cols (types)
 
         terrain_dict = {
-                "smooth slope": 0.1, 
-                "rough slope up": 0.1,
-                "rough slope down":0.1,
+                "smooth slope": 0.0, 
+                "rough slope up": 0.0,
+                "rough slope down":0.0,
                 "stairs up": 0., 
                 "stairs down": 0., 
                 "discrete": 0., 
                 "stepping stones": 0.,
                 "gaps": 0., 
-                "smooth flat": 0.1,
+                "smooth flat": 0.0,
                 "pit": 0.0,
                 "wall": 0.0,
                 "platform": 0,
@@ -184,7 +184,7 @@ class LeggedRobotCfg(BaseConfig):
                 "parkour_flat": 0.,
                 "parkour_step": 0.,
                 "parkour_gap": 0,
-                "plane": 0.1,
+                "plane": 1,
                 "demo": 0.0,
                 "icra_qrc_a":0.,
                 "icra_qrc_b":0.,
@@ -282,7 +282,7 @@ class LeggedRobotCfg(BaseConfig):
         collapse_fixed_joints = True # merge bodies connected by fixed joints. Specific fixed joints can be kept by adding " <... dont_collapse="true">
         fix_base_link = False # fixe the base of the robot
         default_dof_drive_mode = 3 # see GymDofDriveModeFlags (0 is none, 1 is pos tgt, 2 is vel tgt, 3 effort)
-        self_collisions = 0 # 1 to disable, 0 to enable...bitwise filter
+        self_collisions = 1 # 1 to disable, 0 to enable...bitwise filter
         replace_cylinder_with_capsule = True # replace collision cylinders with capsules, leads to faster/more stable simulation
         flip_visual_attachments = False # Some .obj meshes must be flipped from y-up to z-up
         
@@ -304,7 +304,7 @@ class LeggedRobotCfg(BaseConfig):
         ##--------------------------
 
         randomize_base_mass = True
-        added_mass_range = [-1, 2.]
+        added_mass_range = [-0.5, 0.5]
 
         randomize_base_com = True
         added_com_range = [-0.2, 0.2]
@@ -332,7 +332,7 @@ class LeggedRobotCfg(BaseConfig):
         ##--------------------------
         
         push_robots = True
-        push_interval_s = 15
+        push_interval_s = 10
         max_push_vel_xy = 1
 
         disturbance = True
@@ -342,14 +342,14 @@ class LeggedRobotCfg(BaseConfig):
         ##--------------------------
 
         action_delay = True
-        delay_inject_steps = 24 * 0
+        delay_inject_steps = 24 * 1
 
         
     class rewards:
         class scales:
             tracking_lin_vel = 1.0
 
-        only_positive_rewards = True # if true negative total rewards are clipped at zero (avoids early termination problems)
+        only_positive_rewards = False # if true negative total rewards are clipped at zero (avoids early termination problems)
         tracking_sigma = 0.25 # tracking reward = exp(-error^2/sigma)
         soft_dof_pos_limit = 1 # percentage of urdf limits, values above this limit are penalized
         soft_dof_vel_limit = 1

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "train.py", line 72, in <module>
+    train(args)
+  File "train.py", line 65, in train
+    env, env_cfg = task_registry.make_env(name=args.task, args=args)
+  File "/home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/utils/task_registry.py", line 98, in make_env
+    env = task_class(   cfg=env_cfg,
+  File "/home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/envs/base/legged_robot.py", line 111, in __init__
+    wandb.save(LEGGED_GYM_ENVS_DIR + "/base/legged_robot_config.py", policy="now")
+NameError: name 'LEGGED_GYM_ENVS_DIR' is not defined

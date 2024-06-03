@@ -1,0 +1,34 @@
+Setting seed: 1
+********************************************************************************
+Start creating ground...
+Converting heightmap to trimesh...
+Created 5913600 vertices
+Created 11816962 triangles
+Adding trimesh to simulation...
+[34m[1mwandb[39m[22m: [33mWARNING[39m Saving files without folders. If you want to preserve subdirectories pass base_path to wandb.save, i.e. wandb.save("/mnt/folder/file.h5", base_path="/mnt")
+Trimesh added
+Finished creating ground. Time taken 45.70 s
+********************************************************************************
+ 10%|███▋                                  | 394/4096 [00:00<00:02, 1463.00it/s]
+force sensors set at: ['body', 'left_roll_Link', 'left_yaw_Link', 'left_pitch_Link', 'left_knee_Link', 'left_foot_Link', 'right_roll_Link', 'right_yaw_Link', 'right_pitch_Link', 'right_knee_Link', 'right_foot_Link']
+
+
+100%|█████████████████████████████████████| 4096/4096 [00:02<00:00, 1753.98it/s]
+/home/lenovo/chenxi/anaconda3/envs/legged_base/lib/python3.8/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /opt/conda/conda-bld/pytorch_1666642975312/work/aten/src/ATen/native/TensorShape.cpp:3190.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Traceback (most recent call last):
+  File "train.py", line 73, in <module>
+    train(args)
+  File "train.py", line 66, in train
+    env, env_cfg = task_registry.make_env(name=args.task, args=args)
+  File "/home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/utils/task_registry.py", line 98, in make_env
+    env = task_class(   cfg=env_cfg,
+  File "/home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/envs/base/legged_robot.py", line 120, in __init__
+    self.post_physics_step()
+  File "/home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/envs/base/legged_robot.py", line 190, in post_physics_step
+    self.compute_reward()
+  File "/home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/envs/base/legged_robot.py", line 320, in compute_reward
+    rew = self.reward_functions[i]() * self.reward_scales[name]
+  File "/home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/envs/wow/wow.py", line 118, in _reward_foot_position_stand
+    self.get_target_angles()
+AttributeError: 'Wow' object has no attribute 'get_target_angles'

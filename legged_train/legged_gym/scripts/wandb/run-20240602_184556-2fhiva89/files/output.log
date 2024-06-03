@@ -1,0 +1,3743 @@
+
+[34m[1mwandb[39m[22m: [33mWARNING[39m Saving files without folders. If you want to preserve subdirectories pass base_path to wandb.save, i.e. wandb.save("/mnt/folder/file.h5", base_path="/mnt")
+Setting seed: 1
+********************************************************************************
+Start creating ground...
+Converting heightmap to trimesh...
+Created 5913600 vertices
+Created 11816962 triangles
+Adding trimesh to simulation...
+Trimesh added
+Finished creating ground. Time taken 47.88 s
+********************************************************************************
+force sensors set at: ['body', 'left_roll_Link', 'left_yaw_Link', 'left_pitch_Link', 'left_knee_Link', 'left_foot_Link', 'right_roll_Link', 'right_yaw_Link', 'right_pitch_Link', 'right_knee_Link', 'right_foot_Link']
+Creating env...
+
+100%|██████████████████████████████████████████████████████████████████████████████████| 4096/4096 [00:02<00:00, 1755.16it/s]
+wow
+ActorCritic.__init__ got unexpected arguments, which will be ignored: ['adapt_hidden_dims', 'estimate_hidden_dims']
+Actor MLP: Sequential(
+  (0): Linear(in_features=41, out_features=512, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=512, out_features=256, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=256, out_features=128, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=128, out_features=10, bias=True)
+)
+Critic MLP: Sequential(
+  (0): Linear(in_features=611, out_features=512, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=512, out_features=256, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=256, out_features=128, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=128, out_features=1, bias=True)
+)
+/home/lenovo/chenxi/anaconda3/envs/legged_base/lib/python3.8/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /opt/conda/conda-bld/pytorch_1666642975312/work/aten/src/ATen/native/TensorShape.cpp:3190.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+################################################################################
+                      [1m Learning iteration 0/50000 
+                       Computation: 8320 steps/s (collection: 11.529s, learning 0.287s)
+               Value function loss: 0.0391
+                    Surrogate loss: 0.0142
+             Mean action noise std: 1.00
+               Mean reward (total): 0.00
+               Mean episode length: 15.47
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0030
+       Mean episode rew_ang_vel_xy: -0.0132
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0273
+   Mean episode rew_dof_pos_limits: -0.0008
+          Mean episode rew_dof_vel: -0.0013
+      Mean episode rew_foot_height: -0.0013
+      Mean episode rew_joint_power: -0.0006
+        Mean episode rew_lin_vel_z: -0.0080
+      Mean episode rew_orientation: -0.0004
+       Mean episode rew_smoothness: -0.0082
+      Mean episode rew_stand_still: -0.0003
+          Mean episode rew_torques: -0.0003
+ Mean episode rew_tracking_ang_vel: 0.0016
+ Mean episode rew_tracking_lin_vel: 0.0029
+        Mean episode terrain_level: 1.7838
+--------------------------------------------------------------------------------
+                   Total timesteps: 98304
+                    Iteration time: 11.82s
+                        Total time: 11.82s
+                               ETA: 9846 mins 8.5 s
+################################################################################
+                      [1m Learning iteration 1/50001 
+                       Computation: 8477 steps/s (collection: 11.328s, learning 0.268s)
+               Value function loss: 0.0005
+                    Surrogate loss: -0.0014
+             Mean action noise std: 1.00
+               Mean reward (total): 0.00
+               Mean episode length: 16.42
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0047
+       Mean episode rew_ang_vel_xy: -0.0155
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0324
+   Mean episode rew_dof_pos_limits: -0.0011
+          Mean episode rew_dof_vel: -0.0014
+      Mean episode rew_foot_height: -0.0020
+      Mean episode rew_joint_power: -0.0007
+        Mean episode rew_lin_vel_z: -0.0076
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0136
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0022
+ Mean episode rew_tracking_lin_vel: 0.0037
+        Mean episode terrain_level: 1.1811
+--------------------------------------------------------------------------------
+                   Total timesteps: 196608
+                    Iteration time: 11.60s
+                        Total time: 23.41s
+                               ETA: 9754 mins 21.6 s
+################################################################################
+                      [1m Learning iteration 2/50002 
+                       Computation: 8356 steps/s (collection: 11.488s, learning 0.275s)
+               Value function loss: 0.0001
+                    Surrogate loss: -0.0034
+             Mean action noise std: 1.01
+               Mean reward (total): 0.00
+               Mean episode length: 15.59
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0047
+       Mean episode rew_ang_vel_xy: -0.0158
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0327
+   Mean episode rew_dof_pos_limits: -0.0011
+          Mean episode rew_dof_vel: -0.0014
+      Mean episode rew_foot_height: -0.0020
+      Mean episode rew_joint_power: -0.0007
+        Mean episode rew_lin_vel_z: -0.0076
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0135
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0020
+ Mean episode rew_tracking_lin_vel: 0.0035
+        Mean episode terrain_level: 0.7153
+--------------------------------------------------------------------------------
+                   Total timesteps: 294912
+                    Iteration time: 11.76s
+                        Total time: 35.17s
+                               ETA: 9770 mins 12.0 s
+################################################################################
+                      [1m Learning iteration 3/50003 
+                       Computation: 8245 steps/s (collection: 11.651s, learning 0.271s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0024
+             Mean action noise std: 1.01
+               Mean reward (total): 0.00
+               Mean episode length: 16.07
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0047
+       Mean episode rew_ang_vel_xy: -0.0157
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0327
+   Mean episode rew_dof_pos_limits: -0.0011
+          Mean episode rew_dof_vel: -0.0014
+      Mean episode rew_foot_height: -0.0021
+      Mean episode rew_joint_power: -0.0007
+        Mean episode rew_lin_vel_z: -0.0076
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0135
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0020
+ Mean episode rew_tracking_lin_vel: 0.0035
+        Mean episode terrain_level: 0.4143
+--------------------------------------------------------------------------------
+                   Total timesteps: 393216
+                    Iteration time: 11.92s
+                        Total time: 47.10s
+                               ETA: 9811 mins 5.4 s
+################################################################################
+                      [1m Learning iteration 4/50004 
+                       Computation: 8170 steps/s (collection: 11.756s, learning 0.275s)
+               Value function loss: 0.0000
+                    Surrogate loss: 0.0005
+             Mean action noise std: 1.01
+               Mean reward (total): 0.00
+               Mean episode length: 14.53
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0047
+       Mean episode rew_ang_vel_xy: -0.0156
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0324
+   Mean episode rew_dof_pos_limits: -0.0010
+          Mean episode rew_dof_vel: -0.0014
+      Mean episode rew_foot_height: -0.0021
+      Mean episode rew_joint_power: -0.0007
+        Mean episode rew_lin_vel_z: -0.0077
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0136
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0020
+ Mean episode rew_tracking_lin_vel: 0.0034
+        Mean episode terrain_level: 0.2376
+--------------------------------------------------------------------------------
+                   Total timesteps: 491520
+                    Iteration time: 12.03s
+                        Total time: 59.13s
+                               ETA: 9853 mins 47.1 s
+################################################################################
+                      [1m Learning iteration 5/50005 
+                       Computation: 8076 steps/s (collection: 11.901s, learning 0.270s)
+               Value function loss: 0.0007
+                    Surrogate loss: -0.0011
+             Mean action noise std: 1.01
+               Mean reward (total): 0.00
+               Mean episode length: 14.58
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0047
+       Mean episode rew_ang_vel_xy: -0.0156
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0321
+   Mean episode rew_dof_pos_limits: -0.0011
+          Mean episode rew_dof_vel: -0.0014
+      Mean episode rew_foot_height: -0.0021
+      Mean episode rew_joint_power: -0.0007
+        Mean episode rew_lin_vel_z: -0.0078
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0135
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0020
+ Mean episode rew_tracking_lin_vel: 0.0034
+        Mean episode terrain_level: 0.1325
+--------------------------------------------------------------------------------
+                   Total timesteps: 589824
+                    Iteration time: 12.17s
+                        Total time: 71.30s
+                               ETA: 9901 mins 34.5 s
+################################################################################
+                      [1m Learning iteration 6/50006 
+                       Computation: 8114 steps/s (collection: 11.971s, learning 0.143s)
+               Value function loss: 5.8276
+                    Surrogate loss: 0.0052
+             Mean action noise std: 1.01
+               Mean reward (total): 0.00
+               Mean episode length: 14.36
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0047
+       Mean episode rew_ang_vel_xy: -0.0158
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0324
+   Mean episode rew_dof_pos_limits: -0.0010
+          Mean episode rew_dof_vel: -0.0014
+      Mean episode rew_foot_height: -0.0021
+      Mean episode rew_joint_power: -0.0007
+        Mean episode rew_lin_vel_z: -0.0076
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0134
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0020
+ Mean episode rew_tracking_lin_vel: 0.0034
+        Mean episode terrain_level: 0.0773
+--------------------------------------------------------------------------------
+                   Total timesteps: 688128
+                    Iteration time: 12.11s
+                        Total time: 83.41s
+                               ETA: 9928 mins 53.9 s
+################################################################################
+                      [1m Learning iteration 7/50007 
+                       Computation: 8075 steps/s (collection: 12.029s, learning 0.144s)
+               Value function loss: 0.4308
+                    Surrogate loss: -0.0012
+             Mean action noise std: 1.02
+               Mean reward (total): 0.00
+               Mean episode length: 15.72
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0048
+       Mean episode rew_ang_vel_xy: -0.0156
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0323
+   Mean episode rew_dof_pos_limits: -0.0011
+          Mean episode rew_dof_vel: -0.0014
+      Mean episode rew_foot_height: -0.0021
+      Mean episode rew_joint_power: -0.0007
+        Mean episode rew_lin_vel_z: -0.0074
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0135
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0020
+ Mean episode rew_tracking_lin_vel: 0.0034
+        Mean episode terrain_level: 0.0475
+--------------------------------------------------------------------------------
+                   Total timesteps: 786432
+                    Iteration time: 12.17s
+                        Total time: 95.59s
+                               ETA: 9955 mins 32.3 s
+################################################################################
+                      [1m Learning iteration 8/50008 
+                       Computation: 8037 steps/s (collection: 12.087s, learning 0.145s)
+               Value function loss: 0.2282
+                    Surrogate loss: 0.0002
+             Mean action noise std: 1.03
+               Mean reward (total): 0.00
+               Mean episode length: 15.77
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0048
+       Mean episode rew_ang_vel_xy: -0.0156
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0325
+   Mean episode rew_dof_pos_limits: -0.0011
+          Mean episode rew_dof_vel: -0.0014
+      Mean episode rew_foot_height: -0.0021
+      Mean episode rew_joint_power: -0.0007
+        Mean episode rew_lin_vel_z: -0.0073
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0135
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0020
+ Mean episode rew_tracking_lin_vel: 0.0035
+        Mean episode terrain_level: 0.0266
+--------------------------------------------------------------------------------
+                   Total timesteps: 884736
+                    Iteration time: 12.23s
+                        Total time: 107.82s
+                               ETA: 9981 mins 32.9 s
+################################################################################
+                      [1m Learning iteration 9/50009 
+                       Computation: 7987 steps/s (collection: 12.038s, learning 0.270s)
+               Value function loss: 0.1836
+                    Surrogate loss: -0.0018
+             Mean action noise std: 1.03
+               Mean reward (total): 0.00
+               Mean episode length: 15.49
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0048
+       Mean episode rew_ang_vel_xy: -0.0159
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0320
+   Mean episode rew_dof_pos_limits: -0.0011
+          Mean episode rew_dof_vel: -0.0014
+      Mean episode rew_foot_height: -0.0021
+      Mean episode rew_joint_power: -0.0007
+        Mean episode rew_lin_vel_z: -0.0076
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0136
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0020
+ Mean episode rew_tracking_lin_vel: 0.0034
+        Mean episode terrain_level: 0.0161
+--------------------------------------------------------------------------------
+                   Total timesteps: 983040
+                    Iteration time: 12.31s
+                        Total time: 120.13s
+                               ETA: 10008 mins 40.7 s
+################################################################################
+                     [1m Learning iteration 10/50010 
+                       Computation: 7931 steps/s (collection: 12.123s, learning 0.271s)
+               Value function loss: 0.0433
+                    Surrogate loss: -0.0008
+             Mean action noise std: 1.04
+               Mean reward (total): 0.00
+               Mean episode length: 16.08
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0049
+       Mean episode rew_ang_vel_xy: -0.0159
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0320
+   Mean episode rew_dof_pos_limits: -0.0011
+          Mean episode rew_dof_vel: -0.0014
+      Mean episode rew_foot_height: -0.0021
+      Mean episode rew_joint_power: -0.0007
+        Mean episode rew_lin_vel_z: -0.0074
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0137
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0020
+ Mean episode rew_tracking_lin_vel: 0.0034
+        Mean episode terrain_level: 0.0092
+--------------------------------------------------------------------------------
+                   Total timesteps: 1081344
+                    Iteration time: 12.39s
+                        Total time: 132.52s
+                               ETA: 10037 mins 23.6 s
+################################################################################
+                     [1m Learning iteration 11/50011 
+                       Computation: 7956 steps/s (collection: 12.087s, learning 0.269s)
+               Value function loss: 0.0141
+                    Surrogate loss: 0.0035
+             Mean action noise std: 1.04
+               Mean reward (total): 0.00
+               Mean episode length: 15.80
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0049
+       Mean episode rew_ang_vel_xy: -0.0159
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0326
+   Mean episode rew_dof_pos_limits: -0.0010
+          Mean episode rew_dof_vel: -0.0014
+      Mean episode rew_foot_height: -0.0021
+      Mean episode rew_joint_power: -0.0007
+        Mean episode rew_lin_vel_z: -0.0074
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0137
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0020
+ Mean episode rew_tracking_lin_vel: 0.0033
+        Mean episode terrain_level: 0.0055
+--------------------------------------------------------------------------------
+                   Total timesteps: 1179648
+                    Iteration time: 12.36s
+                        Total time: 144.88s
+                               ETA: 10058 mins 36.9 s
+################################################################################
+                     [1m Learning iteration 12/50012 
+                       Computation: 7804 steps/s (collection: 12.315s, learning 0.281s)
+               Value function loss: 0.0146
+                    Surrogate loss: 0.0033
+             Mean action noise std: 1.05
+               Mean reward (total): 0.00
+               Mean episode length: 14.85
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0049
+       Mean episode rew_ang_vel_xy: -0.0159
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0324
+   Mean episode rew_dof_pos_limits: -0.0011
+          Mean episode rew_dof_vel: -0.0014
+      Mean episode rew_foot_height: -0.0021
+      Mean episode rew_joint_power: -0.0007
+        Mean episode rew_lin_vel_z: -0.0073
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0139
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0020
+ Mean episode rew_tracking_lin_vel: 0.0034
+        Mean episode terrain_level: 0.0032
+--------------------------------------------------------------------------------
+                   Total timesteps: 1277952
+                    Iteration time: 12.60s
+                        Total time: 157.47s
+                               ETA: 10091 mins 55.7 s
+################################################################################
+                     [1m Learning iteration 13/50013 
+                       Computation: 7905 steps/s (collection: 12.161s, learning 0.274s)
+               Value function loss: 0.0049
+                    Surrogate loss: -0.0004
+             Mean action noise std: 1.05
+               Mean reward (total): 0.00
+               Mean episode length: 14.94
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0049
+       Mean episode rew_ang_vel_xy: -0.0158
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0317
+   Mean episode rew_dof_pos_limits: -0.0010
+          Mean episode rew_dof_vel: -0.0014
+      Mean episode rew_foot_height: -0.0021
+      Mean episode rew_joint_power: -0.0007
+        Mean episode rew_lin_vel_z: -0.0074
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0140
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0020
+ Mean episode rew_tracking_lin_vel: 0.0033
+        Mean episode terrain_level: 0.0021
+--------------------------------------------------------------------------------
+                   Total timesteps: 1376256
+                    Iteration time: 12.44s
+                        Total time: 169.91s
+                               ETA: 10110 mins 52.7 s
+################################################################################
+                     [1m Learning iteration 14/50014 
+                       Computation: 7904 steps/s (collection: 12.165s, learning 0.271s)
+               Value function loss: 0.0072
+                    Surrogate loss: -0.0006
+             Mean action noise std: 1.05
+               Mean reward (total): 0.00
+               Mean episode length: 16.04
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0050
+       Mean episode rew_ang_vel_xy: -0.0159
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0326
+   Mean episode rew_dof_pos_limits: -0.0010
+          Mean episode rew_dof_vel: -0.0014
+      Mean episode rew_foot_height: -0.0021
+      Mean episode rew_joint_power: -0.0007
+        Mean episode rew_lin_vel_z: -0.0076
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0142
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0020
+ Mean episode rew_tracking_lin_vel: 0.0034
+        Mean episode terrain_level: 0.0012
+--------------------------------------------------------------------------------
+                   Total timesteps: 1474560
+                    Iteration time: 12.44s
+                        Total time: 182.34s
+                               ETA: 10127 mins 18.6 s
+################################################################################
+                     [1m Learning iteration 15/50015 
+                       Computation: 7909 steps/s (collection: 12.155s, learning 0.273s)
+               Value function loss: 0.0121
+                    Surrogate loss: -0.0004
+             Mean action noise std: 1.06
+               Mean reward (total): 0.00
+               Mean episode length: 15.72
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0050
+       Mean episode rew_ang_vel_xy: -0.0158
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0327
+   Mean episode rew_dof_pos_limits: -0.0010
+          Mean episode rew_dof_vel: -0.0014
+      Mean episode rew_foot_height: -0.0021
+      Mean episode rew_joint_power: -0.0007
+        Mean episode rew_lin_vel_z: -0.0074
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0142
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0020
+ Mean episode rew_tracking_lin_vel: 0.0034
+        Mean episode terrain_level: 0.0006
+--------------------------------------------------------------------------------
+                   Total timesteps: 1572864
+                    Iteration time: 12.43s
+                        Total time: 194.77s
+                               ETA: 10141 mins 17.6 s
+################################################################################
+                     [1m Learning iteration 16/50016 
+                       Computation: 7942 steps/s (collection: 12.105s, learning 0.272s)
+               Value function loss: 0.0329
+                    Surrogate loss: 0.0032
+             Mean action noise std: 1.07
+               Mean reward (total): 0.00
+               Mean episode length: 14.84
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0052
+       Mean episode rew_ang_vel_xy: -0.0156
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0325
+   Mean episode rew_dof_pos_limits: -0.0010
+          Mean episode rew_dof_vel: -0.0014
+      Mean episode rew_foot_height: -0.0021
+      Mean episode rew_joint_power: -0.0007
+        Mean episode rew_lin_vel_z: -0.0076
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0146
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0020
+ Mean episode rew_tracking_lin_vel: 0.0035
+        Mean episode terrain_level: 0.0005
+--------------------------------------------------------------------------------
+                   Total timesteps: 1671168
+                    Iteration time: 12.38s
+                        Total time: 207.15s
+                               ETA: 10151 mins 4.9 s
+################################################################################
+                     [1m Learning iteration 17/50017 
+                       Computation: 7900 steps/s (collection: 12.175s, learning 0.268s)
+               Value function loss: 0.0092
+                    Surrogate loss: -0.0005
+             Mean action noise std: 1.07
+               Mean reward (total): 0.00
+               Mean episode length: 14.97
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0052
+       Mean episode rew_ang_vel_xy: -0.0161
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0332
+   Mean episode rew_dof_pos_limits: -0.0011
+          Mean episode rew_dof_vel: -0.0014
+      Mean episode rew_foot_height: -0.0021
+      Mean episode rew_joint_power: -0.0007
+        Mean episode rew_lin_vel_z: -0.0077
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0148
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0020
+ Mean episode rew_tracking_lin_vel: 0.0034
+        Mean episode terrain_level: 0.0005
+--------------------------------------------------------------------------------
+                   Total timesteps: 1769472
+                    Iteration time: 12.44s
+                        Total time: 219.59s
+                               ETA: 10162 mins 48.5 s
+################################################################################
+                     [1m Learning iteration 18/50018 
+                       Computation: 7949 steps/s (collection: 12.095s, learning 0.272s)
+               Value function loss: 0.0111
+                    Surrogate loss: -0.0031
+             Mean action noise std: 1.07
+               Mean reward (total): 0.00
+               Mean episode length: 14.75
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0053
+       Mean episode rew_ang_vel_xy: -0.0159
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0328
+   Mean episode rew_dof_pos_limits: -0.0011
+          Mean episode rew_dof_vel: -0.0014
+      Mean episode rew_foot_height: -0.0021
+      Mean episode rew_joint_power: -0.0007
+        Mean episode rew_lin_vel_z: -0.0076
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0149
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0020
+ Mean episode rew_tracking_lin_vel: 0.0034
+        Mean episode terrain_level: 0.0005
+--------------------------------------------------------------------------------
+                   Total timesteps: 1867776
+                    Iteration time: 12.37s
+                        Total time: 231.96s
+                               ETA: 10169 mins 56.0 s
+################################################################################
+                     [1m Learning iteration 19/50019 
+                       Computation: 7929 steps/s (collection: 12.128s, learning 0.270s)
+               Value function loss: 0.0109
+                    Surrogate loss: -0.0040
+             Mean action noise std: 1.08
+               Mean reward (total): 0.00
+               Mean episode length: 16.43
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0054
+       Mean episode rew_ang_vel_xy: -0.0157
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0331
+   Mean episode rew_dof_pos_limits: -0.0011
+          Mean episode rew_dof_vel: -0.0014
+      Mean episode rew_foot_height: -0.0021
+      Mean episode rew_joint_power: -0.0007
+        Mean episode rew_lin_vel_z: -0.0076
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0151
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0020
+ Mean episode rew_tracking_lin_vel: 0.0035
+        Mean episode terrain_level: 0.0005
+--------------------------------------------------------------------------------
+                   Total timesteps: 1966080
+                    Iteration time: 12.40s
+                        Total time: 244.36s
+                               ETA: 10177 mins 36.8 s
+################################################################################
+                     [1m Learning iteration 20/50020 
+                       Computation: 7972 steps/s (collection: 12.057s, learning 0.272s)
+               Value function loss: 0.0107
+                    Surrogate loss: -0.0040
+             Mean action noise std: 1.08
+               Mean reward (total): 0.00
+               Mean episode length: 15.41
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0055
+       Mean episode rew_ang_vel_xy: -0.0158
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0335
+   Mean episode rew_dof_pos_limits: -0.0011
+          Mean episode rew_dof_vel: -0.0015
+      Mean episode rew_foot_height: -0.0022
+      Mean episode rew_joint_power: -0.0007
+        Mean episode rew_lin_vel_z: -0.0077
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0155
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0021
+ Mean episode rew_tracking_lin_vel: 0.0035
+        Mean episode terrain_level: 0.0002
+--------------------------------------------------------------------------------
+                   Total timesteps: 2064384
+                    Iteration time: 12.33s
+                        Total time: 256.69s
+                               ETA: 10181 mins 50.8 s
+################################################################################
+                     [1m Learning iteration 21/50021 
+                       Computation: 7967 steps/s (collection: 12.070s, learning 0.269s)
+               Value function loss: 0.0105
+                    Surrogate loss: -0.0038
+             Mean action noise std: 1.08
+               Mean reward (total): 0.00
+               Mean episode length: 16.27
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0056
+       Mean episode rew_ang_vel_xy: -0.0157
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0337
+   Mean episode rew_dof_pos_limits: -0.0011
+          Mean episode rew_dof_vel: -0.0015
+      Mean episode rew_foot_height: -0.0022
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0077
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0157
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0021
+ Mean episode rew_tracking_lin_vel: 0.0035
+        Mean episode terrain_level: 0.0002
+--------------------------------------------------------------------------------
+                   Total timesteps: 2162688
+                    Iteration time: 12.34s
+                        Total time: 269.02s
+                               ETA: 10186 mins 1.1 s
+################################################################################
+                     [1m Learning iteration 22/50022 
+                       Computation: 7957 steps/s (collection: 12.077s, learning 0.276s)
+               Value function loss: 0.0104
+                    Surrogate loss: -0.0030
+             Mean action noise std: 1.09
+               Mean reward (total): 0.00
+               Mean episode length: 15.57
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0057
+       Mean episode rew_ang_vel_xy: -0.0156
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0344
+   Mean episode rew_dof_pos_limits: -0.0011
+          Mean episode rew_dof_vel: -0.0015
+      Mean episode rew_foot_height: -0.0022
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0077
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0162
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0021
+ Mean episode rew_tracking_lin_vel: 0.0035
+        Mean episode terrain_level: 0.0002
+--------------------------------------------------------------------------------
+                   Total timesteps: 2260992
+                    Iteration time: 12.35s
+                        Total time: 281.38s
+                               ETA: 10190 mins 19.5 s
+################################################################################
+                     [1m Learning iteration 23/50023 
+                       Computation: 7963 steps/s (collection: 12.072s, learning 0.272s)
+               Value function loss: 0.0101
+                    Surrogate loss: -0.0028
+             Mean action noise std: 1.09
+               Mean reward (total): 0.00
+               Mean episode length: 16.02
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0059
+       Mean episode rew_ang_vel_xy: -0.0155
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0352
+   Mean episode rew_dof_pos_limits: -0.0011
+          Mean episode rew_dof_vel: -0.0015
+      Mean episode rew_foot_height: -0.0023
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0076
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0166
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0021
+ Mean episode rew_tracking_lin_vel: 0.0035
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 2359296
+                    Iteration time: 12.34s
+                        Total time: 293.72s
+                               ETA: 10193 mins 57.2 s
+################################################################################
+                     [1m Learning iteration 24/50024 
+                       Computation: 7937 steps/s (collection: 12.101s, learning 0.283s)
+               Value function loss: 0.0099
+                    Surrogate loss: -0.0018
+             Mean action noise std: 1.10
+               Mean reward (total): 0.00
+               Mean episode length: 16.15
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0059
+       Mean episode rew_ang_vel_xy: -0.0153
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0352
+   Mean episode rew_dof_pos_limits: -0.0011
+          Mean episode rew_dof_vel: -0.0015
+      Mean episode rew_foot_height: -0.0022
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0078
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0167
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0021
+ Mean episode rew_tracking_lin_vel: 0.0036
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 2457600
+                    Iteration time: 12.38s
+                        Total time: 306.11s
+                               ETA: 10198 mins 36.4 s
+################################################################################
+                     [1m Learning iteration 25/50025 
+                       Computation: 7917 steps/s (collection: 12.144s, learning 0.272s)
+               Value function loss: 0.0098
+                    Surrogate loss: -0.0027
+             Mean action noise std: 1.10
+               Mean reward (total): 0.00
+               Mean episode length: 17.06
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0060
+       Mean episode rew_ang_vel_xy: -0.0154
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0353
+   Mean episode rew_dof_pos_limits: -0.0011
+          Mean episode rew_dof_vel: -0.0015
+      Mean episode rew_foot_height: -0.0023
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0077
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0171
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0021
+ Mean episode rew_tracking_lin_vel: 0.0035
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 2555904
+                    Iteration time: 12.42s
+                        Total time: 318.52s
+                               ETA: 10203 mins 54.1 s
+################################################################################
+                     [1m Learning iteration 26/50026 
+                       Computation: 7957 steps/s (collection: 12.084s, learning 0.270s)
+               Value function loss: 0.0097
+                    Surrogate loss: -0.0036
+             Mean action noise std: 1.10
+               Mean reward (total): 0.00
+               Mean episode length: 15.11
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0061
+       Mean episode rew_ang_vel_xy: -0.0153
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0357
+   Mean episode rew_dof_pos_limits: -0.0012
+          Mean episode rew_dof_vel: -0.0015
+      Mean episode rew_foot_height: -0.0023
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0079
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0176
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0021
+ Mean episode rew_tracking_lin_vel: 0.0036
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 2654208
+                    Iteration time: 12.35s
+                        Total time: 330.87s
+                               ETA: 10206 mins 51.4 s
+################################################################################
+                     [1m Learning iteration 27/50027 
+                       Computation: 7925 steps/s (collection: 12.127s, learning 0.276s)
+               Value function loss: 0.0096
+                    Surrogate loss: -0.0024
+             Mean action noise std: 1.11
+               Mean reward (total): 0.00
+               Mean episode length: 17.33
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0062
+       Mean episode rew_ang_vel_xy: -0.0151
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0351
+   Mean episode rew_dof_pos_limits: -0.0012
+          Mean episode rew_dof_vel: -0.0015
+      Mean episode rew_foot_height: -0.0023
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0077
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0178
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0021
+ Mean episode rew_tracking_lin_vel: 0.0037
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 2752512
+                    Iteration time: 12.40s
+                        Total time: 343.28s
+                               ETA: 10211 mins 4.6 s
+################################################################################
+                     [1m Learning iteration 28/50028 
+                       Computation: 7954 steps/s (collection: 12.088s, learning 0.270s)
+               Value function loss: 0.0094
+                    Surrogate loss: -0.0013
+             Mean action noise std: 1.11
+               Mean reward (total): 0.00
+               Mean episode length: 16.33
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0063
+       Mean episode rew_ang_vel_xy: -0.0154
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0362
+   Mean episode rew_dof_pos_limits: -0.0012
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0023
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0079
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0179
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0021
+ Mean episode rew_tracking_lin_vel: 0.0037
+        Mean episode terrain_level: 0.0001
+--------------------------------------------------------------------------------
+                   Total timesteps: 2850816
+                    Iteration time: 12.36s
+                        Total time: 355.64s
+                               ETA: 10213 mins 41.4 s
+################################################################################
+                     [1m Learning iteration 29/50029 
+                       Computation: 7952 steps/s (collection: 12.089s, learning 0.272s)
+               Value function loss: 0.0095
+                    Surrogate loss: -0.0031
+             Mean action noise std: 1.12
+               Mean reward (total): 0.00
+               Mean episode length: 17.72
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0064
+       Mean episode rew_ang_vel_xy: -0.0153
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0361
+   Mean episode rew_dof_pos_limits: -0.0012
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0023
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0079
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0181
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0022
+ Mean episode rew_tracking_lin_vel: 0.0037
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 2949120
+                    Iteration time: 12.36s
+                        Total time: 368.00s
+                               ETA: 10216 mins 11.4 s
+################################################################################
+                     [1m Learning iteration 30/50030 
+                       Computation: 7962 steps/s (collection: 12.075s, learning 0.272s)
+               Value function loss: 0.0093
+                    Surrogate loss: -0.0022
+             Mean action noise std: 1.12
+               Mean reward (total): 0.00
+               Mean episode length: 16.86
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0065
+       Mean episode rew_ang_vel_xy: -0.0155
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0361
+   Mean episode rew_dof_pos_limits: -0.0012
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0023
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0078
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0185
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0021
+ Mean episode rew_tracking_lin_vel: 0.0037
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 3047424
+                    Iteration time: 12.35s
+                        Total time: 380.34s
+                               ETA: 10218 mins 7.7 s
+################################################################################
+                     [1m Learning iteration 31/50031 
+                       Computation: 7909 steps/s (collection: 12.143s, learning 0.286s)
+               Value function loss: 0.0093
+                    Surrogate loss: -0.0029
+             Mean action noise std: 1.13
+               Mean reward (total): 0.00
+               Mean episode length: 17.44
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0066
+       Mean episode rew_ang_vel_xy: -0.0153
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0363
+   Mean episode rew_dof_pos_limits: -0.0012
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0024
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0080
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0187
+      Mean episode rew_stand_still: -0.0005
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0022
+ Mean episode rew_tracking_lin_vel: 0.0037
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 3145728
+                    Iteration time: 12.43s
+                        Total time: 392.77s
+                               ETA: 10222 mins 5.0 s
+################################################################################
+                     [1m Learning iteration 32/50032 
+                       Computation: 7960 steps/s (collection: 12.082s, learning 0.268s)
+               Value function loss: 0.0089
+                    Surrogate loss: -0.0032
+             Mean action noise std: 1.13
+               Mean reward (total): 0.00
+               Mean episode length: 16.01
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0067
+       Mean episode rew_ang_vel_xy: -0.0151
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0366
+   Mean episode rew_dof_pos_limits: -0.0012
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0024
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0079
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0191
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0022
+ Mean episode rew_tracking_lin_vel: 0.0038
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 3244032
+                    Iteration time: 12.35s
+                        Total time: 405.12s
+                               ETA: 10223 mins 46.7 s
+################################################################################
+                     [1m Learning iteration 33/50033 
+                       Computation: 7963 steps/s (collection: 12.077s, learning 0.268s)
+               Value function loss: 0.0089
+                    Surrogate loss: -0.0022
+             Mean action noise std: 1.14
+               Mean reward (total): 0.00
+               Mean episode length: 18.68
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0068
+       Mean episode rew_ang_vel_xy: -0.0150
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0368
+   Mean episode rew_dof_pos_limits: -0.0012
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0024
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0080
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0192
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0022
+ Mean episode rew_tracking_lin_vel: 0.0037
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 3342336
+                    Iteration time: 12.34s
+                        Total time: 417.47s
+                               ETA: 10225 mins 14.4 s
+################################################################################
+                     [1m Learning iteration 34/50034 
+                       Computation: 7959 steps/s (collection: 12.078s, learning 0.272s)
+               Value function loss: 0.0090
+                    Surrogate loss: -0.0022
+             Mean action noise std: 1.14
+               Mean reward (total): 0.00
+               Mean episode length: 17.89
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0068
+       Mean episode rew_ang_vel_xy: -0.0151
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0370
+   Mean episode rew_dof_pos_limits: -0.0013
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0024
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0081
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0195
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0005
+ Mean episode rew_tracking_ang_vel: 0.0022
+ Mean episode rew_tracking_lin_vel: 0.0038
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 3440640
+                    Iteration time: 12.35s
+                        Total time: 429.82s
+                               ETA: 10226 mins 44.9 s
+################################################################################
+                     [1m Learning iteration 35/50035 
+                       Computation: 7949 steps/s (collection: 12.097s, learning 0.270s)
+               Value function loss: 0.0087
+                    Surrogate loss: -0.0019
+             Mean action noise std: 1.14
+               Mean reward (total): 0.00
+               Mean episode length: 17.40
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0070
+       Mean episode rew_ang_vel_xy: -0.0151
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0372
+   Mean episode rew_dof_pos_limits: -0.0013
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0024
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0079
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0198
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0022
+ Mean episode rew_tracking_lin_vel: 0.0038
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 3538944
+                    Iteration time: 12.37s
+                        Total time: 442.18s
+                               ETA: 10228 mins 32.4 s
+################################################################################
+                     [1m Learning iteration 36/50036 
+                       Computation: 7972 steps/s (collection: 12.059s, learning 0.271s)
+               Value function loss: 0.0018
+                    Surrogate loss: -0.0027
+             Mean action noise std: 1.15
+               Mean reward (total): 0.00
+               Mean episode length: 17.25
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0070
+       Mean episode rew_ang_vel_xy: -0.0152
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0371
+   Mean episode rew_dof_pos_limits: -0.0013
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0024
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0081
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0200
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0022
+ Mean episode rew_tracking_lin_vel: 0.0038
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 3637248
+                    Iteration time: 12.33s
+                        Total time: 454.51s
+                               ETA: 10229 mins 23.6 s
+################################################################################
+                     [1m Learning iteration 37/50037 
+                       Computation: 7943 steps/s (collection: 12.104s, learning 0.271s)
+               Value function loss: 0.0003
+                    Surrogate loss: -0.0029
+             Mean action noise std: 1.15
+               Mean reward (total): 0.00
+               Mean episode length: 18.79
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0072
+       Mean episode rew_ang_vel_xy: -0.0149
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0376
+   Mean episode rew_dof_pos_limits: -0.0013
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0024
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0079
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0206
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0023
+ Mean episode rew_tracking_lin_vel: 0.0038
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 3735552
+                    Iteration time: 12.38s
+                        Total time: 466.89s
+                               ETA: 10231 mins 10.8 s
+################################################################################
+                     [1m Learning iteration 38/50038 
+                       Computation: 7953 steps/s (collection: 12.074s, learning 0.286s)
+               Value function loss: 0.0001
+                    Surrogate loss: -0.0029
+             Mean action noise std: 1.16
+               Mean reward (total): 0.00
+               Mean episode length: 18.34
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0073
+       Mean episode rew_ang_vel_xy: -0.0148
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0371
+   Mean episode rew_dof_pos_limits: -0.0013
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0025
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0078
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0210
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0023
+ Mean episode rew_tracking_lin_vel: 0.0039
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 3833856
+                    Iteration time: 12.36s
+                        Total time: 479.25s
+                               ETA: 10232 mins 32.3 s
+################################################################################
+                     [1m Learning iteration 39/50039 
+                       Computation: 7975 steps/s (collection: 12.053s, learning 0.273s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0038
+             Mean action noise std: 1.16
+               Mean reward (total): 0.00
+               Mean episode length: 17.13
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0073
+       Mean episode rew_ang_vel_xy: -0.0151
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0378
+   Mean episode rew_dof_pos_limits: -0.0013
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0024
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0079
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0210
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0022
+ Mean episode rew_tracking_lin_vel: 0.0039
+        Mean episode terrain_level: 0.0001
+--------------------------------------------------------------------------------
+                   Total timesteps: 3932160
+                    Iteration time: 12.33s
+                        Total time: 491.57s
+                               ETA: 10233 mins 7.2 s
+################################################################################
+                     [1m Learning iteration 40/50040 
+                       Computation: 7977 steps/s (collection: 12.048s, learning 0.275s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0061
+             Mean action noise std: 1.16
+               Mean reward (total): 0.00
+               Mean episode length: 18.12
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0075
+       Mean episode rew_ang_vel_xy: -0.0151
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0381
+   Mean episode rew_dof_pos_limits: -0.0013
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0025
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0082
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0212
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0022
+ Mean episode rew_tracking_lin_vel: 0.0039
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 4030464
+                    Iteration time: 12.32s
+                        Total time: 503.90s
+                               ETA: 10233 mins 35.2 s
+################################################################################
+                     [1m Learning iteration 41/50041 
+                       Computation: 7939 steps/s (collection: 12.108s, learning 0.274s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0044
+             Mean action noise std: 1.16
+               Mean reward (total): 0.00
+               Mean episode length: 18.35
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0077
+       Mean episode rew_ang_vel_xy: -0.0149
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0384
+   Mean episode rew_dof_pos_limits: -0.0013
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0025
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0081
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0217
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0023
+ Mean episode rew_tracking_lin_vel: 0.0039
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 4128768
+                    Iteration time: 12.38s
+                        Total time: 516.28s
+                               ETA: 10235 mins 11.4 s
+################################################################################
+                     [1m Learning iteration 42/50042 
+                       Computation: 7991 steps/s (collection: 12.027s, learning 0.274s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0060
+             Mean action noise std: 1.16
+               Mean reward (total): 0.00
+               Mean episode length: 18.54
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0076
+       Mean episode rew_ang_vel_xy: -0.0149
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0384
+   Mean episode rew_dof_pos_limits: -0.0014
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0025
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0082
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0215
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0022
+ Mean episode rew_tracking_lin_vel: 0.0038
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 4227072
+                    Iteration time: 12.30s
+                        Total time: 528.58s
+                               ETA: 10235 mins 8.6 s
+################################################################################
+                     [1m Learning iteration 43/50043 
+                       Computation: 7962 steps/s (collection: 12.062s, learning 0.284s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0061
+             Mean action noise std: 1.16
+               Mean reward (total): 0.00
+               Mean episode length: 17.67
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0076
+       Mean episode rew_ang_vel_xy: -0.0149
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0384
+   Mean episode rew_dof_pos_limits: -0.0014
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0025
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0078
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0217
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0022
+ Mean episode rew_tracking_lin_vel: 0.0039
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 4325376
+                    Iteration time: 12.35s
+                        Total time: 540.92s
+                               ETA: 10235 mins 57.1 s
+################################################################################
+                     [1m Learning iteration 44/50044 
+                       Computation: 7973 steps/s (collection: 12.046s, learning 0.283s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0055
+             Mean action noise std: 1.16
+               Mean reward (total): 0.00
+               Mean episode length: 17.77
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0077
+       Mean episode rew_ang_vel_xy: -0.0147
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0381
+   Mean episode rew_dof_pos_limits: -0.0014
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0025
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0080
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0217
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0022
+ Mean episode rew_tracking_lin_vel: 0.0038
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 4423680
+                    Iteration time: 12.33s
+                        Total time: 553.25s
+                               ETA: 10236 mins 24.0 s
+################################################################################
+                     [1m Learning iteration 45/50045 
+                       Computation: 7949 steps/s (collection: 12.096s, learning 0.270s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0046
+             Mean action noise std: 1.16
+               Mean reward (total): 0.00
+               Mean episode length: 18.55
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0078
+       Mean episode rew_ang_vel_xy: -0.0146
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0390
+   Mean episode rew_dof_pos_limits: -0.0014
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0025
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0082
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0219
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0023
+ Mean episode rew_tracking_lin_vel: 0.0039
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 4521984
+                    Iteration time: 12.37s
+                        Total time: 565.62s
+                               ETA: 10237 mins 29.8 s
+################################################################################
+                     [1m Learning iteration 46/50046 
+                       Computation: 7951 steps/s (collection: 12.089s, learning 0.274s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0042
+             Mean action noise std: 1.16
+               Mean reward (total): 0.00
+               Mean episode length: 17.56
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0077
+       Mean episode rew_ang_vel_xy: -0.0146
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0384
+   Mean episode rew_dof_pos_limits: -0.0014
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0025
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0080
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0216
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0022
+ Mean episode rew_tracking_lin_vel: 0.0038
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 4620288
+                    Iteration time: 12.36s
+                        Total time: 577.98s
+                               ETA: 10238 mins 28.6 s
+################################################################################
+                     [1m Learning iteration 47/50047 
+                       Computation: 7936 steps/s (collection: 12.116s, learning 0.270s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0042
+             Mean action noise std: 1.15
+               Mean reward (total): 0.00
+               Mean episode length: 18.02
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0077
+       Mean episode rew_ang_vel_xy: -0.0146
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0387
+   Mean episode rew_dof_pos_limits: -0.0014
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0025
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0081
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0215
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0023
+ Mean episode rew_tracking_lin_vel: 0.0039
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 4718592
+                    Iteration time: 12.39s
+                        Total time: 590.37s
+                               ETA: 10239 mins 48.8 s
+################################################################################
+                     [1m Learning iteration 48/50048 
+                       Computation: 7983 steps/s (collection: 12.027s, learning 0.286s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0034
+             Mean action noise std: 1.15
+               Mean reward (total): 0.00
+               Mean episode length: 18.25
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0077
+       Mean episode rew_ang_vel_xy: -0.0149
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0385
+   Mean episode rew_dof_pos_limits: -0.0014
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0025
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0081
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0212
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0023
+ Mean episode rew_tracking_lin_vel: 0.0039
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 4816896
+                    Iteration time: 12.31s
+                        Total time: 602.68s
+                               ETA: 10239 mins 50.5 s
+################################################################################
+                     [1m Learning iteration 49/50049 
+                       Computation: 7979 steps/s (collection: 12.051s, learning 0.269s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0031
+             Mean action noise std: 1.15
+               Mean reward (total): 0.00
+               Mean episode length: 19.60
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0077
+       Mean episode rew_ang_vel_xy: -0.0149
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0387
+   Mean episode rew_dof_pos_limits: -0.0014
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0026
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0081
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0212
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0023
+ Mean episode rew_tracking_lin_vel: 0.0041
+        Mean episode terrain_level: 0.0002
+--------------------------------------------------------------------------------
+                   Total timesteps: 4915200
+                    Iteration time: 12.32s
+                        Total time: 615.00s
+                               ETA: 10239 mins 58.8 s
+################################################################################
+                     [1m Learning iteration 50/50050 
+                       Computation: 7956 steps/s (collection: 12.081s, learning 0.274s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0033
+             Mean action noise std: 1.14
+               Mean reward (total): 0.00
+               Mean episode length: 17.60
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0077
+       Mean episode rew_ang_vel_xy: -0.0147
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0381
+   Mean episode rew_dof_pos_limits: -0.0014
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0025
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0080
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0209
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0023
+ Mean episode rew_tracking_lin_vel: 0.0040
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 5013504
+                    Iteration time: 12.36s
+                        Total time: 627.36s
+                               ETA: 10240 mins 40.6 s
+################################################################################
+                     [1m Learning iteration 51/50051 
+                       Computation: 7967 steps/s (collection: 12.069s, learning 0.270s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0034
+             Mean action noise std: 1.14
+               Mean reward (total): 0.00
+               Mean episode length: 18.39
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0075
+       Mean episode rew_ang_vel_xy: -0.0145
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0383
+   Mean episode rew_dof_pos_limits: -0.0014
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0025
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0081
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0204
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0023
+ Mean episode rew_tracking_lin_vel: 0.0040
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 5111808
+                    Iteration time: 12.34s
+                        Total time: 639.70s
+                               ETA: 10241 mins 4.6 s
+################################################################################
+                     [1m Learning iteration 52/50052 
+                       Computation: 7963 steps/s (collection: 12.071s, learning 0.272s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0040
+             Mean action noise std: 1.14
+               Mean reward (total): 0.00
+               Mean episode length: 19.28
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0075
+       Mean episode rew_ang_vel_xy: -0.0146
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0380
+   Mean episode rew_dof_pos_limits: -0.0014
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0025
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0081
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0202
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0023
+ Mean episode rew_tracking_lin_vel: 0.0040
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 5210112
+                    Iteration time: 12.34s
+                        Total time: 652.04s
+                               ETA: 10241 mins 31.6 s
+################################################################################
+                     [1m Learning iteration 53/50053 
+                       Computation: 8013 steps/s (collection: 11.998s, learning 0.270s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0044
+             Mean action noise std: 1.13
+               Mean reward (total): 0.00
+               Mean episode length: 19.23
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0075
+       Mean episode rew_ang_vel_xy: -0.0148
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0379
+   Mean episode rew_dof_pos_limits: -0.0014
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0026
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0081
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0201
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0023
+ Mean episode rew_tracking_lin_vel: 0.0041
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 5308416
+                    Iteration time: 12.27s
+                        Total time: 664.31s
+                               ETA: 10240 mins 47.1 s
+################################################################################
+                     [1m Learning iteration 54/50054 
+                       Computation: 7971 steps/s (collection: 12.060s, learning 0.272s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0032
+             Mean action noise std: 1.13
+               Mean reward (total): 0.00
+               Mean episode length: 18.95
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0075
+       Mean episode rew_ang_vel_xy: -0.0144
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0376
+   Mean episode rew_dof_pos_limits: -0.0014
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0026
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0081
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0200
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0023
+ Mean episode rew_tracking_lin_vel: 0.0040
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 5406720
+                    Iteration time: 12.33s
+                        Total time: 676.64s
+                               ETA: 10241 mins 2.4 s
+################################################################################
+                     [1m Learning iteration 55/50055 
+                       Computation: 7971 steps/s (collection: 12.062s, learning 0.270s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0028
+             Mean action noise std: 1.13
+               Mean reward (total): 0.00
+               Mean episode length: 17.84
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0075
+       Mean episode rew_ang_vel_xy: -0.0146
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0376
+   Mean episode rew_dof_pos_limits: -0.0014
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0026
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0080
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0200
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0024
+ Mean episode rew_tracking_lin_vel: 0.0041
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 5505024
+                    Iteration time: 12.33s
+                        Total time: 688.97s
+                               ETA: 10241 mins 16.2 s
+################################################################################
+                     [1m Learning iteration 56/50056 
+                       Computation: 7986 steps/s (collection: 12.038s, learning 0.271s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0042
+             Mean action noise std: 1.12
+               Mean reward (total): 0.00
+               Mean episode length: 17.75
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0075
+       Mean episode rew_ang_vel_xy: -0.0145
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0374
+   Mean episode rew_dof_pos_limits: -0.0014
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0026
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0079
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0199
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0024
+ Mean episode rew_tracking_lin_vel: 0.0042
+        Mean episode terrain_level: 0.0001
+--------------------------------------------------------------------------------
+                   Total timesteps: 5603328
+                    Iteration time: 12.31s
+                        Total time: 701.28s
+                               ETA: 10241 mins 8.9 s
+################################################################################
+                     [1m Learning iteration 57/50057 
+                       Computation: 8018 steps/s (collection: 11.988s, learning 0.272s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0046
+             Mean action noise std: 1.12
+               Mean reward (total): 0.00
+               Mean episode length: 21.05
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0075
+       Mean episode rew_ang_vel_xy: -0.0145
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0374
+   Mean episode rew_dof_pos_limits: -0.0014
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0026
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0078
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0199
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0024
+ Mean episode rew_tracking_lin_vel: 0.0042
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 5701632
+                    Iteration time: 12.26s
+                        Total time: 713.54s
+                               ETA: 10240 mins 19.1 s
+################################################################################
+                     [1m Learning iteration 58/50058 
+                       Computation: 7994 steps/s (collection: 12.024s, learning 0.272s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0037
+             Mean action noise std: 1.11
+               Mean reward (total): 0.00
+               Mean episode length: 19.60
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0074
+       Mean episode rew_ang_vel_xy: -0.0145
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0371
+   Mean episode rew_dof_pos_limits: -0.0014
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0026
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0080
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0195
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0024
+ Mean episode rew_tracking_lin_vel: 0.0042
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 5799936
+                    Iteration time: 12.30s
+                        Total time: 725.84s
+                               ETA: 10240 mins 1.4 s
+################################################################################
+                     [1m Learning iteration 59/50059 
+                       Computation: 7998 steps/s (collection: 12.003s, learning 0.287s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0053
+             Mean action noise std: 1.11
+               Mean reward (total): 0.00
+               Mean episode length: 19.07
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0074
+       Mean episode rew_ang_vel_xy: -0.0146
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0373
+   Mean episode rew_dof_pos_limits: -0.0015
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0026
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0081
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0192
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0025
+ Mean episode rew_tracking_lin_vel: 0.0043
+        Mean episode terrain_level: 0.0002
+--------------------------------------------------------------------------------
+                   Total timesteps: 5898240
+                    Iteration time: 12.29s
+                        Total time: 738.13s
+                               ETA: 10239 mins 39.2 s
+################################################################################
+                     [1m Learning iteration 60/50060 
+                       Computation: 7998 steps/s (collection: 12.003s, learning 0.288s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0053
+             Mean action noise std: 1.10
+               Mean reward (total): 0.00
+               Mean episode length: 18.73
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0073
+       Mean episode rew_ang_vel_xy: -0.0142
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0366
+   Mean episode rew_dof_pos_limits: -0.0015
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0026
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0081
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0189
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0024
+ Mean episode rew_tracking_lin_vel: 0.0042
+        Mean episode terrain_level: 0.0001
+--------------------------------------------------------------------------------
+                   Total timesteps: 5996544
+                    Iteration time: 12.29s
+                        Total time: 750.42s
+                               ETA: 10239 mins 17.8 s
+################################################################################
+                     [1m Learning iteration 61/50061 
+                       Computation: 8087 steps/s (collection: 12.009s, learning 0.146s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0044
+             Mean action noise std: 1.10
+               Mean reward (total): 0.00
+               Mean episode length: 18.49
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0074
+       Mean episode rew_ang_vel_xy: -0.0142
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0367
+   Mean episode rew_dof_pos_limits: -0.0015
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0027
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0076
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0190
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0025
+ Mean episode rew_tracking_lin_vel: 0.0043
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 6094848
+                    Iteration time: 12.16s
+                        Total time: 762.57s
+                               ETA: 10237 mins 7.5 s
+################################################################################
+                     [1m Learning iteration 62/50062 
+                       Computation: 8096 steps/s (collection: 11.995s, learning 0.146s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0059
+             Mean action noise std: 1.09
+               Mean reward (total): 0.00
+               Mean episode length: 20.21
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0073
+       Mean episode rew_ang_vel_xy: -0.0145
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0368
+   Mean episode rew_dof_pos_limits: -0.0015
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0026
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0078
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0186
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0025
+ Mean episode rew_tracking_lin_vel: 0.0042
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 6193152
+                    Iteration time: 12.14s
+                        Total time: 774.71s
+                               ETA: 10234 mins 49.5 s
+################################################################################
+                     [1m Learning iteration 63/50063 
+                       Computation: 7959 steps/s (collection: 12.078s, learning 0.273s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0063
+             Mean action noise std: 1.08
+               Mean reward (total): 0.00
+               Mean episode length: 18.54
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0072
+       Mean episode rew_ang_vel_xy: -0.0140
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0365
+   Mean episode rew_dof_pos_limits: -0.0015
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0026
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0077
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0183
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0025
+ Mean episode rew_tracking_lin_vel: 0.0043
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 6291456
+                    Iteration time: 12.35s
+                        Total time: 787.06s
+                               ETA: 10235 mins 18.8 s
+################################################################################
+                     [1m Learning iteration 64/50064 
+                       Computation: 7985 steps/s (collection: 12.019s, learning 0.290s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0054
+             Mean action noise std: 1.08
+               Mean reward (total): 0.00
+               Mean episode length: 19.23
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0072
+       Mean episode rew_ang_vel_xy: -0.0142
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0365
+   Mean episode rew_dof_pos_limits: -0.0016
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0027
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0078
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0180
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0025
+ Mean episode rew_tracking_lin_vel: 0.0043
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 6389760
+                    Iteration time: 12.31s
+                        Total time: 799.37s
+                               ETA: 10235 mins 15.6 s
+################################################################################
+                     [1m Learning iteration 65/50065 
+                       Computation: 8094 steps/s (collection: 12.003s, learning 0.142s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0053
+             Mean action noise std: 1.07
+               Mean reward (total): 0.00
+               Mean episode length: 18.92
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0071
+       Mean episode rew_ang_vel_xy: -0.0140
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0361
+   Mean episode rew_dof_pos_limits: -0.0015
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0027
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0078
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0178
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0026
+ Mean episode rew_tracking_lin_vel: 0.0043
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 6488064
+                    Iteration time: 12.14s
+                        Total time: 811.52s
+                               ETA: 10233 mins 7.0 s
+################################################################################
+                     [1m Learning iteration 66/50066 
+                       Computation: 8009 steps/s (collection: 12.003s, learning 0.271s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0038
+             Mean action noise std: 1.07
+               Mean reward (total): 0.00
+               Mean episode length: 19.48
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0071
+       Mean episode rew_ang_vel_xy: -0.0140
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0358
+   Mean episode rew_dof_pos_limits: -0.0015
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0027
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0074
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0174
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0026
+ Mean episode rew_tracking_lin_vel: 0.0043
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 6586368
+                    Iteration time: 12.27s
+                        Total time: 823.79s
+                               ETA: 10232 mins 38.3 s
+################################################################################
+                     [1m Learning iteration 67/50067 
+                       Computation: 8041 steps/s (collection: 11.939s, learning 0.286s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0059
+             Mean action noise std: 1.06
+               Mean reward (total): 0.00
+               Mean episode length: 20.26
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0070
+       Mean episode rew_ang_vel_xy: -0.0143
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0369
+   Mean episode rew_dof_pos_limits: -0.0016
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0027
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0079
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0172
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0025
+ Mean episode rew_tracking_lin_vel: 0.0043
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 6684672
+                    Iteration time: 12.22s
+                        Total time: 836.02s
+                               ETA: 10231 mins 34.1 s
+################################################################################
+                     [1m Learning iteration 68/50068 
+                       Computation: 8042 steps/s (collection: 11.954s, learning 0.269s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0062
+             Mean action noise std: 1.05
+               Mean reward (total): 0.00
+               Mean episode length: 18.45
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0070
+       Mean episode rew_ang_vel_xy: -0.0138
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0359
+   Mean episode rew_dof_pos_limits: -0.0016
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0027
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0075
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0170
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0026
+ Mean episode rew_tracking_lin_vel: 0.0044
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 6782976
+                    Iteration time: 12.22s
+                        Total time: 848.24s
+                               ETA: 10230 mins 30.1 s
+################################################################################
+                     [1m Learning iteration 69/50069 
+                       Computation: 8023 steps/s (collection: 11.982s, learning 0.271s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0053
+             Mean action noise std: 1.05
+               Mean reward (total): 0.00
+               Mean episode length: 18.54
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0069
+       Mean episode rew_ang_vel_xy: -0.0138
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0365
+   Mean episode rew_dof_pos_limits: -0.0016
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0027
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0075
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0168
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0027
+ Mean episode rew_tracking_lin_vel: 0.0044
+        Mean episode terrain_level: 0.0002
+--------------------------------------------------------------------------------
+                   Total timesteps: 6881280
+                    Iteration time: 12.25s
+                        Total time: 860.49s
+                               ETA: 10229 mins 48.8 s
+################################################################################
+                     [1m Learning iteration 70/50070 
+                       Computation: 8073 steps/s (collection: 11.896s, learning 0.281s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0046
+             Mean action noise std: 1.04
+               Mean reward (total): 0.00
+               Mean episode length: 19.61
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0069
+       Mean episode rew_ang_vel_xy: -0.0136
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0359
+   Mean episode rew_dof_pos_limits: -0.0016
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0027
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0073
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0166
+      Mean episode rew_stand_still: -0.0006
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0026
+ Mean episode rew_tracking_lin_vel: 0.0045
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 6979584
+                    Iteration time: 12.18s
+                        Total time: 872.67s
+                               ETA: 10228 mins 15.0 s
+################################################################################
+                     [1m Learning iteration 71/50071 
+                       Computation: 8068 steps/s (collection: 11.913s, learning 0.271s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0036
+             Mean action noise std: 1.04
+               Mean reward (total): 0.00
+               Mean episode length: 18.81
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0069
+       Mean episode rew_ang_vel_xy: -0.0136
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0360
+   Mean episode rew_dof_pos_limits: -0.0016
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0027
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0076
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0163
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0026
+ Mean episode rew_tracking_lin_vel: 0.0044
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 7077888
+                    Iteration time: 12.18s
+                        Total time: 884.85s
+                               ETA: 10226 mins 48.3 s
+################################################################################
+                     [1m Learning iteration 72/50072 
+                       Computation: 8031 steps/s (collection: 11.962s, learning 0.278s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0054
+             Mean action noise std: 1.03
+               Mean reward (total): 0.00
+               Mean episode length: 18.57
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0069
+       Mean episode rew_ang_vel_xy: -0.0136
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0356
+   Mean episode rew_dof_pos_limits: -0.0017
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0028
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0073
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0162
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0027
+ Mean episode rew_tracking_lin_vel: 0.0044
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 7176192
+                    Iteration time: 12.24s
+                        Total time: 897.09s
+                               ETA: 10226 mins 1.7 s
+################################################################################
+                     [1m Learning iteration 73/50073 
+                       Computation: 8041 steps/s (collection: 11.947s, learning 0.278s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0064
+             Mean action noise std: 1.02
+               Mean reward (total): 0.00
+               Mean episode length: 18.79
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0068
+       Mean episode rew_ang_vel_xy: -0.0134
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0355
+   Mean episode rew_dof_pos_limits: -0.0017
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0027
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0075
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0158
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0027
+ Mean episode rew_tracking_lin_vel: 0.0045
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 7274496
+                    Iteration time: 12.22s
+                        Total time: 909.32s
+                               ETA: 10225 mins 5.9 s
+################################################################################
+                     [1m Learning iteration 74/50074 
+                       Computation: 8074 steps/s (collection: 11.900s, learning 0.275s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0064
+             Mean action noise std: 1.02
+               Mean reward (total): 0.00
+               Mean episode length: 21.57
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0066
+       Mean episode rew_ang_vel_xy: -0.0134
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0355
+   Mean episode rew_dof_pos_limits: -0.0016
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0027
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0072
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0154
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0027
+ Mean episode rew_tracking_lin_vel: 0.0044
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 7372800
+                    Iteration time: 12.18s
+                        Total time: 921.49s
+                               ETA: 10223 mins 38.3 s
+################################################################################
+                     [1m Learning iteration 75/50075 
+                       Computation: 8037 steps/s (collection: 11.947s, learning 0.284s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0071
+             Mean action noise std: 1.01
+               Mean reward (total): 0.00
+               Mean episode length: 21.01
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0066
+       Mean episode rew_ang_vel_xy: -0.0133
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0359
+   Mean episode rew_dof_pos_limits: -0.0017
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0028
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0075
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0153
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0028
+ Mean episode rew_tracking_lin_vel: 0.0046
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 7471104
+                    Iteration time: 12.23s
+                        Total time: 933.72s
+                               ETA: 10222 mins 49.6 s
+################################################################################
+                     [1m Learning iteration 76/50076 
+                       Computation: 8057 steps/s (collection: 11.929s, learning 0.272s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0071
+             Mean action noise std: 1.00
+               Mean reward (total): 0.00
+               Mean episode length: 19.18
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0065
+       Mean episode rew_ang_vel_xy: -0.0132
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0350
+   Mean episode rew_dof_pos_limits: -0.0016
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0028
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0072
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0149
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0027
+ Mean episode rew_tracking_lin_vel: 0.0045
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 7569408
+                    Iteration time: 12.20s
+                        Total time: 945.92s
+                               ETA: 10221 mins 42.2 s
+################################################################################
+                     [1m Learning iteration 77/50077 
+                       Computation: 8064 steps/s (collection: 11.916s, learning 0.274s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0077
+             Mean action noise std: 0.99
+               Mean reward (total): 0.00
+               Mean episode length: 19.50
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0064
+       Mean episode rew_ang_vel_xy: -0.0134
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0352
+   Mean episode rew_dof_pos_limits: -0.0017
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0027
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0073
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0146
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0027
+ Mean episode rew_tracking_lin_vel: 0.0044
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 7667712
+                    Iteration time: 12.19s
+                        Total time: 958.11s
+                               ETA: 10220 mins 29.2 s
+################################################################################
+                     [1m Learning iteration 78/50078 
+                       Computation: 8047 steps/s (collection: 11.938s, learning 0.277s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0063
+             Mean action noise std: 0.98
+               Mean reward (total): 0.00
+               Mean episode length: 20.00
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0064
+       Mean episode rew_ang_vel_xy: -0.0132
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0360
+   Mean episode rew_dof_pos_limits: -0.0017
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0028
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0074
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0145
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0029
+ Mean episode rew_tracking_lin_vel: 0.0045
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 7766016
+                    Iteration time: 12.21s
+                        Total time: 970.33s
+                               ETA: 10219 mins 33.5 s
+################################################################################
+                     [1m Learning iteration 79/50079 
+                       Computation: 8042 steps/s (collection: 11.949s, learning 0.274s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0071
+             Mean action noise std: 0.97
+               Mean reward (total): 0.00
+               Mean episode length: 19.72
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0064
+       Mean episode rew_ang_vel_xy: -0.0130
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0352
+   Mean episode rew_dof_pos_limits: -0.0017
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0029
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0071
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0143
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0029
+ Mean episode rew_tracking_lin_vel: 0.0046
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 7864320
+                    Iteration time: 12.22s
+                        Total time: 982.55s
+                               ETA: 10218 mins 43.9 s
+################################################################################
+                     [1m Learning iteration 80/50080 
+                       Computation: 8050 steps/s (collection: 11.938s, learning 0.273s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0079
+             Mean action noise std: 0.96
+               Mean reward (total): 0.00
+               Mean episode length: 21.30
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0063
+       Mean episode rew_ang_vel_xy: -0.0130
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0357
+   Mean episode rew_dof_pos_limits: -0.0017
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0028
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0072
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0140
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0028
+ Mean episode rew_tracking_lin_vel: 0.0045
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 7962624
+                    Iteration time: 12.21s
+                        Total time: 994.76s
+                               ETA: 10217 mins 47.8 s
+################################################################################
+                     [1m Learning iteration 81/50081 
+                       Computation: 8054 steps/s (collection: 11.934s, learning 0.271s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0069
+             Mean action noise std: 0.95
+               Mean reward (total): 0.00
+               Mean episode length: 19.79
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0060
+       Mean episode rew_ang_vel_xy: -0.0129
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0351
+   Mean episode rew_dof_pos_limits: -0.0017
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0028
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0071
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0133
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0029
+ Mean episode rew_tracking_lin_vel: 0.0045
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 8060928
+                    Iteration time: 12.20s
+                        Total time: 1006.97s
+                               ETA: 10216 mins 49.0 s
+################################################################################
+                     [1m Learning iteration 82/50082 
+                       Computation: 8062 steps/s (collection: 11.915s, learning 0.278s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0070
+             Mean action noise std: 0.94
+               Mean reward (total): 0.00
+               Mean episode length: 21.75
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0061
+       Mean episode rew_ang_vel_xy: -0.0127
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0351
+   Mean episode rew_dof_pos_limits: -0.0017
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0029
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0074
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0134
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0030
+ Mean episode rew_tracking_lin_vel: 0.0046
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 8159232
+                    Iteration time: 12.19s
+                        Total time: 1019.16s
+                               ETA: 10215 mins 44.1 s
+################################################################################
+                     [1m Learning iteration 83/50083 
+                       Computation: 8076 steps/s (collection: 11.900s, learning 0.272s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0082
+             Mean action noise std: 0.93
+               Mean reward (total): 0.00
+               Mean episode length: 19.93
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0060
+       Mean episode rew_ang_vel_xy: -0.0130
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0350
+   Mean episode rew_dof_pos_limits: -0.0017
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0029
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0073
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0132
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0030
+ Mean episode rew_tracking_lin_vel: 0.0046
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 8257536
+                    Iteration time: 12.17s
+                        Total time: 1031.33s
+                               ETA: 10214 mins 28.4 s
+################################################################################
+                     [1m Learning iteration 84/50084 
+                       Computation: 8088 steps/s (collection: 11.884s, learning 0.270s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0075
+             Mean action noise std: 0.91
+               Mean reward (total): 0.00
+               Mean episode length: 21.27
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0059
+       Mean episode rew_ang_vel_xy: -0.0129
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0355
+   Mean episode rew_dof_pos_limits: -0.0018
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0029
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0074
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0129
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0030
+ Mean episode rew_tracking_lin_vel: 0.0046
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 8355840
+                    Iteration time: 12.15s
+                        Total time: 1043.48s
+                               ETA: 10213 mins 3.3 s
+################################################################################
+                     [1m Learning iteration 85/50085 
+                       Computation: 8103 steps/s (collection: 11.862s, learning 0.270s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0081
+             Mean action noise std: 0.90
+               Mean reward (total): 0.00
+               Mean episode length: 20.37
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0059
+       Mean episode rew_ang_vel_xy: -0.0126
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0352
+   Mean episode rew_dof_pos_limits: -0.0018
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0029
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0071
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0127
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0030
+ Mean episode rew_tracking_lin_vel: 0.0047
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 8454144
+                    Iteration time: 12.13s
+                        Total time: 1055.62s
+                               ETA: 10211 mins 27.0 s
+################################################################################
+                     [1m Learning iteration 86/50086 
+                       Computation: 8074 steps/s (collection: 11.903s, learning 0.272s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0078
+             Mean action noise std: 0.89
+               Mean reward (total): 0.00
+               Mean episode length: 22.94
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0058
+       Mean episode rew_ang_vel_xy: -0.0126
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0349
+   Mean episode rew_dof_pos_limits: -0.0018
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0030
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0070
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0124
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0032
+ Mean episode rew_tracking_lin_vel: 0.0048
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 8552448
+                    Iteration time: 12.18s
+                        Total time: 1067.79s
+                               ETA: 10210 mins 17.8 s
+################################################################################
+                     [1m Learning iteration 87/50087 
+                       Computation: 8057 steps/s (collection: 11.926s, learning 0.274s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0076
+             Mean action noise std: 0.88
+               Mean reward (total): 0.00
+               Mean episode length: 20.80
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0057
+       Mean episode rew_ang_vel_xy: -0.0126
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0349
+   Mean episode rew_dof_pos_limits: -0.0018
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0030
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0070
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0121
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0031
+ Mean episode rew_tracking_lin_vel: 0.0048
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 8650752
+                    Iteration time: 12.20s
+                        Total time: 1079.99s
+                               ETA: 10209 mins 23.9 s
+################################################################################
+                     [1m Learning iteration 88/50088 
+                       Computation: 8086 steps/s (collection: 11.887s, learning 0.269s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0064
+             Mean action noise std: 0.88
+               Mean reward (total): 0.00
+               Mean episode length: 20.00
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0055
+       Mean episode rew_ang_vel_xy: -0.0123
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0345
+   Mean episode rew_dof_pos_limits: -0.0018
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0029
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0070
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0117
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0033
+ Mean episode rew_tracking_lin_vel: 0.0048
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 8749056
+                    Iteration time: 12.16s
+                        Total time: 1092.15s
+                               ETA: 10208 mins 6.2 s
+################################################################################
+                     [1m Learning iteration 89/50089 
+                       Computation: 8073 steps/s (collection: 11.907s, learning 0.269s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0074
+             Mean action noise std: 0.87
+               Mean reward (total): 0.00
+               Mean episode length: 22.73
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0056
+       Mean episode rew_ang_vel_xy: -0.0122
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0344
+   Mean episode rew_dof_pos_limits: -0.0019
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0030
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0068
+      Mean episode rew_orientation: -0.0007
+       Mean episode rew_smoothness: -0.0118
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0034
+ Mean episode rew_tracking_lin_vel: 0.0049
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 8847360
+                    Iteration time: 12.18s
+                        Total time: 1104.32s
+                               ETA: 10207 mins 0.8 s
+################################################################################
+                     [1m Learning iteration 90/50090 
+                       Computation: 8084 steps/s (collection: 11.884s, learning 0.275s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0072
+             Mean action noise std: 0.86
+               Mean reward (total): 0.00
+               Mean episode length: 21.93
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0054
+       Mean episode rew_ang_vel_xy: -0.0124
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0001
+          Mean episode rew_dof_acc: -0.0342
+   Mean episode rew_dof_pos_limits: -0.0018
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0030
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0070
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0114
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0033
+ Mean episode rew_tracking_lin_vel: 0.0048
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 8945664
+                    Iteration time: 12.16s
+                        Total time: 1116.48s
+                               ETA: 10205 mins 47.7 s
+################################################################################
+                     [1m Learning iteration 91/50091 
+                       Computation: 8079 steps/s (collection: 11.895s, learning 0.273s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0080
+             Mean action noise std: 0.85
+               Mean reward (total): 0.00
+               Mean episode length: 21.68
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0054
+       Mean episode rew_ang_vel_xy: -0.0122
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0342
+   Mean episode rew_dof_pos_limits: -0.0018
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0030
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0070
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0112
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0034
+ Mean episode rew_tracking_lin_vel: 0.0048
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 9043968
+                    Iteration time: 12.17s
+                        Total time: 1128.65s
+                               ETA: 10204 mins 40.4 s
+################################################################################
+                     [1m Learning iteration 92/50092 
+                       Computation: 8120 steps/s (collection: 11.828s, learning 0.277s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0077
+             Mean action noise std: 0.84
+               Mean reward (total): 0.01
+               Mean episode length: 20.78
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0053
+       Mean episode rew_ang_vel_xy: -0.0123
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0345
+   Mean episode rew_dof_pos_limits: -0.0018
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0030
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0070
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0110
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0033
+ Mean episode rew_tracking_lin_vel: 0.0048
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 9142272
+                    Iteration time: 12.11s
+                        Total time: 1140.76s
+                               ETA: 10203 mins 0.9 s
+################################################################################
+                     [1m Learning iteration 93/50093 
+                       Computation: 8125 steps/s (collection: 11.826s, learning 0.272s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0076
+             Mean action noise std: 0.83
+               Mean reward (total): 0.00
+               Mean episode length: 22.68
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0053
+       Mean episode rew_ang_vel_xy: -0.0122
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0342
+   Mean episode rew_dof_pos_limits: -0.0019
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0030
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0068
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0108
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0034
+ Mean episode rew_tracking_lin_vel: 0.0048
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 9240576
+                    Iteration time: 12.10s
+                        Total time: 1152.85s
+                               ETA: 10201 mins 19.3 s
+################################################################################
+                     [1m Learning iteration 94/50094 
+                       Computation: 8068 steps/s (collection: 11.909s, learning 0.274s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0073
+             Mean action noise std: 0.82
+               Mean reward (total): 0.00
+               Mean episode length: 22.00
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0052
+       Mean episode rew_ang_vel_xy: -0.0120
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0348
+   Mean episode rew_dof_pos_limits: -0.0019
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0030
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0069
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0107
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0034
+ Mean episode rew_tracking_lin_vel: 0.0049
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 9338880
+                    Iteration time: 12.18s
+                        Total time: 1165.04s
+                               ETA: 10200 mins 24.7 s
+################################################################################
+                     [1m Learning iteration 95/50095 
+                       Computation: 8069 steps/s (collection: 11.914s, learning 0.268s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0063
+             Mean action noise std: 0.82
+               Mean reward (total): 0.01
+               Mean episode length: 22.34
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0051
+       Mean episode rew_ang_vel_xy: -0.0120
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0341
+   Mean episode rew_dof_pos_limits: -0.0019
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0031
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0066
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0104
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0035
+ Mean episode rew_tracking_lin_vel: 0.0049
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 9437184
+                    Iteration time: 12.18s
+                        Total time: 1177.22s
+                               ETA: 10199 mins 30.2 s
+################################################################################
+                     [1m Learning iteration 96/50096 
+                       Computation: 8038 steps/s (collection: 11.902s, learning 0.328s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0077
+             Mean action noise std: 0.81
+               Mean reward (total): 0.01
+               Mean episode length: 21.45
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0050
+       Mean episode rew_ang_vel_xy: -0.0118
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0338
+   Mean episode rew_dof_pos_limits: -0.0019
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0031
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0066
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0102
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0035
+ Mean episode rew_tracking_lin_vel: 0.0050
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 9535488
+                    Iteration time: 12.23s
+                        Total time: 1189.45s
+                               ETA: 10199 mins 0.9 s
+################################################################################
+                     [1m Learning iteration 97/50097 
+                       Computation: 8018 steps/s (collection: 11.926s, learning 0.333s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0086
+             Mean action noise std: 0.80
+               Mean reward (total): 0.01
+               Mean episode length: 21.69
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0049
+       Mean episode rew_ang_vel_xy: -0.0119
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0335
+   Mean episode rew_dof_pos_limits: -0.0018
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0031
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0067
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0100
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0035
+ Mean episode rew_tracking_lin_vel: 0.0048
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 9633792
+                    Iteration time: 12.26s
+                        Total time: 1201.71s
+                               ETA: 10198 mins 47.1 s
+################################################################################
+                     [1m Learning iteration 98/50098 
+                       Computation: 8069 steps/s (collection: 11.859s, learning 0.323s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0070
+             Mean action noise std: 0.79
+               Mean reward (total): 0.01
+               Mean episode length: 22.65
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0049
+       Mean episode rew_ang_vel_xy: -0.0117
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0339
+   Mean episode rew_dof_pos_limits: -0.0019
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0031
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0068
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0099
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0036
+ Mean episode rew_tracking_lin_vel: 0.0050
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 9732096
+                    Iteration time: 12.18s
+                        Total time: 1213.89s
+                               ETA: 10197 mins 54.3 s
+################################################################################
+                     [1m Learning iteration 99/50099 
+                       Computation: 8070 steps/s (collection: 11.856s, learning 0.324s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0076
+             Mean action noise std: 0.78
+               Mean reward (total): 0.01
+               Mean episode length: 21.76
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0048
+       Mean episode rew_ang_vel_xy: -0.0115
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0339
+   Mean episode rew_dof_pos_limits: -0.0019
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0031
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0065
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0097
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0037
+ Mean episode rew_tracking_lin_vel: 0.0049
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 9830400
+                    Iteration time: 12.18s
+                        Total time: 1226.07s
+                               ETA: 10197 mins 1.4 s
+################################################################################
+                     [1m Learning iteration 100/50100 
+                       Computation: 8067 steps/s (collection: 11.863s, learning 0.322s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0076
+             Mean action noise std: 0.77
+               Mean reward (total): 0.01
+               Mean episode length: 22.12
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0047
+       Mean episode rew_ang_vel_xy: -0.0116
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0336
+   Mean episode rew_dof_pos_limits: -0.0019
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0031
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0068
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0094
+      Mean episode rew_stand_still: -0.0008
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0037
+ Mean episode rew_tracking_lin_vel: 0.0050
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 9928704
+                    Iteration time: 12.19s
+                        Total time: 1238.26s
+                               ETA: 10196 mins 11.9 s
+################################################################################
+                     [1m Learning iteration 101/50101 
+                       Computation: 8051 steps/s (collection: 11.887s, learning 0.322s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0079
+             Mean action noise std: 0.77
+               Mean reward (total): 0.01
+               Mean episode length: 20.93
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0047
+       Mean episode rew_ang_vel_xy: -0.0114
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0334
+   Mean episode rew_dof_pos_limits: -0.0019
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0031
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0064
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0093
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0039
+ Mean episode rew_tracking_lin_vel: 0.0050
+        Mean episode terrain_level: 0.0002
+--------------------------------------------------------------------------------
+                   Total timesteps: 10027008
+                    Iteration time: 12.21s
+                        Total time: 1250.47s
+                               ETA: 10195 mins 35.1 s
+################################################################################
+                     [1m Learning iteration 102/50102 
+                       Computation: 8048 steps/s (collection: 11.881s, learning 0.333s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0077
+             Mean action noise std: 0.76
+               Mean reward (total): 0.01
+               Mean episode length: 22.29
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0046
+       Mean episode rew_ang_vel_xy: -0.0114
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0339
+   Mean episode rew_dof_pos_limits: -0.0019
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0031
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0066
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0092
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0039
+ Mean episode rew_tracking_lin_vel: 0.0050
+        Mean episode terrain_level: 0.0001
+--------------------------------------------------------------------------------
+                   Total timesteps: 10125312
+                    Iteration time: 12.21s
+                        Total time: 1262.68s
+                               ETA: 10195 mins 1.0 s
+################################################################################
+                     [1m Learning iteration 103/50103 
+                       Computation: 8056 steps/s (collection: 11.878s, learning 0.324s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0073
+             Mean action noise std: 0.75
+               Mean reward (total): 0.01
+               Mean episode length: 23.77
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0046
+       Mean episode rew_ang_vel_xy: -0.0115
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0338
+   Mean episode rew_dof_pos_limits: -0.0019
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0031
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0067
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0091
+      Mean episode rew_stand_still: -0.0008
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0040
+ Mean episode rew_tracking_lin_vel: 0.0051
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 10223616
+                    Iteration time: 12.20s
+                        Total time: 1274.88s
+                               ETA: 10194 mins 21.5 s
+################################################################################
+                     [1m Learning iteration 104/50104 
+                       Computation: 8069 steps/s (collection: 11.860s, learning 0.323s)
+               Value function loss: 0.0000
+                    Surrogate loss: -0.0077
+             Mean action noise std: 0.75
+               Mean reward (total): 0.01
+               Mean episode length: 23.58
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0046
+       Mean episode rew_ang_vel_xy: -0.0113
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0340
+   Mean episode rew_dof_pos_limits: -0.0019
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0032
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0063
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0090
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0040
+ Mean episode rew_tracking_lin_vel: 0.0052
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 10321920
+                    Iteration time: 12.18s
+                        Total time: 1287.06s
+                               ETA: 10193 mins 33.3 s
+################################################################################
+                     [1m Learning iteration 105/50105 
+                       Computation: 8092 steps/s (collection: 11.827s, learning 0.321s)
+               Value function loss: 0.0001
+                    Surrogate loss: -0.0078
+             Mean action noise std: 0.74
+               Mean reward (total): 0.01
+               Mean episode length: 22.46
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0044
+       Mean episode rew_ang_vel_xy: -0.0115
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0339
+   Mean episode rew_dof_pos_limits: -0.0019
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0031
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0065
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0088
+      Mean episode rew_stand_still: -0.0008
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0040
+ Mean episode rew_tracking_lin_vel: 0.0050
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 10420224
+                    Iteration time: 12.15s
+                        Total time: 1299.21s
+                               ETA: 10192 mins 29.1 s
+################################################################################
+                     [1m Learning iteration 106/50106 
+                       Computation: 8094 steps/s (collection: 11.819s, learning 0.325s)
+               Value function loss: 0.0001
+                    Surrogate loss: -0.0089
+             Mean action noise std: 0.73
+               Mean reward (total): 0.01
+               Mean episode length: 23.25
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0045
+       Mean episode rew_ang_vel_xy: -0.0113
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0341
+   Mean episode rew_dof_pos_limits: -0.0020
+          Mean episode rew_dof_vel: -0.0017
+      Mean episode rew_foot_height: -0.0032
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0062
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0088
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0042
+ Mean episode rew_tracking_lin_vel: 0.0052
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 10518528
+                    Iteration time: 12.14s
+                        Total time: 1311.36s
+                               ETA: 10191 mins 24.2 s
+################################################################################
+                     [1m Learning iteration 107/50107 
+                       Computation: 8090 steps/s (collection: 11.832s, learning 0.318s)
+               Value function loss: 0.0001
+                    Surrogate loss: -0.0080
+             Mean action noise std: 0.73
+               Mean reward (total): 0.01
+               Mean episode length: 22.44
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0044
+       Mean episode rew_ang_vel_xy: -0.0110
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0329
+   Mean episode rew_dof_pos_limits: -0.0020
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0032
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0064
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0086
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0042
+ Mean episode rew_tracking_lin_vel: 0.0052
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 10616832
+                    Iteration time: 12.15s
+                        Total time: 1323.51s
+                               ETA: 10190 mins 23.4 s
+################################################################################
+                     [1m Learning iteration 108/50108 
+                       Computation: 8107 steps/s (collection: 11.804s, learning 0.321s)
+               Value function loss: 0.0001
+                    Surrogate loss: -0.0078
+             Mean action noise std: 0.72
+               Mean reward (total): 0.01
+               Mean episode length: 19.55
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0043
+       Mean episode rew_ang_vel_xy: -0.0110
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0333
+   Mean episode rew_dof_pos_limits: -0.0020
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0032
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0062
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0084
+      Mean episode rew_stand_still: -0.0008
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0042
+ Mean episode rew_tracking_lin_vel: 0.0052
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 10715136
+                    Iteration time: 12.12s
+                        Total time: 1335.63s
+                               ETA: 10189 mins 11.7 s
+################################################################################
+                     [1m Learning iteration 109/50109 
+                       Computation: 8080 steps/s (collection: 11.842s, learning 0.324s)
+               Value function loss: 0.0001
+                    Surrogate loss: -0.0085
+             Mean action noise std: 0.71
+               Mean reward (total): 0.01
+               Mean episode length: 22.72
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0043
+       Mean episode rew_ang_vel_xy: -0.0109
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0329
+   Mean episode rew_dof_pos_limits: -0.0020
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0032
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0064
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0083
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0043
+ Mean episode rew_tracking_lin_vel: 0.0053
+        Mean episode terrain_level: 0.0001
+--------------------------------------------------------------------------------
+                   Total timesteps: 10813440
+                    Iteration time: 12.17s
+                        Total time: 1347.80s
+                               ETA: 10188 mins 19.6 s
+################################################################################
+                     [1m Learning iteration 110/50110 
+                       Computation: 8053 steps/s (collection: 11.878s, learning 0.328s)
+               Value function loss: 0.0001
+                    Surrogate loss: -0.0071
+             Mean action noise std: 0.71
+               Mean reward (total): 0.01
+               Mean episode length: 24.67
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0043
+       Mean episode rew_ang_vel_xy: -0.0109
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0328
+   Mean episode rew_dof_pos_limits: -0.0021
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0032
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0062
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0083
+      Mean episode rew_stand_still: -0.0008
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0044
+ Mean episode rew_tracking_lin_vel: 0.0053
+        Mean episode terrain_level: 0.0002
+--------------------------------------------------------------------------------
+                   Total timesteps: 10911744
+                    Iteration time: 12.21s
+                        Total time: 1360.00s
+                               ETA: 10187 mins 46.4 s
+################################################################################
+                     [1m Learning iteration 111/50111 
+                       Computation: 19932 steps/s (collection: 4.609s, learning 0.323s)
+               Value function loss: 0.0001
+                    Surrogate loss: -0.0086
+             Mean action noise std: 0.70
+               Mean reward (total): 0.01
+               Mean episode length: 22.69
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0042
+       Mean episode rew_ang_vel_xy: -0.0105
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0323
+   Mean episode rew_dof_pos_limits: -0.0020
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0032
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0060
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0080
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0043
+ Mean episode rew_tracking_lin_vel: 0.0052
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 11010048
+                    Iteration time: 4.93s
+                        Total time: 1364.94s
+                               ETA: 10133 mins 13.3 s
+################################################################################
+                     [1m Learning iteration 112/50112 
+                       Computation: 28609 steps/s (collection: 3.116s, learning 0.320s)
+               Value function loss: 0.0001
+                    Surrogate loss: -0.0090
+             Mean action noise std: 0.70
+               Mean reward (total): 0.01
+               Mean episode length: 24.50
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0042
+       Mean episode rew_ang_vel_xy: -0.0110
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0324
+   Mean episode rew_dof_pos_limits: -0.0021
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0033
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0061
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0081
+      Mean episode rew_stand_still: -0.0008
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0044
+ Mean episode rew_tracking_lin_vel: 0.0053
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 11108352
+                    Iteration time: 3.44s
+                        Total time: 1368.37s
+                               ETA: 10068 mins 37.7 s
+################################################################################
+                     [1m Learning iteration 113/50113 
+                       Computation: 28395 steps/s (collection: 3.140s, learning 0.322s)
+               Value function loss: 0.0001
+                    Surrogate loss: -0.0082
+             Mean action noise std: 0.69
+               Mean reward (total): 0.01
+               Mean episode length: 23.19
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0041
+       Mean episode rew_ang_vel_xy: -0.0108
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0322
+   Mean episode rew_dof_pos_limits: -0.0021
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0033
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0063
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0079
+      Mean episode rew_stand_still: -0.0008
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0045
+ Mean episode rew_tracking_lin_vel: 0.0053
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 11206656
+                    Iteration time: 3.46s
+                        Total time: 1371.83s
+                               ETA: 10005 mins 21.4 s
+################################################################################
+                     [1m Learning iteration 114/50114 
+                       Computation: 28785 steps/s (collection: 3.118s, learning 0.297s)
+               Value function loss: 0.0001
+                    Surrogate loss: -0.0081
+             Mean action noise std: 0.69
+               Mean reward (total): 0.01
+               Mean episode length: 22.46
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0041
+       Mean episode rew_ang_vel_xy: -0.0107
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0322
+   Mean episode rew_dof_pos_limits: -0.0021
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0033
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0063
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0078
+      Mean episode rew_stand_still: -0.0008
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0046
+ Mean episode rew_tracking_lin_vel: 0.0054
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 11304960
+                    Iteration time: 3.42s
+                        Total time: 1375.25s
+                               ETA: 9942 mins 50.8 s
+################################################################################
+                     [1m Learning iteration 115/50115 
+                       Computation: 28482 steps/s (collection: 3.169s, learning 0.283s)
+               Value function loss: 0.0001
+                    Surrogate loss: -0.0086
+             Mean action noise std: 0.68
+               Mean reward (total): 0.01
+               Mean episode length: 24.21
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0041
+       Mean episode rew_ang_vel_xy: -0.0104
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0318
+   Mean episode rew_dof_pos_limits: -0.0022
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0033
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0061
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0079
+      Mean episode rew_stand_still: -0.0008
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0047
+ Mean episode rew_tracking_lin_vel: 0.0054
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 11403264
+                    Iteration time: 3.45s
+                        Total time: 1378.70s
+                               ETA: 9881 mins 40.3 s
+################################################################################
+                     [1m Learning iteration 116/50116 
+                       Computation: 28350 steps/s (collection: 3.175s, learning 0.293s)
+               Value function loss: 0.0001
+                    Surrogate loss: -0.0077
+             Mean action noise std: 0.67
+               Mean reward (total): 0.01
+               Mean episode length: 23.17
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0040
+       Mean episode rew_ang_vel_xy: -0.0103
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0311
+   Mean episode rew_dof_pos_limits: -0.0021
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0033
+      Mean episode rew_joint_power: -0.0009
+        Mean episode rew_lin_vel_z: -0.0056
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0077
+      Mean episode rew_stand_still: -0.0008
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0048
+ Mean episode rew_tracking_lin_vel: 0.0054
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 11501568
+                    Iteration time: 3.47s
+                        Total time: 1382.17s
+                               ETA: 9821 mins 39.4 s
+################################################################################
+                     [1m Learning iteration 117/50117 
+                       Computation: 28572 steps/s (collection: 3.157s, learning 0.284s)
+               Value function loss: 0.0001
+                    Surrogate loss: -0.0077
+             Mean action noise std: 0.67
+               Mean reward (total): 0.01
+               Mean episode length: 23.87
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0040
+       Mean episode rew_ang_vel_xy: -0.0104
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0312
+   Mean episode rew_dof_pos_limits: -0.0021
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0033
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0057
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0075
+      Mean episode rew_stand_still: -0.0008
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0048
+ Mean episode rew_tracking_lin_vel: 0.0055
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 11599872
+                    Iteration time: 3.44s
+                        Total time: 1385.61s
+                               ETA: 9762 mins 28.0 s
+################################################################################
+                     [1m Learning iteration 118/50118 
+                       Computation: 28226 steps/s (collection: 3.203s, learning 0.279s)
+               Value function loss: 0.0001
+                    Surrogate loss: -0.0077
+             Mean action noise std: 0.66
+               Mean reward (total): 0.02
+               Mean episode length: 22.89
+--------------------------------------------------------------------------------
+      Mean episode rew_action_rate: -0.0040
+       Mean episode rew_ang_vel_xy: -0.0104
+         Mean episode rew_base_acc: 0.0002
+      Mean episode rew_base_height: 0.0002
+          Mean episode rew_dof_acc: -0.0311
+   Mean episode rew_dof_pos_limits: -0.0021
+          Mean episode rew_dof_vel: -0.0016
+      Mean episode rew_foot_height: -0.0033
+      Mean episode rew_joint_power: -0.0008
+        Mean episode rew_lin_vel_z: -0.0058
+      Mean episode rew_orientation: -0.0006
+       Mean episode rew_smoothness: -0.0075
+      Mean episode rew_stand_still: -0.0007
+          Mean episode rew_torques: -0.0006
+ Mean episode rew_tracking_ang_vel: 0.0048
+ Mean episode rew_tracking_lin_vel: 0.0054
+        Mean episode terrain_level: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 11698176
+                    Iteration time: 3.48s
+                        Total time: 1389.09s
+                               ETA: 9704 mins 34.0 s
+Traceback (most recent call last):
+  File "train.py", line 73, in <module>
+    train(args)
+  File "train.py", line 68, in train
+    ppo_runner.learn(num_learning_iterations=train_cfg.runner.max_iterations, init_at_random_ep_len=True)
+  File "/home/lenovo/chenxi/baseline_2/Locomotion_Baseline/rsl_rl/rsl_rl/runners/on_policy_runner.py", line 137, in learn
+    self.alg.compute_returns(critic_obs)
+  File "/home/lenovo/chenxi/baseline_2/Locomotion_Baseline/rsl_rl/rsl_rl/algorithms/ppo.py", line 99, in compute_returns
+    self.storage.compute_returns(last_values, self.gamma, self.lam)
+  File "/home/lenovo/chenxi/baseline_2/Locomotion_Baseline/rsl_rl/rsl_rl/storage/rollout_storage.py", line 130, in compute_returns
+    next_is_not_terminal = 1.0 - self.dones[step].float()
+  File "/home/lenovo/chenxi/anaconda3/envs/legged_base/lib/python3.8/site-packages/torch/_tensor.py", line 39, in wrapped
+    return f(*args, **kwargs)
+  File "/home/lenovo/chenxi/anaconda3/envs/legged_base/lib/python3.8/site-packages/torch/_tensor.py", line 833, in __rsub__
+    return _C._VariableFunctions.rsub(self, other)
+KeyboardInterrupt

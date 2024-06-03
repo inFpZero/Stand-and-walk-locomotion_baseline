@@ -1,0 +1,79 @@
+wandb_version: 1
+
+action_difference:
+  desc: null
+  value: 0.02
+ang_vel_xy:
+  desc: null
+  value: -0.1
+base_acc:
+  desc: null
+  value: 0.02
+base_height:
+  desc: null
+  value: 0.003
+dof_acc:
+  desc: null
+  value: -8.0e-07
+dof_pos_limits:
+  desc: null
+  value: -1.5
+dof_vel:
+  desc: null
+  value: -8.0e-05
+feet_air_time:
+  desc: null
+  value: 0.5
+foot_height:
+  desc: null
+  value: -0.12
+foot_position_stand:
+  desc: null
+  value: 0.03
+lin_vel_z:
+  desc: null
+  value: -0.8
+orientation:
+  desc: null
+  value: -0.5
+torques:
+  desc: null
+  value: 0.02
+tracking_ang_vel:
+  desc: null
+  value: 1.0
+tracking_lin_vel:
+  desc: null
+  value: 1.0
+tracking_x_vel:
+  desc: null
+  value: 2
+tracking_y_vel:
+  desc: null
+  value: 2
+_wandb:
+  desc: null
+  value:
+    python_version: 3.8.19
+    cli_version: 0.16.6
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1717395199.0
+    t:
+      1:
+      - 1
+      - 41
+      - 55
+      2:
+      - 1
+      - 41
+      - 55
+      3:
+      - 16
+      - 23
+      4: 3.8.19
+      5: 0.16.6
+      8:
+      - 5
+      13: linux-x86_64

@@ -59,9 +59,8 @@ def train(args):
         mode = "disabled"
     print(args.proj_name)
     # wandb.init(project=args.proj_name, experiment_name=args.exptid, mode=mode, logdir="../../logs")
-    wandb.init(project="Stand and Walk for wow", resume="allow") 
-    wandb.save(LEGGED_GYM_ENVS_DIR + "/base/legged_robot_config.py", policy="now")
-    wandb.save(LEGGED_GYM_ENVS_DIR + "/base/legged_robot.py", policy="now")
+
+
 
     env, env_cfg = task_registry.make_env(name=args.task, args=args)
     ppo_runner, train_cfg = task_registry.make_alg_runner(log_root = log_pth, env=env, name=args.task, args=args)

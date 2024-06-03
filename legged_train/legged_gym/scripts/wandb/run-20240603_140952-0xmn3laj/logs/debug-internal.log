@@ -1,0 +1,218 @@
+2024-06-03 14:09:52,639 INFO    StreamThr :23081 [internal.py:wandb_internal():86] W&B internal server running at pid: 23081, started at: 2024-06-03 14:09:52.638357
+2024-06-03 14:09:52,643 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: status
+2024-06-03 14:09:52,651 INFO    WriterThread:23081 [datastore.py:open_for_write():87] open: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/run-0xmn3laj.wandb
+2024-06-03 14:09:52,652 DEBUG   SenderThread:23081 [sender.py:send():379] send: header
+2024-06-03 14:09:52,674 DEBUG   SenderThread:23081 [sender.py:send():379] send: run
+2024-06-03 14:09:52,678 INFO    SenderThread:23081 [sender.py:_setup_resume():749] checking resume status for None/Stand and Walk for wow/0xmn3laj
+2024-06-03 14:09:54,638 INFO    SenderThread:23081 [dir_watcher.py:__init__():211] watching files in: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/files
+2024-06-03 14:09:54,638 INFO    SenderThread:23081 [sender.py:_start_run_threads():1124] run started: 0xmn3laj with start time 1717394992.6374
+2024-06-03 14:09:54,654 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: check_version
+2024-06-03 14:09:54,655 DEBUG   SenderThread:23081 [sender.py:send_request():406] send_request: check_version
+2024-06-03 14:09:57,171 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: run_start
+2024-06-03 14:09:57,188 DEBUG   HandlerThread:23081 [system_info.py:__init__():26] System info init
+2024-06-03 14:09:57,188 DEBUG   HandlerThread:23081 [system_info.py:__init__():41] System info init done
+2024-06-03 14:09:57,188 INFO    HandlerThread:23081 [system_monitor.py:start():194] Starting system monitor
+2024-06-03 14:09:57,188 INFO    SystemMonitor:23081 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-06-03 14:09:57,190 INFO    HandlerThread:23081 [system_monitor.py:probe():214] Collecting system info
+2024-06-03 14:09:57,191 INFO    SystemMonitor:23081 [interfaces.py:start():190] Started cpu monitoring
+2024-06-03 14:09:57,192 INFO    SystemMonitor:23081 [interfaces.py:start():190] Started disk monitoring
+2024-06-03 14:09:57,193 INFO    SystemMonitor:23081 [interfaces.py:start():190] Started gpu monitoring
+2024-06-03 14:09:57,194 INFO    SystemMonitor:23081 [interfaces.py:start():190] Started memory monitoring
+2024-06-03 14:09:57,195 INFO    SystemMonitor:23081 [interfaces.py:start():190] Started network monitoring
+2024-06-03 14:09:57,263 DEBUG   HandlerThread:23081 [system_info.py:probe():150] Probing system
+2024-06-03 14:09:57,271 DEBUG   HandlerThread:23081 [system_info.py:_probe_git():135] Probing git
+2024-06-03 14:09:57,287 DEBUG   HandlerThread:23081 [system_info.py:_probe_git():143] Probing git done
+2024-06-03 14:09:57,287 DEBUG   HandlerThread:23081 [system_info.py:probe():198] Probing system done
+2024-06-03 14:09:57,287 DEBUG   HandlerThread:23081 [system_monitor.py:probe():223] {'os': 'Linux-5.4.0-152-generic-x86_64-with-glibc2.17', 'python': '3.8.19', 'heartbeatAt': '2024-06-03T06:09:57.263338', 'startedAt': '2024-06-03T06:09:52.626412', 'docker': None, 'cuda': None, 'args': ('--exptid', 'loc-h1-wow', '--task=wow', '--device', 'cuda:0'), 'state': 'running', 'program': 'train.py', 'codePathLocal': 'train.py', 'codePath': 'legged_train/legged_gym/scripts/train.py', 'git': {'remote': 'git@github.com:inFpZero/Locomotion_Baseline.git', 'commit': '9c6bd537f3d8417be4d7aa7f6362902dd6d6a03c'}, 'email': 'ibean625@gmail.com', 'root': '/home/lenovo/chenxi/baseline_2/Locomotion_Baseline', 'host': 'lenovo', 'username': 'lenovo', 'executable': '/home/lenovo/chenxi/anaconda3/envs/legged_base/bin/python', 'cpu_count': 32, 'cpu_count_logical': 64, 'cpu_freq': {'current': 1003.3149687499999, 'min': 1000.0, 'max': 3900.0}, 'cpu_freq_per_core': [{'current': 1000.11, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.21, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.904, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.244, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.577, 'min': 1000.0, 'max': 3900.0}, {'current': 1001.078, 'min': 1000.0, 'max': 3900.0}, {'current': 1001.131, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.563, 'min': 1000.0, 'max': 3900.0}, {'current': 999.967, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.148, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.794, 'min': 1000.0, 'max': 3900.0}, {'current': 1639.853, 'min': 1000.0, 'max': 3900.0}, {'current': 1001.157, 'min': 1000.0, 'max': 3900.0}, {'current': 1001.269, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.003, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.202, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.984, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.937, 'min': 1000.0, 'max': 3900.0}, {'current': 999.987, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.73, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.141, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.27, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.092, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.079, 'min': 1000.0, 'max': 3900.0}, {'current': 1001.175, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.557, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.321, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.696, 'min': 1000.0, 'max': 3900.0}, {'current': 999.99, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.681, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.119, 'min': 1000.0, 'max': 3900.0}, {'current': 999.91, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.216, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.371, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.049, 'min': 1000.0, 'max': 3900.0}, {'current': 1001.347, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.135, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.048, 'min': 1000.0, 'max': 3900.0}, {'current': 1001.289, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.438, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.024, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.062, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.167, 'min': 1000.0, 'max': 3900.0}, {'current': 2351.859, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.247, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.089, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.066, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.245, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.321, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.185, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.579, 'min': 1000.0, 'max': 3900.0}, {'current': 999.89, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.845, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.329, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.422, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.997, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.68, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.081, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.559, 'min': 1000.0, 'max': 3900.0}, {'current': 999.955, 'min': 1000.0, 'max': 3900.0}, {'current': 1001.265, 'min': 1000.0, 'max': 3900.0}, {'current': 999.906, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.462, 'min': 1000.0, 'max': 3900.0}, {'current': 999.893, 'min': 1000.0, 'max': 3900.0}], 'disk': {'/': {'total': 3753.978012084961, 'used': 111.31781387329102}}, 'gpu': 'NVIDIA GeForce RTX 4080', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 4080', 'memory_total': 17171480576}], 'memory': {'total': 125.48954391479492}}
+2024-06-03 14:09:57,287 INFO    HandlerThread:23081 [system_monitor.py:probe():224] Finished collecting system info
+2024-06-03 14:09:57,287 INFO    HandlerThread:23081 [system_monitor.py:probe():227] Publishing system info
+2024-06-03 14:09:57,287 DEBUG   HandlerThread:23081 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-06-03 14:09:57,644 INFO    Thread-12 :23081 [dir_watcher.py:_on_file_created():271] file/dir created: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/files/conda-environment.yaml
+2024-06-03 14:09:58,641 INFO    Thread-12 :23081 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/files/conda-environment.yaml
+2024-06-03 14:09:58,710 DEBUG   HandlerThread:23081 [system_info.py:_save_conda():222] Saving conda packages done
+2024-06-03 14:09:58,712 INFO    HandlerThread:23081 [system_monitor.py:probe():229] Finished publishing system info
+2024-06-03 14:09:58,723 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: status_report
+2024-06-03 14:09:58,725 DEBUG   SenderThread:23081 [sender.py:send():379] send: files
+2024-06-03 14:09:58,725 INFO    SenderThread:23081 [sender.py:_save_file():1390] saving file wandb-metadata.json with policy now
+2024-06-03 14:09:58,799 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: python_packages
+2024-06-03 14:09:58,800 DEBUG   SenderThread:23081 [sender.py:send_request():406] send_request: python_packages
+2024-06-03 14:09:58,802 DEBUG   SenderThread:23081 [sender.py:send():379] send: telemetry
+2024-06-03 14:09:58,803 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-03 14:09:58,804 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-03 14:09:58,807 DEBUG   SenderThread:23081 [sender.py:send_request():406] send_request: stop_status
+2024-06-03 14:09:59,437 DEBUG   SenderThread:23081 [sender.py:send():379] send: telemetry
+2024-06-03 14:09:59,438 DEBUG   SenderThread:23081 [sender.py:send():379] send: files
+2024-06-03 14:09:59,438 INFO    SenderThread:23081 [sender.py:_save_file():1390] saving file base/legged_robot_config.py with policy now
+2024-06-03 14:09:59,439 DEBUG   SenderThread:23081 [sender.py:send():379] send: files
+2024-06-03 14:09:59,439 INFO    SenderThread:23081 [sender.py:_save_file():1390] saving file base/legged_robot.py with policy now
+2024-06-03 14:09:59,642 INFO    Thread-12 :23081 [dir_watcher.py:_on_file_created():271] file/dir created: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/files/output.log
+2024-06-03 14:09:59,642 INFO    Thread-12 :23081 [dir_watcher.py:_on_file_created():271] file/dir created: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/files/base/legged_robot_config.py
+2024-06-03 14:09:59,643 INFO    Thread-12 :23081 [dir_watcher.py:_on_file_created():271] file/dir created: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/files/base/legged_robot.py
+2024-06-03 14:09:59,643 INFO    Thread-12 :23081 [dir_watcher.py:_on_file_created():271] file/dir created: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/files/wandb-metadata.json
+2024-06-03 14:09:59,643 INFO    Thread-12 :23081 [dir_watcher.py:_on_file_created():271] file/dir created: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/files/requirements.txt
+2024-06-03 14:09:59,644 INFO    Thread-12 :23081 [dir_watcher.py:_on_file_created():271] file/dir created: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/files/base
+2024-06-03 14:10:01,061 INFO    wandb-upload_1:23081 [upload_job.py:push():131] Uploaded file /tmp/tmprft3akp_wandb/32m64qib-base/legged_robot_config.py
+2024-06-03 14:10:01,363 INFO    wandb-upload_2:23081 [upload_job.py:push():131] Uploaded file /tmp/tmprft3akp_wandb/93wbl935-base/legged_robot.py
+2024-06-03 14:10:01,434 INFO    wandb-upload_0:23081 [upload_job.py:push():131] Uploaded file /tmp/tmprft3akp_wandb/ud6eunz0-wandb-metadata.json
+2024-06-03 14:10:01,643 INFO    Thread-12 :23081 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/files/output.log
+2024-06-03 14:10:03,644 INFO    Thread-12 :23081 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/files/output.log
+2024-06-03 14:10:04,096 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: status_report
+2024-06-03 14:10:09,097 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: status_report
+2024-06-03 14:10:14,098 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: status_report
+2024-06-03 14:10:19,099 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: status_report
+2024-06-03 14:10:24,105 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: status_report
+2024-06-03 14:10:24,657 INFO    Thread-12 :23081 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/files/config.yaml
+2024-06-03 14:10:29,483 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: status_report
+2024-06-03 14:10:34,484 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: status_report
+2024-06-03 14:10:39,485 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: status_report
+2024-06-03 14:10:44,486 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: status_report
+2024-06-03 14:10:45,153 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-03 14:10:45,154 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-03 14:10:45,156 DEBUG   SenderThread:23081 [sender.py:send_request():406] send_request: stop_status
+2024-06-03 14:10:45,628 DEBUG   SenderThread:23081 [sender.py:send():379] send: exit
+2024-06-03 14:10:45,628 INFO    SenderThread:23081 [sender.py:send_exit():586] handling exit code: 255
+2024-06-03 14:10:45,628 INFO    SenderThread:23081 [sender.py:send_exit():588] handling runtime: 47
+2024-06-03 14:10:45,633 INFO    SenderThread:23081 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-06-03 14:10:45,634 INFO    SenderThread:23081 [sender.py:send_exit():594] send defer
+2024-06-03 14:10:45,634 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: defer
+2024-06-03 14:10:45,634 INFO    HandlerThread:23081 [handler.py:handle_request_defer():172] handle defer: 0
+2024-06-03 14:10:45,635 DEBUG   SenderThread:23081 [sender.py:send_request():406] send_request: defer
+2024-06-03 14:10:45,635 INFO    SenderThread:23081 [sender.py:send_request_defer():610] handle sender defer: 0
+2024-06-03 14:10:45,635 INFO    SenderThread:23081 [sender.py:transition_state():614] send defer: 1
+2024-06-03 14:10:45,635 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: defer
+2024-06-03 14:10:45,636 INFO    HandlerThread:23081 [handler.py:handle_request_defer():172] handle defer: 1
+2024-06-03 14:10:45,636 DEBUG   SenderThread:23081 [sender.py:send_request():406] send_request: defer
+2024-06-03 14:10:45,636 INFO    SenderThread:23081 [sender.py:send_request_defer():610] handle sender defer: 1
+2024-06-03 14:10:45,636 INFO    SenderThread:23081 [sender.py:transition_state():614] send defer: 2
+2024-06-03 14:10:45,636 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: defer
+2024-06-03 14:10:45,637 INFO    HandlerThread:23081 [handler.py:handle_request_defer():172] handle defer: 2
+2024-06-03 14:10:45,637 INFO    HandlerThread:23081 [system_monitor.py:finish():203] Stopping system monitor
+2024-06-03 14:10:45,638 INFO    HandlerThread:23081 [interfaces.py:finish():202] Joined cpu monitor
+2024-06-03 14:10:45,638 INFO    HandlerThread:23081 [interfaces.py:finish():202] Joined disk monitor
+2024-06-03 14:10:45,639 DEBUG   SystemMonitor:23081 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-06-03 14:10:45,639 DEBUG   SystemMonitor:23081 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-06-03 14:10:45,639 DEBUG   SystemMonitor:23081 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-06-03 14:10:45,670 INFO    Thread-12 :23081 [dir_watcher.py:_on_file_created():271] file/dir created: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/files/wandb-summary.json
+2024-06-03 14:10:45,745 INFO    HandlerThread:23081 [interfaces.py:finish():202] Joined gpu monitor
+2024-06-03 14:10:45,745 INFO    HandlerThread:23081 [interfaces.py:finish():202] Joined memory monitor
+2024-06-03 14:10:45,746 INFO    HandlerThread:23081 [interfaces.py:finish():202] Joined network monitor
+2024-06-03 14:10:45,747 DEBUG   SenderThread:23081 [sender.py:send_request():406] send_request: defer
+2024-06-03 14:10:45,747 INFO    SenderThread:23081 [sender.py:send_request_defer():610] handle sender defer: 2
+2024-06-03 14:10:45,747 INFO    SenderThread:23081 [sender.py:transition_state():614] send defer: 3
+2024-06-03 14:10:45,748 DEBUG   SenderThread:23081 [sender.py:send():379] send: stats
+2024-06-03 14:10:45,748 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: defer
+2024-06-03 14:10:45,749 INFO    HandlerThread:23081 [handler.py:handle_request_defer():172] handle defer: 3
+2024-06-03 14:10:45,750 DEBUG   SenderThread:23081 [sender.py:send_request():406] send_request: defer
+2024-06-03 14:10:45,750 INFO    SenderThread:23081 [sender.py:send_request_defer():610] handle sender defer: 3
+2024-06-03 14:10:45,750 INFO    SenderThread:23081 [sender.py:transition_state():614] send defer: 4
+2024-06-03 14:10:45,750 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: defer
+2024-06-03 14:10:45,751 INFO    HandlerThread:23081 [handler.py:handle_request_defer():172] handle defer: 4
+2024-06-03 14:10:45,751 DEBUG   SenderThread:23081 [sender.py:send_request():406] send_request: defer
+2024-06-03 14:10:45,751 INFO    SenderThread:23081 [sender.py:send_request_defer():610] handle sender defer: 4
+2024-06-03 14:10:45,751 INFO    SenderThread:23081 [sender.py:transition_state():614] send defer: 5
+2024-06-03 14:10:45,752 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: defer
+2024-06-03 14:10:45,752 INFO    HandlerThread:23081 [handler.py:handle_request_defer():172] handle defer: 5
+2024-06-03 14:10:45,752 DEBUG   SenderThread:23081 [sender.py:send():379] send: summary
+2024-06-03 14:10:45,753 INFO    SenderThread:23081 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-06-03 14:10:45,753 DEBUG   SenderThread:23081 [sender.py:send_request():406] send_request: defer
+2024-06-03 14:10:45,753 INFO    SenderThread:23081 [sender.py:send_request_defer():610] handle sender defer: 5
+2024-06-03 14:10:45,754 INFO    SenderThread:23081 [sender.py:transition_state():614] send defer: 6
+2024-06-03 14:10:45,754 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: defer
+2024-06-03 14:10:45,754 INFO    HandlerThread:23081 [handler.py:handle_request_defer():172] handle defer: 6
+2024-06-03 14:10:45,755 DEBUG   SenderThread:23081 [sender.py:send_request():406] send_request: defer
+2024-06-03 14:10:45,755 INFO    SenderThread:23081 [sender.py:send_request_defer():610] handle sender defer: 6
+2024-06-03 14:10:45,755 INFO    SenderThread:23081 [sender.py:transition_state():614] send defer: 7
+2024-06-03 14:10:45,755 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: status_report
+2024-06-03 14:10:45,755 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: defer
+2024-06-03 14:10:45,756 INFO    HandlerThread:23081 [handler.py:handle_request_defer():172] handle defer: 7
+2024-06-03 14:10:45,756 DEBUG   SenderThread:23081 [sender.py:send_request():406] send_request: defer
+2024-06-03 14:10:45,756 INFO    SenderThread:23081 [sender.py:send_request_defer():610] handle sender defer: 7
+2024-06-03 14:10:46,166 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: poll_exit
+2024-06-03 14:10:46,671 INFO    Thread-12 :23081 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/files/wandb-summary.json
+2024-06-03 14:10:47,501 INFO    SenderThread:23081 [sender.py:transition_state():614] send defer: 8
+2024-06-03 14:10:47,502 DEBUG   SenderThread:23081 [sender.py:send_request():406] send_request: poll_exit
+2024-06-03 14:10:47,502 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: defer
+2024-06-03 14:10:47,503 INFO    HandlerThread:23081 [handler.py:handle_request_defer():172] handle defer: 8
+2024-06-03 14:10:47,503 DEBUG   SenderThread:23081 [sender.py:send_request():406] send_request: defer
+2024-06-03 14:10:47,503 INFO    SenderThread:23081 [sender.py:send_request_defer():610] handle sender defer: 8
+2024-06-03 14:10:47,503 INFO    SenderThread:23081 [job_builder.py:build():318] Attempting to build job artifact
+2024-06-03 14:10:47,504 INFO    SenderThread:23081 [job_builder.py:_get_source_type():455] is repo sourced job
+2024-06-03 14:10:47,552 INFO    SenderThread:23081 [job_builder.py:build():431] adding wandb-job metadata file
+2024-06-03 14:10:47,562 INFO    SenderThread:23081 [sender.py:transition_state():614] send defer: 9
+2024-06-03 14:10:47,563 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: defer
+2024-06-03 14:10:47,564 INFO    HandlerThread:23081 [handler.py:handle_request_defer():172] handle defer: 9
+2024-06-03 14:10:47,564 DEBUG   SenderThread:23081 [sender.py:send():379] send: artifact
+2024-06-03 14:10:47,672 INFO    Thread-12 :23081 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/files/output.log
+2024-06-03 14:10:48,168 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: poll_exit
+2024-06-03 14:10:49,418 INFO    SenderThread:23081 [sender.py:send_artifact():1468] sent artifact job-git_github.com_inFpZero_Locomotion_Baseline.git_legged_train_legged_gym_scripts_train.py - {'id': 'QXJ0aWZhY3Q6ODU3Nzg3NDA0', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE4MTQ4NDcxNA==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6ODU4NDQwMDM3', 'versionIndex': 7}}}
+2024-06-03 14:10:49,418 DEBUG   SenderThread:23081 [sender.py:send_request():406] send_request: defer
+2024-06-03 14:10:49,418 INFO    SenderThread:23081 [sender.py:send_request_defer():610] handle sender defer: 9
+2024-06-03 14:10:49,418 INFO    SenderThread:23081 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-06-03 14:10:49,674 INFO    SenderThread:23081 [dir_watcher.py:finish():388] scan: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/files
+2024-06-03 14:10:49,674 INFO    SenderThread:23081 [dir_watcher.py:finish():402] scan save: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/files/wandb-metadata.json wandb-metadata.json
+2024-06-03 14:10:49,675 INFO    SenderThread:23081 [dir_watcher.py:finish():402] scan save: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/files/requirements.txt requirements.txt
+2024-06-03 14:10:49,675 INFO    SenderThread:23081 [dir_watcher.py:finish():402] scan save: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/files/output.log output.log
+2024-06-03 14:10:49,675 INFO    SenderThread:23081 [dir_watcher.py:finish():402] scan save: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/files/wandb-summary.json wandb-summary.json
+2024-06-03 14:10:49,687 INFO    SenderThread:23081 [dir_watcher.py:finish():402] scan save: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/files/conda-environment.yaml conda-environment.yaml
+2024-06-03 14:10:49,688 INFO    SenderThread:23081 [dir_watcher.py:finish():402] scan save: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/files/config.yaml config.yaml
+2024-06-03 14:10:49,708 INFO    SenderThread:23081 [dir_watcher.py:finish():402] scan save: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/files/base/legged_robot_config.py base/legged_robot_config.py
+2024-06-03 14:10:49,708 INFO    SenderThread:23081 [dir_watcher.py:finish():402] scan save: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/files/base/legged_robot.py base/legged_robot.py
+2024-06-03 14:10:49,709 INFO    SenderThread:23081 [sender.py:transition_state():614] send defer: 10
+2024-06-03 14:10:49,709 DEBUG   SenderThread:23081 [sender.py:send_request():406] send_request: poll_exit
+2024-06-03 14:10:49,710 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: defer
+2024-06-03 14:10:49,710 INFO    HandlerThread:23081 [handler.py:handle_request_defer():172] handle defer: 10
+2024-06-03 14:10:49,712 DEBUG   SenderThread:23081 [sender.py:send_request():406] send_request: defer
+2024-06-03 14:10:49,712 INFO    SenderThread:23081 [sender.py:send_request_defer():610] handle sender defer: 10
+2024-06-03 14:10:49,712 INFO    SenderThread:23081 [file_pusher.py:finish():172] shutting down file pusher
+2024-06-03 14:10:50,170 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: poll_exit
+2024-06-03 14:10:50,170 DEBUG   SenderThread:23081 [sender.py:send_request():406] send_request: poll_exit
+2024-06-03 14:10:50,523 INFO    wandb-upload_0:23081 [upload_job.py:push():131] Uploaded file /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/files/wandb-summary.json
+2024-06-03 14:10:50,590 INFO    wandb-upload_1:23081 [upload_job.py:push():131] Uploaded file /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/files/requirements.txt
+2024-06-03 14:10:50,809 INFO    wandb-upload_4:23081 [upload_job.py:push():131] Uploaded file /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/files/config.yaml
+2024-06-03 14:10:51,066 INFO    wandb-upload_3:23081 [upload_job.py:push():131] Uploaded file /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/files/conda-environment.yaml
+2024-06-03 14:10:51,139 INFO    wandb-upload_2:23081 [upload_job.py:push():131] Uploaded file /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/files/output.log
+2024-06-03 14:10:51,171 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: poll_exit
+2024-06-03 14:10:51,172 DEBUG   SenderThread:23081 [sender.py:send_request():406] send_request: poll_exit
+2024-06-03 14:10:51,339 INFO    Thread-11 :23081 [sender.py:transition_state():614] send defer: 11
+2024-06-03 14:10:51,340 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: defer
+2024-06-03 14:10:51,341 INFO    HandlerThread:23081 [handler.py:handle_request_defer():172] handle defer: 11
+2024-06-03 14:10:51,341 DEBUG   SenderThread:23081 [sender.py:send_request():406] send_request: defer
+2024-06-03 14:10:51,341 INFO    SenderThread:23081 [sender.py:send_request_defer():610] handle sender defer: 11
+2024-06-03 14:10:51,342 INFO    SenderThread:23081 [file_pusher.py:join():178] waiting for file pusher
+2024-06-03 14:10:51,342 INFO    SenderThread:23081 [sender.py:transition_state():614] send defer: 12
+2024-06-03 14:10:51,343 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: defer
+2024-06-03 14:10:51,343 INFO    HandlerThread:23081 [handler.py:handle_request_defer():172] handle defer: 12
+2024-06-03 14:10:51,343 DEBUG   SenderThread:23081 [sender.py:send_request():406] send_request: defer
+2024-06-03 14:10:51,344 INFO    SenderThread:23081 [sender.py:send_request_defer():610] handle sender defer: 12
+2024-06-03 14:10:51,344 INFO    SenderThread:23081 [file_stream.py:finish():614] file stream finish called
+2024-06-03 14:10:51,821 INFO    SenderThread:23081 [file_stream.py:finish():618] file stream finish is done
+2024-06-03 14:10:51,821 INFO    SenderThread:23081 [sender.py:transition_state():614] send defer: 13
+2024-06-03 14:10:51,822 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: defer
+2024-06-03 14:10:51,822 INFO    HandlerThread:23081 [handler.py:handle_request_defer():172] handle defer: 13
+2024-06-03 14:10:51,822 DEBUG   SenderThread:23081 [sender.py:send_request():406] send_request: defer
+2024-06-03 14:10:51,823 INFO    SenderThread:23081 [sender.py:send_request_defer():610] handle sender defer: 13
+2024-06-03 14:10:51,823 INFO    SenderThread:23081 [sender.py:transition_state():614] send defer: 14
+2024-06-03 14:10:51,824 DEBUG   SenderThread:23081 [sender.py:send():379] send: final
+2024-06-03 14:10:51,824 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: defer
+2024-06-03 14:10:51,824 DEBUG   SenderThread:23081 [sender.py:send():379] send: footer
+2024-06-03 14:10:51,825 INFO    HandlerThread:23081 [handler.py:handle_request_defer():172] handle defer: 14
+2024-06-03 14:10:51,825 DEBUG   SenderThread:23081 [sender.py:send_request():406] send_request: defer
+2024-06-03 14:10:51,825 INFO    SenderThread:23081 [sender.py:send_request_defer():610] handle sender defer: 14
+2024-06-03 14:10:51,826 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: poll_exit
+2024-06-03 14:10:51,827 DEBUG   SenderThread:23081 [sender.py:send_request():406] send_request: poll_exit
+2024-06-03 14:10:51,828 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: poll_exit
+2024-06-03 14:10:51,829 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: server_info
+2024-06-03 14:10:51,830 DEBUG   SenderThread:23081 [sender.py:send_request():406] send_request: poll_exit
+2024-06-03 14:10:51,830 DEBUG   SenderThread:23081 [sender.py:send_request():406] send_request: server_info
+2024-06-03 14:10:51,836 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: get_summary
+2024-06-03 14:10:51,837 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: sampled_history
+2024-06-03 14:10:51,837 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-03 14:10:52,461 INFO    MainThread:23081 [wandb_run.py:_footer_history_summary_info():3936] rendering history
+2024-06-03 14:10:52,462 INFO    MainThread:23081 [wandb_run.py:_footer_history_summary_info():3968] rendering summary
+2024-06-03 14:10:52,462 INFO    MainThread:23081 [wandb_run.py:_footer_sync_info():3895] logging synced files
+2024-06-03 14:10:52,463 DEBUG   HandlerThread:23081 [handler.py:handle_request():146] handle_request: shutdown
+2024-06-03 14:10:52,463 INFO    HandlerThread:23081 [handler.py:finish():866] shutting down handler
+2024-06-03 14:10:52,830 INFO    WriterThread:23081 [datastore.py:close():296] close: /home/lenovo/chenxi/baseline_2/Locomotion_Baseline/legged_train/legged_gym/scripts/wandb/run-20240603_140952-0xmn3laj/run-0xmn3laj.wandb
+2024-06-03 14:10:53,461 INFO    SenderThread:23081 [sender.py:finish():1546] shutting down sender
+2024-06-03 14:10:53,461 INFO    SenderThread:23081 [file_pusher.py:finish():172] shutting down file pusher
+2024-06-03 14:10:53,462 INFO    SenderThread:23081 [file_pusher.py:join():178] waiting for file pusher

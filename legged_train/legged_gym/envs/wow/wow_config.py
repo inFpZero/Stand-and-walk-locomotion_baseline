@@ -20,21 +20,22 @@ class wowRoughCfg( LeggedRobotCfg ):
         measured_points_y = [-0.75, -0.6, -0.45, -0.3, -0.15, 0.,  0.15, 0.3, 0.45, 0.6, 0.75]
 
     class init_state( LeggedRobotCfg.init_state ):
-        pos = [0.0, 0.0, 0.912] # x,y,z [m]
+        pos = [0.0, 0.0, 0.9] # x,y,z [m]
         default_joint_angles = { # = target angles [rad] when action = 0.0
             'left_roll_joint': 0,   # [rad]
             'left_yaw_joint': 0,   # [rad]
-            'left_pitch_joint': 0 ,  # [rad]
-            'left_knee_joint': 0,   # [rad]
-            'left_foot_joint': 0,
+            'left_pitch_joint': -0.3,  # [rad]
+            'left_knee_joint': 0.6,   # [rad]
+            'left_foot_joint': -0.3,
 
             'right_roll_joint': 0,   # [rad]
             'right_yaw_joint': 0,   # [rad]
-            'right_pitch_joint': 0 ,  # [rad]
-            'right_knee_joint': 0,   # [rad]
-            'right_foot_joint': 0,
+            'right_pitch_joint': 0.3 ,  # [rad]
+            'right_knee_joint': -0.6,   # [rad]
+            'right_foot_joint': 0.3,
 
         }
+
 
     class control( LeggedRobotCfg.control ):
         # PD Drive parameters:
@@ -56,7 +57,7 @@ class wowRoughCfg( LeggedRobotCfg ):
   
     class rewards( LeggedRobotCfg.rewards ):
         soft_dof_pos_limit = 0.9
-        base_height_target = 0.85
+        base_height_target = 0.9
         only_positive_rewards = True # if true negative total rewards are clipped at zero (avoids early termination problems)
         class scales( LeggedRobotCfg.rewards.scales ):
             # # termination = -200.
@@ -117,25 +118,27 @@ class wowRoughCfg( LeggedRobotCfg ):
             # dof_vel = -0.0
 
              #行走reward 
-            termination = -200.
-            tracking_ang_vel = 1.0
-            tracking_lin_vel = 3.
-            lin_vel_z = -2.0
-            ang_vel_xy = -0.05
+            # termination = -200.
+            # tracking_ang_vel = 1.0
+            # tracking_lin_vel = 1.
+            # lin_vel_z = -0.5
+            # ang_vel_xy = -0.05
             
-            torques = -1.e-5
-            dof_acc = -2.e-7
-            action_rate = -0.015 #-0.01
+            # torques = -1.e-5
+            # dof_acc = -2.e-7
+            # action_rate = -0.015 #-0.01
             
-            dof_pos_limits = -1.
-            # no_fly = 0.2 #0.25print
+            # dof_pos_limits = -1.
+            # # no_fly = 0.2 #0.25print
 
-            dof_vel = -0.0
-            stand_still = -0.05
-            orientation = -0.2
-            smoothness = -0.015
-            joint_power = -2e-5
-        
+            # dof_vel=-2.e-5
+            # stand_still = -0.05
+            # orientation = -0.2
+            # smoothness = -0.015
+            # joint_power = -2e-5
+        #added
+
+
             # # 站立reward
             # tracking_ang_vel = 0.0
             # tracking_lin_vel = 1.0
@@ -160,6 +163,36 @@ class wowRoughCfg( LeggedRobotCfg ):
             # # dof_vel = -0.0
             # # step_frequency = -0.1
             # # stand_still = 0.05
+
+
+            #walk and stand on falt
+            base_height=0.003
+            foot_position_stand=0.03
+            # arm_position=0.08
+            # arm_position_stand=0.16
+            base_acc=0.02
+            action_difference=0.02
+            torques=0.02
+            tracking_x_vel = 2
+            tracking_y_vel = 2
+            tracking_ang_vel = 1.
+
+            dof_vel=-8e-5
+            dof_acc=-8e-7
+
+            lin_vel_z = -0.8
+            ang_vel_xy = -0.1
+
+            dof_pos_limits = -1.5
+            foot_height=-0.12
+
+            orientation = -0.5
+
+            feet_air_time=0.5
+
+
+
+
 
 class wowCfgPPO( LeggedRobotCfgPPO ):
     class policy:

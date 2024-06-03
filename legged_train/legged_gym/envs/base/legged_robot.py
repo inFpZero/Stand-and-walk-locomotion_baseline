@@ -33,6 +33,7 @@ from time import time
 from warnings import WarningMessage
 import numpy as np
 import os
+import math
 
 from isaacgym.torch_utils import *
 from isaacgym import gymtorch, gymapi, gymutil
@@ -51,7 +52,7 @@ from legged_gym.utils.terrain_parkour import get_terrain_cls
 from scipy.spatial.transform import Rotation as R
 from .legged_robot_config import LeggedRobotCfg
 from .curriculum import RewardThresholdCurriculum
-
+import wandb
 from tqdm import tqdm
 import cv2
 import matplotlib.pyplot as plt
@@ -100,9 +101,19 @@ class LeggedRobot(BaseTask):
         self._parse_cfg(self.cfg)
         super().__init__(self.cfg, sim_params, physics_engine, sim_device, headless)
 
+
         self.resize_transform = torchvision.transforms.Resize((self.cfg.depth.resized[1], self.cfg.depth.resized[0]), 
-                                                              interpolation=torchvision.transforms.InterpolationMode.BICUBIC)
-        
+
+                                                         
+        interpolation=torchvision.transforms.InterpolationMode.BICUBIC)
+
+        wandb_reward_scales=class_to_dict(self.cfg.rewards.scales)  
+        wandb.init(project="Stand and Walk for wow", resume="allow",config=wandb_reward_scales) 
+        # wandb.save(LEGGED_GYM_ENVS_DIR + "/base/legged_robot_config.py", policy="now")
+        # wandb.save(LEGGED_GYM_ENVS_DIR + "/base/legged_robot.py", policy="now")
+
+       
+        wandb.config.update(wandb_reward_scales)
         self._init_command_distribution(torch.arange(self.num_envs, device=self.device))
         
         if not self.headless:
@@ -571,6 +582,41 @@ class LeggedRobot(BaseTask):
             self.commands[env_ids, 1] = torch_rand_float(self.command_ranges["lin_vel_y"][0], self.command_ranges["lin_vel_y"][1], (len(env_ids), 1), device=self.device).squeeze(1)
             if self.cfg.commands.heading_command:
                 self.commands[env_ids, 3] = torch_rand_float(self.command_ranges["heading"][0], self.command_ranges["heading"][1], (len(env_ids), 1), device=self.device).squeeze(1)
+                
+                #将一些环境用于单独训练，前进后退、横向移动、旋转
+                num_of_single_command_env= math.ceil(len(env_ids) / 4)  
+                single_command_indices = torch.randperm(len(env_ids))[:num_of_single_command_env]  
+
+                #单独旋转训练
+                env_ids_to_ang = env_ids[single_command_indices]  
+                self.commands[env_ids_to_ang, 0] = torch.zeros_like(self.commands[env_ids_to_ang, 0])
+                self.commands[env_ids_to_ang, 1] = torch.zeros_like(self.commands[env_ids_to_ang, 1])
+
+                #从旋转数个体中选取一部分，单独前后移动训练
+                num_of_single_command_env= math.ceil(len(env_ids_to_ang) / 2)  
+                single_command_indices = torch.randperm(len(env_ids_to_ang))[:num_of_single_command_env]   
+
+                env_ids_to_back_and_forward=env_ids[single_command_indices]  
+                self.commands[env_ids_to_back_and_forward, 0] = torch_rand_float(self.command_ranges["lin_vel_x"][0], self.command_ranges["lin_vel_x"][1], (len(env_ids_to_back_and_forward), 1), device=self.device).squeeze(1)
+                self.commands[env_ids_to_back_and_forward, 1] = torch.zeros_like(self.commands[env_ids_to_back_and_forward, 1])
+                self.commands[env_ids_to_back_and_forward, 3] = torch.zeros_like(self.commands[env_ids_to_back_and_forward, 3])  
+
+                #从前后移动个体中，单独横向移动训练
+                num_of_single_command_env= math.ceil(len(env_ids_to_back_and_forward) / 3)  
+                single_command_indices = torch.randperm(len(env_ids_to_back_and_forward))[:num_of_single_command_env]  
+
+                env_ids_to_sldle=env_ids[single_command_indices]  
+                self.commands[env_ids_to_sldle, 0] = torch.zeros_like(self.commands[env_ids_to_sldle, 0])
+                self.commands[env_ids_to_sldle, 1] = torch_rand_float(self.command_ranges["lin_vel_y"][0], self.command_ranges["lin_vel_y"][1], (len(env_ids_to_sldle), 1), device=self.device).squeeze(1)
+                self.commands[env_ids_to_sldle, 3] = torch.zeros_like(self.commands[env_ids_to_sldle, 3])  
+   
+
+            
+            
+            
+            
+            
+            
             else:
                 self.commands[env_ids, 2] = torch_rand_float(self.command_ranges["ang_vel_yaw"][0], self.command_ranges["ang_vel_yaw"][1], (len(env_ids), 1), device=self.device).squeeze(1)
             # set small commands to zero
@@ -1163,6 +1209,7 @@ class LeggedRobot(BaseTask):
             self.command_ranges = class_to_dict(self.cfg.commands.ranges)
         else:
             self.command_ranges = class_to_dict(self.cfg.commands.max_ranges)
+
         if self.cfg.terrain.mesh_type not in ['heightfield', 'trimesh']:
             self.cfg.terrain.curriculum = False
         self.max_episode_length_s = self.cfg.env.episode_length_s
