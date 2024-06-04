@@ -262,6 +262,9 @@ class LeggedRobotCfg(BaseConfig):
         default_joint_angles = { # target angles when action = 0.0
             "joint_a": 0., 
             "joint_b": 0.}
+        target_joint_angles= { # target angles when action = 0.0
+            "joint_a": 0., 
+            "joint_b": 0.}
 
     class control:
         control_type = 'P' # P: position, V: velocity, T: torques
@@ -278,7 +281,7 @@ class LeggedRobotCfg(BaseConfig):
         foot_name = "None" # name of the feet bodies, used to index body state and contact force tensors
         penalize_contacts_on = []
         terminate_after_contacts_on = []
-        disable_gravity = True
+        disable_gravity = False
         collapse_fixed_joints = True # merge bodies connected by fixed joints. Specific fixed joints can be kept by adding " <... dont_collapse="true">
         fix_base_link = False # fixe the base of the robot
         default_dof_drive_mode = 3 # see GymDofDriveModeFlags (0 is none, 1 is pos tgt, 2 is vel tgt, 3 effort)

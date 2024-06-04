@@ -109,11 +109,12 @@ class LeggedRobot(BaseTask):
 
         wandb_reward_scales=class_to_dict(self.cfg.rewards.scales)  
         wandb.init(project="Stand and Walk for wow", resume="allow",config=wandb_reward_scales) 
-        # wandb.save(LEGGED_GYM_ENVS_DIR + "/base/legged_robot_config.py", policy="now")
-        # wandb.save(LEGGED_GYM_ENVS_DIR + "/base/legged_robot.py", policy="now")
+            # wandb.save(LEGGED_GYM_ENVS_DIR + "/base/legged_robot_config.py", policy="now")
+            # wandb.save(LEGGED_GYM_ENVS_DIR + "/base/legged_robot.py", policy="now")
 
-       
+        
         wandb.config.update(wandb_reward_scales)
+
         self._init_command_distribution(torch.arange(self.num_envs, device=self.device))
         
         if not self.headless:
@@ -883,11 +884,16 @@ class LeggedRobot(BaseTask):
         self.if_save_data = False
         # joint positions offsets and PD gains
         self.default_dof_pos = torch.zeros(self.num_dof, dtype=torch.float, device=self.device, requires_grad=False)
+        self.target_dof_pos=torch.zeros(self.num_dof, dtype=torch.float, device=self.device, requires_grad=False)
+
+
         self.default_dof_pos_all = torch.zeros(self.num_envs, self.num_dof, dtype=torch.float, device=self.device, requires_grad=False)
         for i in range(self.num_dofs):
             name = self.dof_names[i]
             angle = self.cfg.init_state.default_joint_angles[name]
+            target_angle = self.cfg.init_state.target_joint_angles[name]
             self.default_dof_pos[i] = angle
+            self.target_dof_pos[i] = target_angle
             found = False
             for dof_name in self.cfg.control.stiffness.keys():
                 if dof_name in name:

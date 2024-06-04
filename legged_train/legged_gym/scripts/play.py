@@ -104,8 +104,8 @@ def play(args):
     env_cfg.domain_rand.push_robots = True
     env_cfg.domain_rand.push_interval_s = 10
     env_cfg.domain_rand.randomize_base_mass = True
-    env_cfg.domain_rand.randomize_base_com = False
-    env_cfg.commands.heading_command = False
+    env_cfg.domain_rand.randomize_base_com = True
+    env_cfg.commands.heading_command = True
 
     depth_latent_buffer = []
     # prepare environment
@@ -137,8 +137,8 @@ def play(args):
 
         actions = policy(obs.detach())
 
-        actions[:,0:9]=0
-        actions[1,0]=1
+        # actions[:,0:9]=0
+        # actions[1,0]=1
         
         obs, _, rews, dones, infos = env.step(actions.detach())
         

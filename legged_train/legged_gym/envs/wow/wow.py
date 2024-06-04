@@ -106,7 +106,7 @@ class Wow(LeggedRobot):
     
     # def _reward_feet_contact_stand(self):
     #     # Reward 1 when standing
-    #     return 1*(torch.norm(self.commands[:, :2], dim=1) < 0.1)
+    #     return 1*(torch.nodefault_dof_posrm(self.commands[:, :2], dim=1) < 0.1)
     # def _reward_feet_contact_walk(self):
     #     # Reward one feet contact when walking beyond 0.3s
     #     one_feet_contact_filt= torch.logical_xor(self.contact_filt[:,0],self.contact_filt[:,1])
@@ -116,8 +116,8 @@ class Wow(LeggedRobot):
     def _reward_foot_position_stand(self):
         # Penalize feet position away from target when standing
         # self.get_target_angles()
-        return -1*torch.sum(torch.abs(self.dof_pos-self.default_dof_pos),dim=1) \
-            *(torch.norm(self.commands[:, :3], dim=1) < 0.08)
+        return -1*torch.sum(torch.abs(self.dof_pos-self.target_dof_pos),dim=1) \
+            *(torch.norm(self.commands[:, :3], dim=1) < 0.15)
     
     # def _reward_foot_position_walk(self):
     #     return 1*(torch.norm(self.commands[:, :2], dim=1) >0.1)
