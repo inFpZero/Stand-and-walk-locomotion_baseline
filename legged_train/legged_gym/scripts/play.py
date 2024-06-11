@@ -100,13 +100,14 @@ def play(args):
     env_cfg.terrain.max_difficulty = False
     
     env_cfg.depth.angle = [0, 1]
-    env_cfg.noise.add_noise = True
+    env_cfg.noise.add_noise = False
     env_cfg.domain_rand.randomize_friction = True
     env_cfg.domain_rand.push_robots = True
     env_cfg.domain_rand.push_interval_s = 10
     env_cfg.domain_rand.randomize_base_mass = True
     env_cfg.domain_rand.randomize_base_com = True
-    env_cfg.commands.heading_command = True
+    env_cfg.commands.heading_command = False
+    env_cfg.domain_rand.randomize_restitution = False
 
     depth_latent_buffer = []
     # prepare environment
@@ -143,11 +144,11 @@ def play(args):
         actions = policy(obs.detach())
 
         obs, _, rews, dones, infos = env.step(actions.detach())
-        
-        if i<time_length*50:
-            obs_buffer[i,:] = obs[0,-36:-24]
-        if i==time_length*50:
-            obs_buffer
+        # if i<time_length*50:
+        #     obs_buffer[i,:] = obs[0,-30:-20]
+        # if i==time_length*50:
+        #     print("--------------------------collect done---------------------------------------------")
+        #     torch.save(obs_buffer,'test.pt')
 
         if args.web:
             web_viewer.render(fetch_results=True,
@@ -159,6 +160,10 @@ def play(args):
                 "cmd vx", env.commands[env.lookat_id, 0].item(),
                 "actual vx", env.base_lin_vel[env.lookat_id, 0].item(), )
             print(env.command_ranges["lin_vel_x"])
+            print("time:", env.episode_length_buf[env.lookat_id].item() / 500, 
+                "cmd yaw", env.commands[env.lookat_id, 2].item(),
+                "actual yaw", env.base_lin_vel[env.lookat_id, 2].item(), )
+            print(env.command_ranges["ang_vel_yaw"])
         id = env.lookat_id
         
 

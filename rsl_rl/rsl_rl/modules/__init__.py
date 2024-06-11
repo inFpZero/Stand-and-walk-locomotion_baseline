@@ -31,4 +31,5 @@
 from .actor_critic_rma import ActorCriticRMA, StateHistoryEncoder
 from .actor_critic_dream import ActorCriticDream
 from .actor_critic import ActorCritic
+from .rnn import ActorCriticRecurrent
 from .depth_backbone import *

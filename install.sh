@@ -8,4 +8,4 @@ cd extreme-parkour
 cd isaacgym/python && pip install -e .
 cd ~/extreme-parkour/rsl_rl && pip install -e .
 cd ~/extreme-parkour/legged_gym && pip install -e .
-pip install "numpy<1.24" pydelatin wandb tqdm opencv-python ipdb pyfqmr flask
+pip install "numpy<1.24" pydelatin swanlab tqdm opencv-python ipdb pyfqmr flask

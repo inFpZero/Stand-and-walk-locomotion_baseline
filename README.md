@@ -13,7 +13,7 @@ cd Locomotion_Baseline
 cd isaacgym/python && pip install -e .
 cd ~/extreme-parkour/rsl_rl && pip install -e .
 cd ~/extreme-parkour/legged_gym && pip install -e .
-pip install "numpy<1.24" pydelatin wandb tqdm opencv-python ipdb pyfqmr flask
+pip install "numpy<1.24" pydelatin swanlab tqdm opencv-python ipdb pyfqmr flask
 ```
 
 ### Usage ###
@@ -62,7 +62,7 @@ Can be used in both IsaacGym and web viewer.
 - --checkpoint: the specific checkpoint you want to load. If not specified load the latest one.
 - --resume: resume from another checkpoint, used together with `--resumeid`.
 - --seed: random seed.
-- --no_wandb: no wandb logging.
+- --no_swanlab: no swanlab logging.
 - --use_camera: use camera or scandots.
 - --web: used for playing on headless machines. It will forward a port with vscode and you can visualize seemlessly in vscode with your idle gpu or cpu. [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server) vscode extension required, otherwise you can view it in any browser.
 

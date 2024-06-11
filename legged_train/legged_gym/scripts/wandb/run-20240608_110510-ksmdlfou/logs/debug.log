@@ -1,0 +1,36 @@
+2024-06-08 11:05:10,631 INFO    MainThread:20750 [wandb_setup.py:_flush():76] Current SDK version is 0.16.6
+2024-06-08 11:05:10,631 INFO    MainThread:20750 [wandb_setup.py:_flush():76] Configure stats pid to 20750
+2024-06-08 11:05:10,631 INFO    MainThread:20750 [wandb_setup.py:_flush():76] Loading settings from /home/aaron/.config/wandb/settings
+2024-06-08 11:05:10,631 INFO    MainThread:20750 [wandb_setup.py:_flush():76] Loading settings from /home/aaron/Aaron/projects/Stand-and-walk-for-wow-based-on-locomotion_baseline-/legged_train/legged_gym/scripts/wandb/settings
+2024-06-08 11:05:10,631 INFO    MainThread:20750 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-06-08 11:05:10,631 INFO    MainThread:20750 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-06-08 11:05:10,631 INFO    MainThread:20750 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'legged_train/legged_gym/scripts/play.py', 'program_abspath': '/home/aaron/Aaron/projects/Stand-and-walk-for-wow-based-on-locomotion_baseline-/legged_train/legged_gym/scripts/play.py', 'program': 'play.py'}
+2024-06-08 11:05:10,631 INFO    MainThread:20750 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-06-08 11:05:10,631 INFO    MainThread:20750 [wandb_init.py:_log_setup():521] Logging user logs to /home/aaron/Aaron/projects/Stand-and-walk-for-wow-based-on-locomotion_baseline-/legged_train/legged_gym/scripts/wandb/run-20240608_110510-ksmdlfou/logs/debug.log
+2024-06-08 11:05:10,631 INFO    MainThread:20750 [wandb_init.py:_log_setup():522] Logging internal logs to /home/aaron/Aaron/projects/Stand-and-walk-for-wow-based-on-locomotion_baseline-/legged_train/legged_gym/scripts/wandb/run-20240608_110510-ksmdlfou/logs/debug-internal.log
+2024-06-08 11:05:10,631 INFO    MainThread:20750 [wandb_init.py:init():561] calling init triggers
+2024-06-08 11:05:10,631 INFO    MainThread:20750 [wandb_init.py:init():568] wandb.init called with sweep_config: {}
+config: {'action_difference': 0.02, 'ang_vel_xy': -0.05, 'base_acc': 0.02, 'base_height': 0.008, 'dof_acc': -6e-07, 'dof_pos_limits': -0.3, 'dof_vel': -6e-05, 'feet_air_time': 1.3, 'foot_height': -0.3, 'foot_position_stand': 0.005, 'lin_vel_z': -0.8, 'orientation': -7, 'torques': 0.02, 'tracking_ang_vel': 1.0, 'tracking_lin_vel': 1.0, 'tracking_x_vel': 4, 'tracking_y_vel': 3}
+2024-06-08 11:05:10,631 INFO    MainThread:20750 [wandb_init.py:init():611] starting backend
+2024-06-08 11:05:10,631 INFO    MainThread:20750 [wandb_init.py:init():615] setting up manager
+2024-06-08 11:05:10,631 INFO    MainThread:20750 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-06-08 11:05:10,632 INFO    MainThread:20750 [wandb_init.py:init():623] backend started and connected
+2024-06-08 11:05:10,633 INFO    MainThread:20750 [wandb_init.py:init():715] updated telemetry
+2024-06-08 11:05:10,687 INFO    MainThread:20750 [wandb_init.py:init():748] communicating run to backend with 90.0 second timeout
+2024-06-08 11:06:08,914 WARNING MainThread:20750 [wandb_init.py:init():1203] interrupted
+Traceback (most recent call last):
+  File "/home/aaron/anaconda3/envs/saw/lib/python3.8/site-packages/wandb/sdk/wandb_init.py", line 1181, in init
+    run = wi.init()
+  File "/home/aaron/anaconda3/envs/saw/lib/python3.8/site-packages/wandb/sdk/wandb_init.py", line 751, in init
+    result = run_init_handle.wait(
+  File "/home/aaron/anaconda3/envs/saw/lib/python3.8/site-packages/wandb/sdk/lib/mailbox.py", line 283, in wait
+    found, abandoned = self._slot._get_and_clear(timeout=wait_timeout)
+  File "/home/aaron/anaconda3/envs/saw/lib/python3.8/site-packages/wandb/sdk/lib/mailbox.py", line 130, in _get_and_clear
+    if self._wait(timeout=timeout):
+  File "/home/aaron/anaconda3/envs/saw/lib/python3.8/site-packages/wandb/sdk/lib/mailbox.py", line 126, in _wait
+    return self._event.wait(timeout=timeout)
+  File "/home/aaron/anaconda3/envs/saw/lib/python3.8/threading.py", line 558, in wait
+    signaled = self._cond.wait(timeout)
+  File "/home/aaron/anaconda3/envs/saw/lib/python3.8/threading.py", line 306, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt

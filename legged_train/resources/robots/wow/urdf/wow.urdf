@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
-     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
-     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+     Commit Version: 2024.06.10  Build Version: 1.6.7995.38578
+     Version Detail: roll limit change-->
 <robot
   name="wow1">
   <link
@@ -97,8 +97,8 @@
     <axis
       xyz="1 0 0" />
     <limit
-      lower="-0.1"
-      upper="0.2"
+      lower="-0.2"
+      upper="1.2"
       effort="30"
       velocity="23" />
   </joint>
@@ -155,8 +155,8 @@
     <axis
       xyz="0 0 -1" />
     <limit
-      lower="-0.1"
-      upper="0.1"
+      lower="-0.7"
+      upper="0.7"
       effort="30"
       velocity="23" />
   </joint>
@@ -213,7 +213,7 @@
     <axis
       xyz="0 1 0" />
     <limit
-      lower="-1"
+      lower="-1.5"
       upper="0.5"
       effort="58"
       velocity="23" />
@@ -271,8 +271,8 @@
     <axis
       xyz="0 1 0" />
     <limit
-      lower="0"
-      upper="1.1"
+      lower="-0.2"
+      upper="1.5"
       effort="58"
       velocity="23" />
   </joint>
@@ -329,9 +329,9 @@
     <axis
       xyz="0 1 0" />
     <limit
-      lower="-0.5"
-      upper="0.5"
-      effort="30"
+      lower="-0.6"
+      upper="0.6"
+      effort="36"
       velocity="23" />
   </joint>
   <link
@@ -387,8 +387,8 @@
     <axis
       xyz="1 0 0" />
     <limit
-      lower="-0.2"
-      upper="0.1"
+      lower="-1.2"
+      upper="0.2"
       effort="30"
       velocity="23" />
   </joint>
@@ -445,8 +445,8 @@
     <axis
       xyz="0 0 -1" />
     <limit
-      lower="-0.1"
-      upper="0.1"
+      lower="-0.7"
+      upper="0.7"
       effort="30"
       velocity="23" />
   </joint>
@@ -503,8 +503,8 @@
     <axis
       xyz="0 -1 0" />
     <limit
-      lower="-0.3"
-      upper="0.3"
+      lower="-1.5"
+      upper="0.5"
       effort="58"
       velocity="23" />
   </joint>
@@ -561,8 +561,8 @@
     <axis
       xyz="0 -1 0" />
     <limit
-      lower="-1.1"
-      upper="0"
+      lower="-1.5"
+      upper="0.2"
       effort="58"
       velocity="23" />
   </joint>
@@ -619,9 +619,121 @@
     <axis
       xyz="0 -1 0" />
     <limit
-      lower="-0.5"
-      upper="0.5"
-      effort="30"
+      lower="-0.6"
+      upper="0.6"
+      effort="36"
       velocity="23" />
   </joint>
 </robot>
+<!--   
+  <link
+    name="right_shoe_Link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0.015 -0.006 -0.065"
+        rpy="0 0 0" />
+      <geometry>
+        <!-- <mesh
+          filename="../meshes/right_foot_Link.STL" /> -->
+          <box size="0.14 0.05 0.020"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0.015 -0.006 -0.065"
+        rpy="0 0 0" />
+      <geometry>
+        <!-- <mesh
+          filename="../meshes/right_foot_Link.STL" /> -->
+        <box size="0.14 0.05 0.020"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_shoe_joint"
+    type="fixed"
+    dont_collapse="true">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="right_foot_Link" />
+    <child
+      link="right_shoe_Link" />
+  </joint>
+
+  <link
+    name="left_shoe_Link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0.015 0.006 -0.065"
+        rpy="0 0 0" />
+ 
+      <geometry>
+        <!-- <mesh
+          filename="../meshes/left_foot_Link.STL" /> -->
+          <box size="0.14 0.05 0.020"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0.015 0.006 -0.065"
+        rpy="0 0 0" />
+      <geometry>
+        <!-- <mesh
+          filename="../meshes/left_foot_Link.STL" /> -->
+        <box size="0.14 0.05 0.020"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_shoe_joint"
+    type="fixed"
+    dont_collapse="true">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_foot_Link" />
+    <child
+      link="left_shoe_Link" />
+  </joint> -->
+

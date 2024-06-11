@@ -36,7 +36,7 @@ import statistics
 # from torch.utils.tensorboard import SummaryWriter
 import torch
 import torch.optim as optim
-import wandb
+import swanlab
 import datetime
 
 from rsl_rl.algorithms import PPO
@@ -52,7 +52,7 @@ class OnPolicyRunner:
                  env: VecEnv,
                  train_cfg,
                  log_dir=None,
-                 init_wandb=True,
+                 init_swanlab=True,
                  device='cpu', **kwargs):
 
         self.cfg=train_cfg["runner"]
@@ -63,7 +63,7 @@ class OnPolicyRunner:
 
         # Create algorithm
         actor_critic_class = eval(self.cfg["policy_class_name"])  # ActorCritic
-        actor_critic: ActorCritic = actor_critic_class(
+        actor_critic = actor_critic_class(
             self.env.num_obs, self.env.num_privileged_obs, self.env.num_actions, **self.policy_cfg
         ).to(self.device)
 
@@ -366,7 +366,7 @@ class OnPolicyRunner:
         iteration_time = locs['collection_time'] + locs['learn_time']
 
         ep_string = f''
-        wandb_dict = {}
+        swanlab_dict = {}
         if locs['ep_infos']:
             for key in locs['ep_infos'][0]:
                 infotensor = torch.tensor([], device=self.device)
@@ -378,24 +378,24 @@ class OnPolicyRunner:
                         ep_info[key] = ep_info[key].unsqueeze(0)
                     infotensor = torch.cat((infotensor, ep_info[key].to(self.device)))
                 value = torch.mean(infotensor)
-                wandb_dict['Episode_rew/' + key] = value
+                swanlab_dict['Episode_rew/' + key] = value
                 ep_string += f"""{f'Mean episode {key}:':>{pad}} {value:.4f}\n"""
         mean_std = self.alg.actor_critic.std.mean()
         fps = int(self.num_steps_per_env * self.env.num_envs / (locs['collection_time'] + locs['learn_time']))
 
-        wandb_dict['Loss_depth/delta_yaw_ok_percent'] = locs['delta_yaw_ok_percentage']
-        wandb_dict['Loss_depth/depth_encoder'] = locs['depth_encoder_loss']
-        wandb_dict['Loss_depth/depth_actor'] = locs['depth_actor_loss']
-        wandb_dict['Loss_depth/yaw'] = locs['yaw_loss']
-        wandb_dict['Policy/mean_noise_std'] = mean_std.item()
-        wandb_dict['Perf/total_fps'] = fps
-        wandb_dict['Perf/collection time'] = locs['collection_time']
-        wandb_dict['Perf/learning_time'] = locs['learn_time']
+        swanlab_dict['Loss_depth/delta_yaw_ok_percent'] = locs['delta_yaw_ok_percentage']
+        swanlab_dict['Loss_depth/depth_encoder'] = locs['depth_encoder_loss']
+        swanlab_dict['Loss_depth/depth_actor'] = locs['depth_actor_loss']
+        swanlab_dict['Loss_depth/yaw'] = locs['yaw_loss']
+        swanlab_dict['Policy/mean_noise_std'] = mean_std.item()
+        swanlab_dict['Perf/total_fps'] = fps
+        swanlab_dict['Perf/collection time'] = locs['collection_time']
+        swanlab_dict['Perf/learning_time'] = locs['learn_time']
         if len(locs['rewbuffer']) > 0:
-            wandb_dict['Train/mean_reward'] = statistics.mean(locs['rewbuffer'])
-            wandb_dict['Train/mean_episode_length'] = statistics.mean(locs['lenbuffer'])
+            swanlab_dict['Train/mean_reward'] = statistics.mean(locs['rewbuffer'])
+            swanlab_dict['Train/mean_episode_length'] = statistics.mean(locs['lenbuffer'])
         
-        wandb.log(wandb_dict, step=locs['it'])
+        swanlab.log(swanlab_dict, step=locs['it'])
 
         str = f" \033[1m Learning iteration {locs['it']}/{self.current_learning_iteration + locs['num_learning_iterations']} \033[0m "
 
@@ -433,7 +433,7 @@ class OnPolicyRunner:
         iteration_time = locs['collection_time'] + locs['learn_time']
 
         ep_string = f''
-        wandb_dict = {}
+        swanlab_dict = {}
         if locs['ep_infos']:
             for key in locs['ep_infos'][0]:
                 infotensor = torch.tensor([], device=self.device)
@@ -445,26 +445,26 @@ class OnPolicyRunner:
                         ep_info[key] = ep_info[key].unsqueeze(0)
                     infotensor = torch.cat((infotensor, ep_info[key].to(self.device)))
                 value = torch.mean(infotensor)
-                wandb_dict['Episode_rew/' + key] = value
+                swanlab_dict['Episode_rew/' + key] = value
                 ep_string += f"""{f'Mean episode {key}:':>{pad}} {value:.4f}\n"""
         mean_std = self.alg.actor_critic.std.mean()
         fps = int(self.num_steps_per_env * self.env.num_envs / (locs['collection_time'] + locs['learn_time']))
 
-        # wandb_dict['Loss/value_function'] = ['mean_value_loss']
-        wandb_dict['Loss/surrogate'] = locs['mean_surrogate_loss']
-        wandb_dict['Loss/learning_rate'] = self.alg.learning_rate
+        # swanlab_dict['Loss/value_function'] = ['mean_value_loss']
+        swanlab_dict['Loss/surrogate'] = locs['mean_surrogate_loss']
+        swanlab_dict['Loss/learning_rate'] = self.alg.learning_rate
 
-        wandb_dict['Policy/mean_noise_std'] = mean_std.item()
-        wandb_dict['Perf/total_fps'] = fps
-        wandb_dict['Perf/collection time'] = locs['collection_time']
-        wandb_dict['Perf/learning_time'] = locs['learn_time']
+        swanlab_dict['Policy/mean_noise_std'] = mean_std.item()
+        swanlab_dict['Perf/total_fps'] = fps
+        swanlab_dict['Perf/collection time'] = locs['collection_time']
+        swanlab_dict['Perf/learning_time'] = locs['learn_time']
         if len(locs['rewbuffer']) > 0:
-            wandb_dict['Train/mean_reward'] = statistics.mean(locs['rewbuffer'])
-            wandb_dict['Train/mean_episode_length'] = statistics.mean(locs['lenbuffer'])
-            # wandb_dict['Train/mean_reward/time', statistics.mean(locs['rewbuffer']), self.tot_time)
-            # wandb_dict['Train/mean_episode_length/time', statistics.mean(locs['lenbuffer']), self.tot_time)
+            swanlab_dict['Train/mean_reward'] = statistics.mean(locs['rewbuffer'])
+            swanlab_dict['Train/mean_episode_length'] = statistics.mean(locs['lenbuffer'])
+            # swanlab_dict['Train/mean_reward/time', statistics.mean(locs['rewbuffer']), self.tot_time)
+            # swanlab_dict['Train/mean_episode_length/time', statistics.mean(locs['lenbuffer']), self.tot_time)
 
-        wandb.log(wandb_dict, step=locs['it'])
+        swanlab.log(swanlab_dict, step=locs['it'])
 
         str = f" \033[1m Learning iteration {locs['it']}/{self.current_learning_iteration + locs['num_learning_iterations']} \033[0m "
 

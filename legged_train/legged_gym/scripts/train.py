@@ -37,7 +37,7 @@ from legged_gym.envs import *
 from legged_gym.utils import get_args, task_registry
 from shutil import copyfile
 import torch
-import wandb
+import swanlab
 
 def train(args):
     # args.headless = False
@@ -55,13 +55,11 @@ def train(args):
     else:
         mode = "cloud"
     
-    if args.no_wandb:
+    if args.no_swanlab:
         mode = "disabled"
     print(args.proj_name)
-    # wandb.init(project=args.proj_name, experiment_name=args.exptid, mode=mode, logdir="../../logs")
-
-
-
+    # swanlab.init(project=args.proj_name, experiment_name=args.exptid, mode=mode, logdir="../../logs")
+    swanlab.init(project=args.proj_name, experiment_name=args.exptid, mode=mode, logdir="../../logs")
     env, env_cfg = task_registry.make_env(name=args.task, args=args)
     ppo_runner, train_cfg = task_registry.make_alg_runner(log_root = log_pth, env=env, name=args.task, args=args)
     ppo_runner.learn(num_learning_iterations=train_cfg.runner.max_iterations, init_at_random_ep_len=True)

@@ -208,7 +208,7 @@ class LeggedRobotCfg(BaseConfig):
         yaw_curriculum_threshold = 0.5
         num_commands = 4
         resampling_time = 10.  # time before command are changed[s]
-        heading_command = True  # if true: compute ang vel command from heading error
+        heading_command = False  # if true: compute ang vel command from heading error
         global_reference = False
 
         num_lin_vel_bins = 20
@@ -219,7 +219,7 @@ class LeggedRobotCfg(BaseConfig):
         curriculum_seed = 100
         
         lin_vel_clip = 0.2
-        ang_vel_clip = 0.2
+        ang_vel_clip = 0.15
 
         lin_vel_x = [-1.0, 1.0]  # min max [m/s]
         lin_vel_y = [-1.0, 1.0]  # min max [m/s]
@@ -242,8 +242,8 @@ class LeggedRobotCfg(BaseConfig):
         # Easy ranges
         class max_ranges:
             lin_vel_x = [-0.4, 1.0] # min max [m/s]
-            lin_vel_y = [-0.3, 0.3]   # min max [m/s]
-            ang_vel_yaw = [-0.3,0.3]    # min max [rad/s]
+            lin_vel_y = [-0., 0.]   # min max [m/s]
+            ang_vel_yaw = [-0.5,0.5]    # min max [rad/s]
             heading = [-3.14, 3.14]
 
         class crclm_incremnt:
@@ -302,7 +302,7 @@ class LeggedRobotCfg(BaseConfig):
         friction_range = [0.5, 1.25]
 
         randomize_restitution = True
-        restitution_range = [0., 0.4]
+        restitution_range = [0., 0.8]
 
         ##--------------------------
 
@@ -350,10 +350,10 @@ class LeggedRobotCfg(BaseConfig):
         
     class rewards:
         class scales:
-            tracking_lin_vel = 1.0
+            tracking_lin_vel = 0.0
 
         only_positive_rewards = False # if true negative total rewards are clipped at zero (avoids early termination problems)
-        tracking_sigma = 0.25 # tracking reward = exp(-error^2/sigma)
+        tracking_sigma = 0.2 # tracking reward = exp(-error^2/sigma)
         soft_dof_pos_limit = 1 # percentage of urdf limits, values above this limit are penalized
         soft_dof_vel_limit = 1
         soft_torque_limit = 1
@@ -398,8 +398,8 @@ class LeggedRobotCfgPPO(BaseConfig):
         activation = 'elu' # can be elu, relu, selu, crelu, lrelu, tanh, sigmoid
         # only for 'ActorCriticRecurrent':
         rnn_type = 'lstm'
-        rnn_hidden_size = 512
-        rnn_num_layers = 1
+        rnn_hidden_size = 64
+        rnn_num_layers = 2
 
         sigmoid_output = True
     
@@ -419,7 +419,7 @@ class LeggedRobotCfgPPO(BaseConfig):
         max_grad_norm = 1.
     
     class runner:
-        policy_class_name = 'ActorCritic'
+        policy_class_name = 'ActorCriticRecurrent'
         algorithm_class_name = 'PPO'
         num_steps_per_env = 24 # per iteration
         max_iterations = 50000 # number of policy updates

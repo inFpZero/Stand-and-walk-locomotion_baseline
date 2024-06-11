@@ -1,0 +1,91 @@
+2024-06-08 11:02:05,368 INFO    StreamThr :17543 [internal.py:wandb_internal():86] W&B internal server running at pid: 17543, started at: 2024-06-08 11:02:05.367852
+2024-06-08 11:02:05,370 DEBUG   HandlerThread:17543 [handler.py:handle_request():146] handle_request: status
+2024-06-08 11:02:05,371 INFO    WriterThread:17543 [datastore.py:open_for_write():87] open: /home/aaron/Aaron/projects/Stand-and-walk-for-wow-based-on-locomotion_baseline-/legged_train/legged_gym/scripts/wandb/run-20240608_110205-ly78p0g3/run-ly78p0g3.wandb
+2024-06-08 11:02:05,371 DEBUG   SenderThread:17543 [sender.py:send():379] send: header
+2024-06-08 11:02:05,450 DEBUG   SenderThread:17543 [sender.py:send():379] send: run
+2024-06-08 11:02:05,453 INFO    SenderThread:17543 [sender.py:_setup_resume():749] checking resume status for None/Stand and Walk for wow/ly78p0g3
+2024-06-08 11:02:09,115 INFO    SenderThread:17543 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/aaron/anaconda3/envs/saw/lib/python3.8/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/home/aaron/anaconda3/envs/saw/lib/python3.8/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/home/aaron/anaconda3/envs/saw/lib/python3.8/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/aaron/anaconda3/envs/saw/lib/python3.8/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+  File "/home/aaron/anaconda3/envs/saw/lib/python3.8/site-packages/urllib3/connectionpool.py", line 491, in _make_request
+    raise new_e
+  File "/home/aaron/anaconda3/envs/saw/lib/python3.8/site-packages/urllib3/connectionpool.py", line 467, in _make_request
+    self._validate_conn(conn)
+  File "/home/aaron/anaconda3/envs/saw/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1099, in _validate_conn
+    conn.connect()
+  File "/home/aaron/anaconda3/envs/saw/lib/python3.8/site-packages/urllib3/connection.py", line 616, in connect
+    self.sock = sock = self._new_conn()
+  File "/home/aaron/anaconda3/envs/saw/lib/python3.8/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f761da441f0>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/aaron/anaconda3/envs/saw/lib/python3.8/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/home/aaron/anaconda3/envs/saw/lib/python3.8/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+  File "/home/aaron/anaconda3/envs/saw/lib/python3.8/site-packages/urllib3/util/retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f761da441f0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aaron/anaconda3/envs/saw/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/aaron/anaconda3/envs/saw/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 369, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/home/aaron/anaconda3/envs/saw/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/aaron/anaconda3/envs/saw/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/aaron/anaconda3/envs/saw/lib/python3.8/site-packages/wandb/sdk/lib/gql_request.py", line 58, in execute
+    request = self.session.post(self.url, **post_args)
+  File "/home/aaron/anaconda3/envs/saw/lib/python3.8/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+  File "/home/aaron/anaconda3/envs/saw/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/aaron/anaconda3/envs/saw/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/aaron/anaconda3/envs/saw/lib/python3.8/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f761da441f0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2024-06-08 11:02:10,451 DEBUG   HandlerThread:17543 [handler.py:handle_request():146] handle_request: keepalive
+2024-06-08 11:02:15,452 DEBUG   HandlerThread:17543 [handler.py:handle_request():146] handle_request: keepalive
+2024-06-08 11:02:20,453 DEBUG   HandlerThread:17543 [handler.py:handle_request():146] handle_request: keepalive
+2024-06-08 11:02:25,454 DEBUG   HandlerThread:17543 [handler.py:handle_request():146] handle_request: keepalive
+2024-06-08 11:02:30,455 DEBUG   HandlerThread:17543 [handler.py:handle_request():146] handle_request: keepalive
+2024-06-08 11:02:35,456 DEBUG   HandlerThread:17543 [handler.py:handle_request():146] handle_request: keepalive
+2024-06-08 11:02:40,456 DEBUG   HandlerThread:17543 [handler.py:handle_request():146] handle_request: keepalive
+2024-06-08 11:02:45,457 DEBUG   HandlerThread:17543 [handler.py:handle_request():146] handle_request: keepalive
+2024-06-08 11:02:50,458 DEBUG   HandlerThread:17543 [handler.py:handle_request():146] handle_request: keepalive
+2024-06-08 11:02:55,459 DEBUG   HandlerThread:17543 [handler.py:handle_request():146] handle_request: keepalive
+2024-06-08 11:03:00,460 DEBUG   HandlerThread:17543 [handler.py:handle_request():146] handle_request: keepalive
+2024-06-08 11:03:05,461 DEBUG   HandlerThread:17543 [handler.py:handle_request():146] handle_request: keepalive
+2024-06-08 11:03:10,462 DEBUG   HandlerThread:17543 [handler.py:handle_request():146] handle_request: keepalive
+2024-06-08 11:03:15,462 DEBUG   HandlerThread:17543 [handler.py:handle_request():146] handle_request: keepalive
+2024-06-08 11:03:20,463 DEBUG   HandlerThread:17543 [handler.py:handle_request():146] handle_request: keepalive
+2024-06-08 11:03:25,464 DEBUG   HandlerThread:17543 [handler.py:handle_request():146] handle_request: keepalive
+2024-06-08 11:03:30,465 DEBUG   HandlerThread:17543 [handler.py:handle_request():146] handle_request: keepalive
+2024-06-08 11:03:35,466 DEBUG   HandlerThread:17543 [handler.py:handle_request():146] handle_request: cancel
+2024-06-08 11:03:35,466 DEBUG   HandlerThread:17543 [handler.py:handle_request():146] handle_request: cancel
+2024-06-08 11:03:35,466 DEBUG   SenderThread:17543 [sender.py:send():388] Record cancelled: run
+2024-06-08 11:03:35,467 DEBUG   HandlerThread:17543 [handler.py:handle_request():146] handle_request: status_report
+2024-06-08 11:03:37,470 DEBUG   HandlerThread:17543 [handler.py:handle_request():146] handle_request: shutdown
+2024-06-08 11:03:37,470 INFO    HandlerThread:17543 [handler.py:finish():866] shutting down handler
+2024-06-08 11:03:38,467 INFO    SenderThread:17543 [sender.py:finish():1546] shutting down sender
+2024-06-08 11:03:38,467 INFO    WriterThread:17543 [datastore.py:close():296] close: /home/aaron/Aaron/projects/Stand-and-walk-for-wow-based-on-locomotion_baseline-/legged_train/legged_gym/scripts/wandb/run-20240608_110205-ly78p0g3/run-ly78p0g3.wandb

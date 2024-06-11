@@ -11,7 +11,7 @@ class wowRoughCfg( LeggedRobotCfg ):
         history_len = 10
 
         num_observations = proprio_dim
-        num_privileged_obs = proprio_dim + scan_dim + priv_dim + priv_latent_dim + history_len*proprio_dim# if not None a priviledge_obs_buf will be returned by step() (critic obs for assymetric training). None is returned otherwise 
+        num_privileged_obs = proprio_dim + scan_dim + priv_dim + priv_latent_dim # if not None a priviledge_obs_buf will be returned by step() (critic obs for assymetric training). None is returned otherwise 
         num_actions = 10
 
 
@@ -20,19 +20,19 @@ class wowRoughCfg( LeggedRobotCfg ):
         measured_points_y = [-0.75, -0.6, -0.45, -0.3, -0.15, 0.,  0.15, 0.3, 0.45, 0.6, 0.75]
 
     class init_state( LeggedRobotCfg.init_state ):
-        pos = [0.0, 0.0, 0.9] # x,y,z [m]
+        pos = [0.0, 0.0, 0.912] # x,y,z [m]
         default_joint_angles = { # = target angles [rad] when action = 0.0
-            'left_roll_joint': 0,   # [rad]
+            'left_roll_joint': 0.1,   # [rad]
             'left_yaw_joint': 0,   # [rad]
-            'left_pitch_joint': -0.,  # [rad]
-            'left_knee_joint': 0.,   # [rad]
-            'left_foot_joint': -0.,
+            'left_pitch_joint': -0.3,  # [rad]
+            'left_knee_joint': 0.6,   # [rad]
+            'left_foot_joint': -0.3,
 
-            'right_roll_joint': 0,   # [rad]
+            'right_roll_joint': -0.1,   # [rad]
             'right_yaw_joint': 0,   # [rad]
-            'right_pitch_joint': 0. ,  # [rad]
-            'right_knee_joint': -0.,   # [rad]
-            'right_foot_joint': 0.,
+            'right_pitch_joint': 0.3 ,  # [rad]
+            'right_knee_joint': -0.6,   # [rad]
+            'right_foot_joint': 0.3,
 
         }
         target_joint_angles = { # = target angles [rad] when action = 0.0
@@ -54,8 +54,12 @@ class wowRoughCfg( LeggedRobotCfg ):
     class control( LeggedRobotCfg.control ):
         # PD Drive parameters:
         control_type = 'P'
-        stiffness = {'joint': 40.}  # [N*m/rad]
-        damping = {'joint': 1}     # [N*m*s/rad]
+        stiffness = {   'roll': 30.0, 'yaw': 30.0,
+                        'pitch': 50., 'knee': 50., 'foot': 10.,
+                        }  # [N*m/rad]
+        damping = {   'roll': 0.75, 'yaw': 0.75,
+                        'pitch': 1.25, 'knee': 1.25, 'foot': 0.25,
+                        }   # [N*m*s/rad]     # [N*m*s/rad]
         # action scale: target angle = actionScale * action + defaultAngle
         action_scale = 0.25
         # decimation: Number of control action updates @ sim DT per policy DT
@@ -65,91 +69,33 @@ class wowRoughCfg( LeggedRobotCfg ):
         file = '{LEGGED_GYM_ROOT_DIR}/resources/robots/wow/urdf/wow.urdf'
         name = "wow"
         foot_name = "foot"
+        hip_name = "roll"
         penalize_contacts_on = [" "]
         terminate_after_contacts_on = ["body"]
         self_collisions = 1 # 1 to disable, 0 to enable...bitwise filter
   
     class rewards( LeggedRobotCfg.rewards ):
-        soft_dof_pos_limit = 0.9
+        tracking_sigma = 0.2
+        orient_tracking_sigma = 2
+        soft_torque_limit = 0.9
+        soft_dof_pos_limit = 0.95
         base_height_target = 0.86
         only_positive_rewards = False # if true negative total rewards are clipped at zero (avoids early termination problems)
-        class scales( LeggedRobotCfg.rewards.scales ):
-            # # termination = -200.
-            # termination = -200.
-            # tracking_ang_vel = 1.0
-            # tracking_lin_vel = 3.
-            # lin_vel_z = -2.0
-            # ang_vel_xy = -0.05
-            
-            # torques = -1.e-5
-            # dof_acc = -2.e-7
-            # action_rate = -0.05 #-0.01
-            
-            # dof_pos_limits = -1.
-            # no_fly = 0.2 #0.25print
-
-            # dof_vel = -0.0
-            # stand_still = -0.05
-            # action_rate = -0.01 #-0.01
-            # smoothness = -0.01
-
-            # power_distribution = -1e-5
-            # orientation = -0.2
-            # joint_power = -2e-5
-            # base_height = -1.0 
-
-            #feet_air_time =  1.0
-            #collision = -1.
-            #feet_stumble = -0.0 
-            # foot_clearance = -0.01
-            #stand_still = -0.
-            # feet_air_time = 6
-            # dof_pos_limits = -1.
-            # tracking_lin_vel=2 #参考速度
-            # tracking_ang_vel=1.5 #参考角度
-            # ang_vel_xy = -0 #旋转惩罚
-            # feet_contact_forces = -0.1#惩罚高接触力
-            # torques = -2e-5# 惩罚关节扭矩过大
-            # dof_vel = -2e-5 # 惩罚关节速度过大
-            # dof_acc = -5e-9# 惩罚关节加速度过大
-            # # 惩罚机器人底座偏离水平
-            # orientation = -1
-            #termination = -200.
-            #stand_still = -0.05
-
-            #行走reward 
-            # tracking_ang_vel = 1.0
-            # tracking_lin_vel = 3.
-            # lin_vel_z = -2.0
-            # ang_vel_xy = -0.05
-            # delta_torques = -1.0e-7
-            # torques = -0.00001 
-            # dof_acc = -2.e-7
-            # action_rate = -0.01 #-0.01
-            # smoothness = -0.01
-            # dof_pos_limits = -1.
-            # no_fly = 0.1 #0.25print
-            # dof_vel = -0.0
-
-             #行走reward 
-            # termination = -200.
-            # tracking_ang_vel = 1.0
-            # tracking_lin_vel = 1.
-            # lin_vel_z = -0.5
-            # ang_vel_xy = -0.05
-            
-            # torques = -1.e-5
-            # dof_acc = -2.e-7
-            # action_rate = -0.015 #-0.01
-            
-            # dof_pos_limits = -1.
-            # # no_fly = 0.2 #0.25print
-
-            # dof_vel=-2.e-5
-            # stand_still = -0.05
-            # orientation = -0.2
-            # smoothness = -0.015
-            # joint_power = -2e-5
+        class scales:
+            # tracking_x_line_vel = 0.2
+            # tracking_y_line_vel = 0.15
+            # tracking_ang_vel = 0.2
+            # roll_pitch_orient = 0.2
+            # base_height = 0.05
+            # feet_contact = 0.2
+            # feet_air_time = 2.0
+            # feet_orientation = 0.20
+            # feet_position = 0.1
+            # base_acc = 0.1
+            # action_difference = 0.03
+            # torques = 0.1
+            # roll_yaw_position = 0.20
+            # dof_pos_limits = -0.2
         #added
 
 
@@ -180,24 +126,29 @@ class wowRoughCfg( LeggedRobotCfg ):
 
 
             #walk and stand on falt
-            base_height=0.008
-            foot_position_stand=0.005
+            # base_height=1
+            # foot_position_stand=0.005
             # arm_position=0.08
             # arm_position_stand=0.16
+            roll_yaw_position = -0.5
             base_acc=0.02
-            action_difference=0.02
-            torques=0.02
-            tracking_x_vel = 4
-            tracking_y_vel = 3
+            # action_difference=0.02
+            torques=0.5
+            tracking_x_line_vel = 4
+            tracking_y_line_vel = 3
             tracking_ang_vel = 1.
             dof_vel=-6e-5
-            dof_acc=-6e-7
+            dof_acc=-2e-7
             lin_vel_z = -0.8
             ang_vel_xy = -0.05
-            dof_pos_limits = -0.3
-            foot_height=-0.3
-            orientation = -7
+            dof_pos_limits = -10
+            action_rate = -0.015 #-0.01
+
+            # foot_height=-0.3
+            orientation = -2
             feet_air_time=1.3
+            feet_contact = 1.2
+
 
 
 
@@ -212,9 +163,9 @@ class wowCfgPPO( LeggedRobotCfgPPO ):
         critic_hidden_dims = [512, 256, 128]
         activation = 'elu' # can be elu, relu, selu, crelu, lrelu, tanh, sigmoid
         # only for 'ActorCriticRecurrent':
-        # rnn_type = 'lstm'
-        # rnn_hidden_size = 512
-        # rnn_num_layers = 1
+        rnn_type = 'lstm'
+        rnn_hidden_size = 64
+        rnn_num_layers = 2
         
     class algorithm():
         # training params
@@ -232,7 +183,7 @@ class wowCfgPPO( LeggedRobotCfgPPO ):
         max_grad_norm = 1.
 
     class runner():
-        policy_class_name = 'ActorCritic'
+        policy_class_name = 'ActorCriticRecurrent' #ActorCriticRecurrent
         algorithm_class_name = 'PPO'
         num_steps_per_env = 24 # per iteration
         max_iterations = 5000 # number of policy updates
