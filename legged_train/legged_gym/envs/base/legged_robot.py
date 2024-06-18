@@ -140,7 +140,7 @@ class LeggedRobot(BaseTask):
         self.render()
         for _ in range(self.cfg.control.decimation):
             self.torques = self._compute_torques(self.delayed_actions[:, _]).view(self.torques.shape)
-            # print(self.torques[0,:])
+            # print('torque',self.torques[0,:])
             # self.torques[0,1]=30
             self.gym.set_dof_actuation_force_tensor(self.sim, gymtorch.unwrap_tensor(self.torques))
             self.gym.simulate(self.sim)
@@ -179,26 +179,25 @@ class LeggedRobot(BaseTask):
 
         self.roll, self.pitch, self.yaw = euler_from_quaternion(self.base_quat)
 
-        self.foot_velocities = self.rigid_body_states.view(self.num_envs, self.num_bodies, 13)[:, self.feet_indices, 7:10]
-        self.foot_positions = self.rigid_body_states.view(self.num_envs, self.num_bodies, 13)[:, self.feet_indices, 0:3]
-
         contact = torch.norm(self.contact_forces, dim=-1) > 1.
         self.contact_filt = torch.logical_or(contact, self.last_contacts) 
         self.last_contacts = contact
 
+        # ---feet observation--
         feet_contact = self.contact_forces[:, self.feet_indices, 2] > 1.
-        # print('li',self.contact_forces[0, self.feet_indices, 2])
         self.feet_contact_filt = torch.logical_or(feet_contact, self.last_feet_contacts) 
-        # print(self.feet_contact_filt[0])
         self.last_feet_contacts = feet_contact
         self.feet_history_contact_flag = torch.cat([self.feet_history_contact_flag[:,1:].clone(), self.feet_contact_filt[:,None, :].clone()], dim=1)
 
-        feet_quat = self.rigid_body_states[:, self.feet_indices, 3:7] 
+        feet_quat = self.rigid_body_states.view(self.num_envs, self.num_bodies, 13)[:, self.feet_indices, 3:7]
         left_feet_roll, left_feet_pitch, left_feet_yaw = euler_from_quaternion(feet_quat[:,0])
         right_feet_roll, right_feet_pitch, right_feet_yaw = euler_from_quaternion(feet_quat[:,1])
         self.feet_rpy[:,0,:] = torch.stack((left_feet_roll, left_feet_pitch, left_feet_yaw), dim=1)
         self.feet_rpy[:,1,:] = torch.stack((right_feet_roll, right_feet_pitch, right_feet_yaw), dim=1)
 
+        self.foot_velocities = self.rigid_body_states.view(self.num_envs, self.num_bodies, 13)[:, self.feet_indices, 7:10]
+        self.foot_positions = self.rigid_body_states.view(self.num_envs, self.num_bodies, 13)[:, self.feet_indices, 0:3]
+        self.foot_positions_inbody = self.foot_positions - self.root_states[:, None, 0:3]
         self._post_physics_step_callback()
 
         # compute observations, rewards, resets, ...
@@ -358,7 +357,6 @@ class LeggedRobot(BaseTask):
                                     self.dof_vel * self.obs_scales.dof_vel,
                                     self.actions,
                                     ),dim=-1)
-
         self.obs_history_buf = torch.where(
             (self.episode_length_buf <= 1)[:, None, None], 
             torch.stack([obs_buf] * self.cfg.env.history_len, dim=1),
@@ -586,8 +584,6 @@ class LeggedRobot(BaseTask):
             line_vel_ids = env_ids[envs_ids_parts==2]
 
             self.commands[yaw_ids, 2] = torch_rand_float(self.command_ranges["ang_vel_yaw"][0], self.command_ranges["ang_vel_yaw"][1], (len(yaw_ids), 1), device=self.device).squeeze(1)
-            # self.commands[yaw_ids, 2] *= torch.abs(self.commands[yaw_ids, 2]) > self.cfg.commands.ang_vel_clip
-
 
             self.commands[line_vel_ids, 0] = torch_rand_float(self.command_ranges["lin_vel_x"][0], self.command_ranges["lin_vel_x"][1], (len(line_vel_ids), 1), device=self.device).squeeze(1)
             self.commands[line_vel_ids, 1] = torch_rand_float(self.command_ranges["lin_vel_y"][0], self.command_ranges["lin_vel_y"][1], (len(line_vel_ids), 1), device=self.device).squeeze(1)
@@ -596,37 +592,7 @@ class LeggedRobot(BaseTask):
             else:
                 self.commands[line_vel_ids, 2] = torch_rand_float(self.command_ranges["ang_vel_yaw"][0], self.command_ranges["ang_vel_yaw"][1], (len(line_vel_ids), 1), device=self.device).squeeze(1)
             # set stand command while vel command is too small
-            # self.commands[line_vel_ids, 0:2] *= torch.abs(self.commands[line_vel_ids, 0:1]) > self.cfg.commands.lin_vel_clip
-            # self.commands[line_vel_ids, 2] *= torch.abs(self.commands[line_vel_ids, 2]) > self.cfg.commands.ang_vel_clip
-
-
-            # #将一些环境用于单独训练，前进后退、横向移动、旋转
-            # num_of_single_command_env= math.ceil(len(env_ids) / 4)  
-            # single_command_indices = torch.randperm(len(env_ids))[:num_of_single_command_env]  
-
-            # #单独旋转训练
-            # env_ids_to_ang = env_ids[single_command_indices]  
-            # self.commands[env_ids_to_ang, 0] = torch.zeros_like(self.commands[env_ids_to_ang, 0])
-            # self.commands[env_ids_to_ang, 1] = torch.zeros_like(self.commands[env_ids_to_ang, 1])
-
-            # #从旋转数个体中选取一部分，单独前后移动训练
-            # num_of_single_command_env= math.ceil(len(env_ids_to_ang) / 2)  
-            # single_command_indices = torch.randperm(len(env_ids_to_ang))[:num_of_single_command_env]   
-
-            # env_ids_to_back_and_forward=env_ids[single_command_indices]  
-            # self.commands[env_ids_to_back_and_forward, 0] = torch_rand_float(self.command_ranges["lin_vel_x"][0], self.command_ranges["lin_vel_x"][1], (len(env_ids_to_back_and_forward), 1), device=self.device).squeeze(1)
-            # self.commands[env_ids_to_back_and_forward, 1] = torch.zeros_like(self.commands[env_ids_to_back_and_forward, 1])
-            # self.commands[env_ids_to_back_and_forward, 3] = torch.zeros_like(self.commands[env_ids_to_back_and_forward, 3])  
-
-            # #从前后移动个体中，单独横向移动训练
-            # num_of_single_command_env= math.ceil(len(env_ids_to_back_and_forward) / 3)  
-            # single_command_indices = torch.randperm(len(env_ids_to_back_and_forward))[:num_of_single_command_env]  
-
-            # env_ids_to_sldle=env_ids[single_command_indices]  
-            # self.commands[env_ids_to_sldle, 0] = torch.zeros_like(self.commands[env_ids_to_sldle, 0])
-            # self.commands[env_ids_to_sldle, 1] = torch_rand_float(self.command_ranges["lin_vel_y"][0], self.command_ranges["lin_vel_y"][1], (len(env_ids_to_sldle), 1), device=self.device).squeeze(1)
-            # self.commands[env_ids_to_sldle, 3] = torch.zeros_like(self.commands[env_ids_to_sldle, 3]
-
+    
 
     def _compute_torques(self, actions):
         """ Compute torques from actions.
@@ -932,9 +898,7 @@ class LeggedRobot(BaseTask):
         for i in range(self.num_dofs):
             name = self.dof_names[i]
             angle = self.cfg.init_state.default_joint_angles[name]
-            target_angle = self.cfg.init_state.target_joint_angles[name]
             self.default_dof_pos[i] = angle
-            self.target_dof_pos[i] = target_angle
             found = False
             for dof_name in self.cfg.control.stiffness.keys():
                 if dof_name in name:

@@ -137,15 +137,18 @@ def play(args):
 
     ##-------------collect obs date for test real motor-------------
     time_length = 20
-    obs_buffer = torch.zeros(time_length*50, env.num_actions, device=env.device, requires_grad=False)
-
+    obs_buffer = torch.zeros(time_length*50, env_cfg.env.num_observations, device=env.device, requires_grad=False)
+    env.commands[:,0]=0
+    env.commands[:,2]=0
     for i in range(10*int(env.max_episode_length)):
-
+        # env.commands[:,0]=0
+        # env.commands[:,2]=0
+    
         actions = policy(obs.detach())
-
+        # print('actions',actions[0,:])
         obs, _, rews, dones, infos = env.step(actions.detach())
         # if i<time_length*50:
-        #     obs_buffer[i,:] = obs[0,-30:-20]
+        #     obs_buffer[i,:] = obs[0,:]
         # if i==time_length*50:
         #     print("--------------------------collect done---------------------------------------------")
         #     torch.save(obs_buffer,'test.pt')

@@ -79,7 +79,6 @@ class Wow(LeggedRobot):
                                     self.dof_vel * self.obs_scales.dof_vel,
                                     self.actions,
                                     ),dim=-1)
-
         self.obs_history_buf = torch.where(
             (self.episode_length_buf <= 1)[:, None, None], 
             torch.stack([obs_buf] * self.cfg.env.history_len, dim=1),
@@ -130,12 +129,12 @@ class Wow(LeggedRobot):
     
     def _reward_tracking_ang_vel(self):
         # Tracking of angular velocity commands (yaw) 
-        ang_vel_error = torch.square(self.commands[:, 2] - self.base_ang_vel[:, 2])
-        ang_vel_error[self.stand_envs_ids] = torch.abs(self.commands[self.stand_envs_ids, 2] - self.base_ang_vel[self.stand_envs_ids, 2]) #stand error
+        ang_vel_error = torch.abs(self.commands[:, 2] - self.base_ang_vel[:, 2])
+        # ang_vel_error[self.stand_envs_ids] = torch.abs(self.commands[self.stand_envs_ids, 2] - self.base_ang_vel[self.stand_envs_ids, 2]) #stand error
         return torch.exp(-ang_vel_error/self.cfg.rewards.tracking_sigma)
     
     def _reward_roll_pitch_orient(self):
-        rew = torch.sum(torch.abs(self.projected_gravity[:, :2]), dim=1)
+        rew = 30 * torch.sum(torch.abs(self.imu_obs[:, :2]), dim=1)
         return torch.exp(-rew/self.cfg.rewards.orient_tracking_sigma)
     
     def _reward_base_height(self):
@@ -169,7 +168,7 @@ class Wow(LeggedRobot):
 
     def _reward_feet_position(self):
         rew_pos_feet = torch.ones(self.num_envs,dtype=torch.float, device=self.device, requires_grad=False)
-        rew_pos_feet[self.stand_envs_ids] = torch.exp(-3*torch.sum(torch.abs(self.dof_pos[self.stand_envs_ids,:]-self.default_dof_pos_all[self.stand_envs_ids,:]),dim=1))
+        rew_pos_feet[self.stand_envs_ids] = torch.exp(-3*torch.sum(torch.abs(self.foot_positions_inbody[self.stand_envs_ids,:,0:2]-self.default_dof_pos_all[self.stand_envs_ids,:]),dim=1))
         return rew_pos_feet
     
     def _reward_base_acc(self):

@@ -1,0 +1,21 @@
+Tue Jun 11 23:57:02 2024
+WARNING: mju_openResource: unknown file '/home/aaron/Aaron/projects/Stand-and-walk-for-wow-based-on-locomotion_baseline-/legged_train/resources/robots/WOW/mjcf/WOW.xml'
+
+Tue Jun 11 23:58:06 2024
+WARNING: mju_openResource: unknown file '/home/aaron/Aaron/projects/Stand-and-walk-for-wow-based-on-locomotion_baseline-/legged_train/legged_gym/resources/robots/WOW/mjcf/WOW.xml'
+
+Wed Jun 12 09:41:51 2024
+WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.2000.
+
+Wed Jun 12 14:29:54 2024
+WARNING: Nan, Inf or huge value in QACC at DOF 1. The simulation is unstable. Time = 0.2400.
+
+Wed Jun 12 17:25:36 2024
+WARNING: Nan, Inf or huge value in QACC at DOF 10. The simulation is unstable. Time = 0.0750.
+
+Wed Jun 12 19:31:07 2024
+WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.1950.
+
+Sat Jun 15 22:08:41 2024
+WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.1150.
+

@@ -274,7 +274,7 @@ class LeggedRobotCfg(BaseConfig):
         # action scale: target angle = actionScale * action + defaultAngle
         action_scale = 0.5
         # decimation: Number of control action updates @ sim DT per policy DT
-        decimation = 4
+        decimation = 20
 
     class asset:
         file = ""
@@ -344,7 +344,7 @@ class LeggedRobotCfg(BaseConfig):
 
         ##--------------------------
 
-        action_delay = True
+        action_delay = False
         delay_inject_steps = 24 * 1
 
         
@@ -368,7 +368,7 @@ class LeggedRobotCfg(BaseConfig):
         lookat = [11., 5, 3.]  # [m]
 
     class sim:
-        dt =  0.005
+        dt =  0.001
         substeps = 1
         gravity = [0., 0. ,-9.81]  # [m/s^2]
         up_axis = 1  # 0 is y, 1 is z

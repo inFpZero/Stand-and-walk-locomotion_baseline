@@ -7,7 +7,7 @@ class wowRoughCfg( LeggedRobotCfg ):
         scan_dim = 11*11
         priv_dim = 3
         priv_latent_dim = 15 + 1 + 10 +10
-        proprio_dim = 2+ 3+ 3+ 3+ 30
+        proprio_dim = 2+ 3+ 30 +6
         history_len = 10
 
         num_observations = proprio_dim
@@ -22,27 +22,13 @@ class wowRoughCfg( LeggedRobotCfg ):
     class init_state( LeggedRobotCfg.init_state ):
         pos = [0.0, 0.0, 0.912] # x,y,z [m]
         default_joint_angles = { # = target angles [rad] when action = 0.0
-            'left_roll_joint': 0.1,   # [rad]
+            'left_roll_joint': 0.,   # [rad]
             'left_yaw_joint': 0,   # [rad]
             'left_pitch_joint': -0.3,  # [rad]
             'left_knee_joint': 0.6,   # [rad]
             'left_foot_joint': -0.3,
 
-            'right_roll_joint': -0.1,   # [rad]
-            'right_yaw_joint': 0,   # [rad]
-            'right_pitch_joint': 0.3 ,  # [rad]
-            'right_knee_joint': -0.6,   # [rad]
-            'right_foot_joint': 0.3,
-
-        }
-        target_joint_angles = { # = target angles [rad] when action = 0.0
-            'left_roll_joint': 0,   # [rad]
-            'left_yaw_joint': 0,   # [rad]
-            'left_pitch_joint': -0.3,  # [rad]
-            'left_knee_joint': 0.6,   # [rad]
-            'left_foot_joint': -0.3,
-
-            'right_roll_joint': 0,   # [rad]
+            'right_roll_joint': -0.,   # [rad]
             'right_yaw_joint': 0,   # [rad]
             'right_pitch_joint': 0.3 ,  # [rad]
             'right_knee_joint': -0.6,   # [rad]
@@ -63,7 +49,7 @@ class wowRoughCfg( LeggedRobotCfg ):
         # action scale: target angle = actionScale * action + defaultAngle
         action_scale = 0.25
         # decimation: Number of control action updates @ sim DT per policy DT
-        decimation = 4
+        decimation = 20
 
     class asset( LeggedRobotCfg.asset ):
         file = '{LEGGED_GYM_ROOT_DIR}/resources/robots/wow/urdf/wow.urdf'
@@ -78,8 +64,10 @@ class wowRoughCfg( LeggedRobotCfg ):
         tracking_sigma = 0.2
         orient_tracking_sigma = 2
         soft_torque_limit = 0.9
-        soft_dof_pos_limit = 0.95
+        soft_dof_pos_limit = 0.90
         base_height_target = 0.86
+        target_foot_pos_x = [0. , 0.  ]
+        target_foot_pos_y = [0.9, -0.9]
         only_positive_rewards = False # if true negative total rewards are clipped at zero (avoids early termination problems)
         class scales:
             # tracking_x_line_vel = 0.2
@@ -97,25 +85,6 @@ class wowRoughCfg( LeggedRobotCfg ):
             # roll_yaw_position = 0.20
             # dof_pos_limits = -0.2
         #added
-
-
-            # # 站立reward
-            # tracking_ang_vel = 0.0
-            # tracking_lin_vel = 1.0
-            # lin_vel_z = -1
-            # lin_vel_x = -1
-            # lin_vel_y = -1
-            # ang_vel_xy = -0.00
-            # torques = -1.e-5
-            # dof_acc = -2.e-7
-            # action_rate = -0.01 #-0.01
-            # orientation = -5
-            # dof_pos_limits = -5.
-            # stand_still = 0.05
-            # hip_pos = -1
-            # base_height = 1.0 
-
-
             # termination = -10
             # base_height = -10
             # # feet_air = -1
@@ -132,32 +101,25 @@ class wowRoughCfg( LeggedRobotCfg ):
             # arm_position_stand=0.16
             roll_yaw_position = -0.5
             base_acc=0.02
-            # action_difference=0.02
             torques=0.5
             tracking_x_line_vel = 4
             tracking_y_line_vel = 3
             tracking_ang_vel = 1.
             dof_vel=-6e-5
             dof_acc=-2e-7
-            lin_vel_z = -0.8
+            lin_vel_z = -1
             ang_vel_xy = -0.05
             dof_pos_limits = -10
-            action_rate = -0.015 #-0.01
+            action_rate = -0.02 #-0.01
 
-            # foot_height=-0.3
             orientation = -2
-            feet_air_time=1.3
-            feet_contact = 1.2
-
-
-
-
-
+            feet_air_time = 4
+            feet_contact = 3
+            feet_orientation = 2
 
 class wowCfgPPO( LeggedRobotCfgPPO ):
     class policy:
         init_noise_std = 1.0
-        adapt_hidden_dims=[128,64,19]
         estimate_hidden_dims = [64,128,41],
         actor_hidden_dims = [512, 256, 128]
         critic_hidden_dims = [512, 256, 128]
@@ -167,7 +129,7 @@ class wowCfgPPO( LeggedRobotCfgPPO ):
         rnn_hidden_size = 64
         rnn_num_layers = 2
         
-    class algorithm():
+    class algorithm:
         # training params
         value_loss_coef = 1.0
         use_clipped_value_loss = True
@@ -182,14 +144,14 @@ class wowCfgPPO( LeggedRobotCfgPPO ):
         desired_kl = 0.01
         max_grad_norm = 1.
 
-    class runner():
+    class runner:
         policy_class_name = 'ActorCriticRecurrent' #ActorCriticRecurrent
         algorithm_class_name = 'PPO'
         num_steps_per_env = 24 # per iteration
-        max_iterations = 5000 # number of policy updates
+        max_iterations = 50000 # number of policy updates
 
         # logging
-        save_interval = 500 # check for potential saves every this many iterations
+        save_interval = 100 # check for potential saves every this many iterations
         experiment_name = 'test'
         run_name = ''
         # load and resume
@@ -197,11 +159,6 @@ class wowCfgPPO( LeggedRobotCfgPPO ):
         load_run = -1 # -1 = last run
         checkpoint = -1 # -1 = last saved model
         resume_path = None # updated from load_run and chkpt
-
-    class estimator():
-        #train_with_estimated_states = True
-        learning_rate = 1.e-4
-        hidden_dims = [19, 128]
 
     class runner( LeggedRobotCfgPPO.runner ):
         run_name = ''

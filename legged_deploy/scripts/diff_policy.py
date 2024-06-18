@@ -105,8 +105,6 @@ def load_policy(logdir,if_distill = False, if_test=True, if_md_ac=True):
             actions = distill_actor(obs.to('cpu'), hist_encoding=True, scandots_latent = latent)
             # print(actions)
 
-            # else:
-            #     actions = ac.act_inference(obs.to('cpu'), hist_encoding=True)   
             return actions
         
     elif if_md_ac:

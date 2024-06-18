@@ -11,8 +11,8 @@ cd Locomotion_Baseline
 # Download the Isaac Gym binaries from https://developer.nvidia.com/isaac-gym 
 # Originally trained with Preview3, but haven't seen bugs using Preview4.
 cd isaacgym/python && pip install -e .
-cd ~/extreme-parkour/rsl_rl && pip install -e .
-cd ~/extreme-parkour/legged_gym && pip install -e .
+cd /rsl_rl && pip install -e .
+cd /legged_gym_train && pip install -e .
 pip install "numpy<1.24" pydelatin swanlab tqdm opencv-python ipdb pyfqmr flask
 ```
 
@@ -58,12 +58,11 @@ Can be used in both IsaacGym and web viewer.
 ### Arguments
 - --exptid: string, can be `xxx-xx-WHATEVER`, `xxx-xx` is typically numbers only. `WHATEVER` is the description of the run. 
 - --device: can be `cuda:0`, `cpu`, etc.
-- --delay: whether add delay or not.
 - --checkpoint: the specific checkpoint you want to load. If not specified load the latest one.
 - --resume: resume from another checkpoint, used together with `--resumeid`.
 - --seed: random seed.
 - --no_swanlab: no swanlab logging.
-- --use_camera: use camera or scandots.
+- --debug: debug mode.
 - --web: used for playing on headless machines. It will forward a port with vscode and you can visualize seemlessly in vscode with your idle gpu or cpu. [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server) vscode extension required, otherwise you can view it in any browser.
 
 ### todo
